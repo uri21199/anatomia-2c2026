@@ -1,6 +1,6 @@
 // Capítulo 17. Generado desde data/s17.html.
 // Sin el bloque de ejercicios inline (usaba pickQ, que no existe en este sitio).
-const S17_HTML = `<details open="">
+const S17_HTML = `<details>
 <summary><span class="num">17</span> Sistema nervioso <span class="sec-score" id="ss-fiuba-anatomia-17"></span></summary>
 <div class="content">
 
@@ -15,6 +15,7 @@ const S17_HTML = `<details open="">
 <h3>Las tres funciones, que ordenan todo lo demás</h3>
 <p><b>Sensorial</b> (recibe información del entorno interno y externo por los receptores) → <b>integradora</b> (procesa esa información y la integra con la memoria) → <b>motora</b> (envía señales a los efectores: <b>músculos y glándulas</b>). Esa tríada es el esqueleto de cualquier respuesta: entrada, procesamiento, salida.</p>
 
+<p>El sistema nervioso funciona como un sistema de comunicación a través de <b>sensores</b> y <b>efectores</b>; los reflejos son el ejemplo más básico. Un <b>estímulo</b> (lumínico, mecánico o químico) lo recibe un receptor, la <b>transducción</b> transforma esa señal en impulsos eléctricos y el sistema genera una <b>respuesta</b>.</p>
 <h3>Embriología: de una lámina de ectodermo a un tubo</h3>
 <p>El sistema nervioso nace del <b>ectodermo</b>, la capa más externa del embrión temprano. La secuencia es:</p>
 <div class="formula">
@@ -136,6 +137,7 @@ La célula de Schwann <b>está igual</b>: lo que cambia es que envuelve <b>mucho
   <tr><td><b>Hipotálamo</b></td><td><b>Funciones vitales</b>: temperatura corporal, frecuencia cardíaca, presión arterial, apetito. Es <b>diencéfalo</b> y el puente con el endócrino</td></tr>
   <tr><td><b>Cerebelo</b></td><td><b>Coordinación</b> del movimiento, <b>equilibrio</b> y postura</td></tr>
   <tr><td><b>Tronco encefálico</b></td><td><b>Mesencéfalo + protuberancia + bulbo raquídeo</b>. Conecta cerebro y médula; controla <b>respiración, frecuencia cardíaca y presión arterial</b>, más deglución, alerta y sueño</td></tr>
+  <tr><td><b>Epitálamo</b></td><td>Glándula pineal: produce melatonina, que regula los ritmos circadianos</td></tr>
   <tr><td><b>Médula espinal</b></td><td>Transmite información sensorial al cerebro y señales motoras a los músculos; sede de los reflejos medulares</td></tr>
 </tbody></table></div>
 <div class="trap"><div class="tr-t">Tres confusiones caras en esta tabla</div>
@@ -144,6 +146,9 @@ La célula de Schwann <b>está igual</b>: lo que cambia es que envuelve <b>mucho
 · La <b>sustancia gris está donde no la esperás</b>: en la <b>médula</b> es <b>central</b> (en H, con asta dorsal y asta ventral) y la blanca periférica; en el <b>cerebro</b> es al revés, la gris es la <b>corteza externa</b>. Con Klüver-Barrera, la sustancia <b>blanca se ve azul</b> porque la técnica tiñe la mielina; la gris se ve rosada/violácea y contiene los pericariones.
 </div>
 
+<p><b>Fibras de la sustancia blanca</b> del encéfalo: de <b>asociación</b> (conectan regiones de un mismo hemisferio, trayecto longitudinal); de <b>proyección</b> (comunican la corteza con estructuras inferiores, trayecto vertical); <b>comisurales</b> (unen un hemisferio con el otro, trayecto transversal, como el cuerpo calloso).</p>
+<p><b>Médula espinal</b>: la sustancia gris es central, con astas <b>posteriores</b> (neuronas sensitivas, forman la raíz posterior del nervio espinal), <b>anteriores</b> (neuronas motoras, forman la raíz anterior) y <b>laterales</b> (somas viscerales del simpático). La sustancia blanca se organiza en cordones posteriores, anteriores y laterales.</p>
+<p><b>Cola de caballo</b>: conjunto de nervios lumbares, sacros y bajos que desciende por el canal vertebral desde la parte inferior de la médula, a la altura de L1-L2.</p>
 <h3>Lóbulos corticales · la cátedra lo toma</h3>
 <p>Una de las 5 <i>Preguntas modelo</i> pregunta exactamente por la función del lóbulo temporal, "según la segregación de funciones corticales". <span class="muted">De la cátedra es la pregunta y el criterio; el desglose fino de la tabla sale del mapa de funciones corticales estándar.</span></p>
 <p class="tabla-aviso" hidden="">Deslizá la tabla de costado para ver el resto.</p><div class="tabla-desliza"><table class="tbl">
@@ -157,6 +162,7 @@ La célula de Schwann <b>está igual</b>: lo que cambia es que envuelve <b>mucho
 <b>Broca = formar las palabras</b> (producción, lenguaje expresivo, lóbulo <b>frontal</b>). <b>Wernicke = comprender</b> el lenguaje (lóbulo <b>temporal</b>). Ambas están en el hemisferio izquierdo en el 95% de las personas. Si el enunciado dice "entiende lo que le dicen pero no logra formar las palabras", es <b>Broca</b>. Y ojo con el distractor "coordinación de movimientos voluntarios y equilibrio": eso es <b>cerebelo</b>, que no es un lóbulo cortical. La cátedra lo usa como distractor en la pregunta del temporal.
 </div>
 
+<p><b>Ubicación de los lóbulos</b>: el <b>frontal</b> va desde el polo frontal hasta el surco central; el <b>parietal</b>, detrás del surco central y por delante del parietooccipital; el <b>occipital</b> está en el polo posterior; el <b>temporal</b>, debajo del surco lateral. La <b>ínsula</b> está en la profundidad del surco lateral. Los surcos que separan los giros son el <b>central</b>, el <b>lateral</b> y el <b>parietooccipital</b>.</p>
 <h3>Meninges y líquido cefalorraquídeo <span class="muted">· ampliación</span></h3>
 <p class="tabla-aviso" hidden="">Deslizá la tabla de costado para ver el resto.</p><div class="tabla-desliza"><table class="tbl">
   <tbody><tr><th>Capa (de afuera hacia adentro)</th><th>Característica</th></tr>
@@ -166,6 +172,8 @@ La célula de Schwann <b>está igual</b>: lo que cambia es que envuelve <b>mucho
 </tbody></table></div>
 <p>El <b>LCR</b> lo producen los <b>plexos coroideos</b> de los ventrículos, circula por los ventrículos y el espacio subaracnoideo y se reabsorbe en las vellosidades aracnoideas. Cumple tres funciones: <b>amortiguación mecánica</b> (el encéfalo flota y pesa mucho menos), <b>homeostasis química</b> del medio y <b>transporte</b> de metabolitos. Las <b>células ependimarias</b> son las que revisten los ventrículos y el canal del epéndimo, de modo que la interfaz LCR-tejido es una interfaz <b>glial</b>.</p>
 
+<p>Los <b>espacios entre meninges</b> son: <b>epidural</b> (entre el cráneo y la duramadre), <b>subdural</b> (entre la duramadre y la aracnoides), <b>subaracnoideo</b> (entre la aracnoides y la piamadre, por donde circula el LCR) y <b>subpial</b> (espacio virtual).</p>
+<p>El LCR circula por el sistema ventricular: los <b>ventrículos laterales</b> están en el telencéfalo, el <b>tercer ventrículo</b> en el diencéfalo y el <b>cuarto ventrículo</b> detrás del tronco encefálico.</p>
 <h3>Vías sensitivas y motoras <span class="muted">· ampliación</span></h3>
 <p class="tabla-aviso" hidden="">Deslizá la tabla de costado para ver el resto.</p><div class="tabla-desliza"><table class="tbl">
   <tbody><tr><th></th><th>Vía sensitiva (ascendente)</th><th>Vía motora (descendente)</th></tr>
@@ -175,6 +183,30 @@ La célula de Schwann <b>está igual</b>: lo que cambia es que envuelve <b>mucho
   <tr><td>Neuronas en cadena</td><td>Tres, en general</td><td>Dos: motoneurona superior (corteza) y <b>motoneurona inferior</b> (asta ventral)</td></tr>
 </tbody></table></div>
 <p>El <b>arco reflejo</b> es el circuito mínimo y explica por qué la médula no es un cable: receptor → neurona sensitiva (raíz dorsal) → interneurona en la sustancia gris → motoneurona (raíz ventral) → efector. Se resuelve <b>en la médula</b>, sin pasar por la corteza; por eso la respuesta llega antes que la conciencia del estímulo.</p>
+
+<h3>Pares craneales</h3>
+<p>Son 12 pares que salen del encéfalo (no de la médula). Esta tabla da el tipo y la función de cada uno.</p>
+<div class="tabla-desliza"><table class="tbl">
+  <tbody><tr><th>N.º</th><th>Nombre</th><th>Tipo</th><th>Función principal</th></tr>
+  <tr><td>I</td><td>Olfatorio</td><td>Sensitivo</td><td>Olfato: lleva los estímulos de la mucosa nasal al cerebro</td></tr>
+  <tr><td>II</td><td>Óptico</td><td>Sensitivo</td><td>Vista: transmite la información visual desde la retina</td></tr>
+  <tr><td>III</td><td>Oculomotor</td><td>Motor</td><td>La mayoría de los músculos del ojo: párpado, constricción pupilar y enfoque</td></tr>
+  <tr><td>IV</td><td>Troclear</td><td>Motor</td><td>Músculo oblicuo superior del ojo</td></tr>
+  <tr><td>V</td><td>Trigémino</td><td>Mixto</td><td>Sensibilidad de la cara, cuero cabelludo, dientes y cavidad bucal; músculos de la masticación. Tres ramas: oftálmica, maxilar y mandibular</td></tr>
+  <tr><td>VI</td><td>Abducens</td><td>Motor</td><td>Músculo recto lateral del ojo</td></tr>
+  <tr><td>VII</td><td>Facial</td><td>Mixto</td><td>Músculos de la expresión facial, glándulas lagrimales y salivales, y gusto en los dos tercios anteriores de la lengua</td></tr>
+  <tr><td>VIII</td><td>Vestibulococlear</td><td>Sensitivo</td><td>Audición y equilibrio</td></tr>
+  <tr><td>IX</td><td>Glosofaríngeo</td><td>Mixto</td><td>Gusto en el tercio posterior de la lengua, sensibilidad de la faringe, deglución y glándula parótida</td></tr>
+  <tr><td>X</td><td>Vago</td><td>Mixto</td><td>Órganos del tórax y del abdomen (corazón, pulmones, tubo digestivo); fonación y deglución</td></tr>
+  <tr><td>XI</td><td>Accesorio</td><td>Motor</td><td>Músculos esternocleidomastoideo y trapecio: movimientos del cuello y los hombros</td></tr>
+  <tr><td>XII</td><td>Hipogloso</td><td>Motor</td><td>Movimientos de la lengua</td></tr>
+  </tbody></table></div>
+
+<h3>Irrigación del encéfalo: dos sistemas unidos por el polígono de Willis</h3>
+<p><b>Circulación anterior</b> (sistema carotídeo): la arteria carótida interna irriga la mayor parte de los lóbulos frontal, parietal y temporal, a través de las arterias cerebrales anterior y media.</p>
+<p><b>Circulación posterior</b> (sistema vertebrobasilar): irriga el tronco encefálico, el cerebelo, el lóbulo occipital y parte del temporal. La forman las arterias vertebrales, la basilar y la cerebral posterior.</p>
+<p>El <b>polígono de Willis</b> da un flujo colateral entre ambos sistemas. Por eso, si una arteria principal se obstruye (por una placa de ateroma o un coágulo), en muchos casos otros vasos pueden suplir el flujo de la zona afectada.</p>
+<p>El <b>seno cavernoso</b> depende de la duramadre y está a los lados de la silla turca; la vena principal que lo drena es la yugular.</p>
 
 <h3>Sistema nervioso autónomo, órgano por órgano</h3>
 <p class="tabla-aviso" hidden="">Deslizá la tabla de costado para ver el resto.</p><div class="tabla-desliza"><table class="tbl">

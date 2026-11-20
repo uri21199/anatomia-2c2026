@@ -1,6 +1,6 @@
 // Capítulo 16. Generado desde data/s16.html.
 // Sin el bloque de ejercicios inline (usaba pickQ, que no existe en este sitio).
-const S16_HTML = `<details open="">
+const S16_HTML = `<details>
 <summary><span class="num">16</span> Sistema endócrino <span class="sec-score" id="ss-fiuba-anatomia-16"></span></summary>
 <div class="content">
 
@@ -56,6 +56,7 @@ Hipotálamo <b>(liberadora)→</b> Adenohipófisis <b>(trófica)→</b> Glándul
 </tbody></table></div>
 <p><span class="muted">Procedencia de esta tabla: la clase de endocrinología nombra las dos relaciones tróficas (<b>TSH</b> → tiroides → T3/T4 y <b>ACTH</b> → corteza suprarrenal → cortisol) y las gonadotrofinas. El eje suprarrenal sí está dibujado completo en la diapositiva 31: <b>CRH</b> (rotulada en inglés, <i>corticotropin-releasing factor</i>) → ACTH → corteza suprarrenal → cortisol, con flechas punteadas del cortisol que vuelven a frenar a la <b>adenohipófisis</b> y al <b>hipotálamo</b>, o sea el lazo de retroalimentación negativa. <b>TRH</b> aparece en las <i>Preguntas modelo</i> (pregunta 5). La <b>GnRH</b> no figura en ningún material de la cátedra: va acá como ampliación, porque el razonamiento del eje es idéntico.</span></p>
 
+<p>El <b>feedback positivo</b> es el caso opuesto: la hormona envía señales para <b>promover</b> su propia secreción. La clase lo nombra junto al negativo sin desarrollarlo.</p>
 <h3>EL MÉTODO · localizar la lesión en el eje</h3>
 <p>Formato de mayor demanda de la unidad: <b>2 de las 5 preguntas modelo</b> son exactamente esto. Te dan síntomas de déficit y valores de sangre, y hay que decir qué piso falló. Dos pasos, sin memorizar nada.</p>
 
@@ -148,6 +149,8 @@ La glándula que está <b>"para"</b> la tiroides (<b>para</b>tiroides) <b>sube</
 <b>Bocio</b> = aumento del tamaño de la tiroides; es un <b>signo</b> y puede acompañar hiper o hipofunción. <b>Graves</b> = causa concreta de <b>hiper</b>tiroidismo, con exoftalmia, intolerancia al calor y ansiedad; en laboratorio, <b>T3/T4 altas con TSH baja</b>.
 </div>
 
+<p><b>Hipertiroidismo</b> = producción excesiva de hormona tiroidea. Sus consecuencias: agrandamiento de la tiroides, exoftalmia, intolerancia al calor, ansiedad y <b>bajo peso</b> (consume más calorías porque el metabolismo es más rápido).</p>
+<p>Las <b>paratiroides</b> están en el cuello, generalmente a los lados de la tiroides. Sus <b>células principales</b> producen la <b>paratohormona (PTH)</b>.</p>
 <h3>Suprarrenales · afuera corteza, adentro médula</h3>
 <p>Apoyadas sobre el <b>polo superior de cada riñón</b>. Producen cosas químicamente opuestas y la regla vale tanto para el microscopio como para el examen.</p>
 <p class="tabla-aviso" hidden="">Deslizá la tabla de costado para ver el resto.</p><div class="tabla-desliza"><table class="tbl">
@@ -159,7 +162,10 @@ La glándula que está <b>"para"</b> la tiroides (<b>para</b>tiroides) <b>sube</
   <tr><td>Zonas de la corteza <span class="muted">(bibliografía; la clase no las desglosa)</span></td><td colspan="2"><b>Glomerular</b> → aldosterona (mineralocorticoide) · <b>Fascicular</b> → cortisol (glucocorticoide, <b>sube la glucemia</b>) · <b>Reticular</b> → andrógenos suprarrenales</td></tr>
 </tbody></table></div>
 <div class="trap"><div class="tr-t">Cortisol a la corteza, adrenalina a la médula</div>
-Anclaje: la <b>ACTH</b> es <b>adreno-CORTICO-tropa</b>. Apunta a la <b>corteza</b>, y su producto principal es el <b>cortisol</b>. La médula no tiene hormona trófica: la maneja el simpático directamente.
+Anclaje: la <b>ACTH</b> es <b>adreno-CORTICO-tropa</b>. Apunta a la <b>corteza</b>, y su producto principal es el <b>cortisol</b>. La médula no tiene hormona trófica: la maneja el simpático directamente.</p>
+<p><b>Cortisol</b>: principal glucocorticoide, sintetizado en la zona fasciculada de la corteza. Actúa sobre el metabolismo y la adaptación al estrés, y tiene efecto antialérgico, antiinflamatorio e inmunosupresor. Eleva la glucemia por gluconeogénesis y glucogenólisis en el hígado.</p>
+<p><b>Aldosterona</b>: regula el volumen sanguíneo, la presión arterial y el equilibrio hidroelectrolítico (sodio, potasio y pH).</p>
+<p><b>Adrenalina</b>: desencadena la respuesta de <b>lucha, huida o alerta</b>, integrada por el sistema nervioso simpático, que actúa sobre receptores alfa y beta de distintos órganos. Su síntesis la estimula directamente el cortisol de la corteza.
 </div>
 
 <div class="key"><div class="ky-t">Diapositiva 31: el cortisol sobre el hígado</div>Según la clase de la cátedra (diapositiva 31), el cortisol tiene una diapositiva propia. A la izquierda está el eje suprarrenal con su freno (CRH → ACTH → corteza → cortisol, y el cortisol que vuelve a frenar a la adenohipófisis y al hipotálamo; lo viste en "Retroalimentación negativa y los ejes"). A la derecha, el efecto que la cátedra eligió destacar: el cortisol llega al <b>hígado</b> y <b>aumenta la glucosa en sangre</b>. Así, en esta clase hay dos hormonas que suben la glucemia a través del hígado: el <b>glucagón</b> (páncreas, células alfa, diapositivas 34 y 35) y el <b>cortisol</b> (corteza suprarrenal). Si una pregunta pide una hormona <b>pancreática</b>, el cortisol queda afuera aunque suba la glucosa.</div>

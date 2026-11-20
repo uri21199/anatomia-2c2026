@@ -1,6 +1,6 @@
 // Capítulo 15. Generado desde data/s15.html.
 // Sin el bloque de ejercicios inline (usaba pickQ, que no existe en este sitio).
-const S15_HTML = `<details open="">
+const S15_HTML = `<details>
 <summary><span class="num">15</span> Aparato urinario <span class="sec-score" id="ss-fiuba-anatomia-15"></span></summary>
 <div class="content">
 

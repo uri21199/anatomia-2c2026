@@ -1,6 +1,6 @@
-// Capítulo 12 (esplacnología: tórax y aparato respiratorio). Generado desde data/s12.html.
+// Capítulo 12. Generado desde data/s12.html.
 // Sin el bloque de ejercicios inline (usaba pickQ, que no existe en este sitio).
-const S12_HTML = `<details open="">
+const S12_HTML = `<details>
 <summary><span class="num">12</span> Esplacnología: tórax y aparato respiratorio <span class="sec-score" id="ss-fiuba-anatomia-12"></span></summary>
 <div class="content">
 

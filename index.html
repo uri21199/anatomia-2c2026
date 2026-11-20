@@ -5,10 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Anatomía · Guía del 2do parcial</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Preferencias guardadas (tema, tipografía, tamaño) antes de pintar la página
+    (function () {
+      var r = document.documentElement, s = window.localStorage;
+      var t = s.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      r.dataset.theme = t;
+      r.dataset.font = s.getItem("font") || "sans";
+      r.style.setProperty("--fs", (s.getItem("fs") || "16") + "px");
+    })();
+  </script>
 </head>
 <body>
   <header class="top">
     <a class="brand" href="#/guia">Anatomía · 2do parcial</a>
+    <div class="tools">
+      <button type="button" class="tool" id="toc-toggle" aria-expanded="false" aria-controls="toc" title="Índice de capítulos">Índice</button>
+      <button type="button" class="tool" id="font-down" title="Achicar texto" aria-label="Achicar texto">A−</button>
+      <button type="button" class="tool" id="font-up" title="Agrandar texto" aria-label="Agrandar texto">A+</button>
+      <button type="button" class="tool" id="font-family" title="Cambiar tipografía" aria-label="Cambiar tipografía">Aa</button>
+      <button type="button" class="tool" id="theme-toggle" title="Modo oscuro / claro" aria-label="Modo oscuro o claro">◐</button>
+    </div>
     <nav>
       <a href="#/guia" data-tab="guia">Guía</a>
       <a href="#/preguntas" data-tab="preguntas">Preguntas</a>
@@ -32,6 +49,7 @@
   <script src="js/data-s16.js"></script>
   <script src="js/data-s17.js"></script>
   <script src="js/data-cap18.js"></script>
+  <script src="js/data-practica.js"></script>
   <script src="js/data-quiz.js"></script>
   <script src="js/app.js"></script>
 </body>

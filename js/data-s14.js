@@ -1,6 +1,6 @@
 // Capítulo 14. Generado desde data/s14.html.
 // Sin el bloque de ejercicios inline (usaba pickQ, que no existe en este sitio).
-const S14_HTML = `<details open="">
+const S14_HTML = `<details>
 <summary><span class="num">14</span> Aparato digestivo <span class="sec-score" id="ss-fiuba-anatomia-14"></span></summary>
 <div class="content">
 

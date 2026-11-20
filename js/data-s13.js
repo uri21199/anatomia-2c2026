@@ -1,6 +1,6 @@
 // Capítulo 13. Generado desde data/s13.html.
 // Sin el bloque de ejercicios inline (usaba pickQ, que no existe en este sitio).
-const S13_HTML = `<details open="">
+const S13_HTML = `<details>
 <summary><span class="num">13</span> Sistema cardiovascular <span class="sec-score" id="ss-fiuba-anatomia-13"></span></summary>
 <div class="content">
 
@@ -118,6 +118,8 @@ Válvulas protésicas mecánicas y biológicas, <b>stents</b> y endoprótesis pa
 <p>El corazón está en el <b>mediastino</b>, que es la región anatómica <b>entre los pulmones</b>, extendida <b>del esternón a la columna vertebral</b> y <b>de la primera costilla al diafragma</b>. Esa definición de cuatro límites es literalmente la que se pregunta.</p>
 <p>Dos tercios de su masa quedan <b>a la izquierda de la línea media</b>. El <b>vértice</b> (ápex), formado por el ventrículo izquierdo, apunta hacia adelante, abajo y <b>a la izquierda de la línea media</b>; la <b>base</b> mira hacia arriba y atrás y la forman sobre todo las aurículas. Es la razón anatómica de que el latido se palpe a la izquierda y de que la reanimación cardiopulmonar comprima sobre el esternón: ahí el corazón queda aplastado entre esternón y columna.</p>
 
+<p>Las <b>caras</b> del corazón: la <b>esternocostal</b> (anterior) la forman sobre todo los <b>ventrículos</b>, que son la región anterior del órgano; la <b>base</b> o superficie posterior la forman sobre todo las <b>aurículas</b>, que son las cavidades que reciben la sangre de las venas.</p>
+<p>El <b>pericardio</b> es un saco o envoltura fibroserosa que rodea externamente al corazón y a las raíces de los grandes vasos en el mediastino.</p>
 <h3>Pericardio: tres capas y una cavidad</h3>
 <p class="tabla-aviso" hidden="">Deslizá la tabla de costado para ver el resto.</p><div class="tabla-desliza"><table class="tbl">
   <tbody><tr><th>Capa</th><th>Composición</th><th>Función</th></tr>
@@ -151,6 +153,13 @@ Es lo que convierte a una hemorragia pequeña en el pericardio en un <b>taponami
 </tbody></table></div>
 <p>Los surcos no son cicatrices: <b>alojan los vasos coronarios y una cantidad variable de grasa</b>. Por eso en un corazón entero no se ven las coronarias directamente, se ve el surco relleno de grasa.</p>
 
+<h3>Músculos papilares: tres órdenes</h3>
+<div class="tabla-desliza"><table class="tbl">
+  <tbody><tr><th>Orden</th><th>Qué es</th></tr>
+  <tr><td><b>Primero</b></td><td>Se fijan a la pared del ventrículo: base en la pared y vértice libre, donde se insertan las <b>cuerdas tendinosas</b></td></tr>
+  <tr><td><b>Segundo</b></td><td><b>Trabéculas carnosas</b> en forma de puentes musculares: sus dos extremos se insertan en la pared miocárdica y la porción media queda libre</td></tr>
+  <tr><td><b>Tercero</b></td><td>Sólo relieves o engrosamientos de la pared miocárdica</td></tr>
+  </tbody></table></div>
 <h3>Válvulas: cuatro, dos tipos, un solo objetivo</h3>
 <p class="tabla-aviso" hidden="">Deslizá la tabla de costado para ver el resto.</p><div class="tabla-desliza"><table class="tbl">
   <tbody><tr><th></th><th>Auriculoventriculares</th><th>Sigmoideas (semilunares)</th></tr>

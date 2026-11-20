@@ -48,14 +48,60 @@
     }
   }
 
+  // Banco de práctica por sistema: tandas de 6 que no se repiten hasta agotar el banco
+  const PRAC_SET = 6;
+  const pracState = {};
+  function pracNext(topic) {
+    const list = PRACTICA[topic] || [];
+    const st = pracState[topic] || (pracState[topic] = { queue: [], tanda: 0, current: null });
+    if (st.queue.length < PRAC_SET) {
+      const rest = list.map((_, i) => i).filter((i) => !st.queue.includes(i));
+      st.queue = st.queue.concat(shuffle(rest));
+    }
+    st.current = st.queue.splice(0, PRAC_SET).map((i) => list[i]);
+    st.tanda += 1;
+    return st;
+  }
+
+  // Práctica al final de cada sistema: opción múltiple con retroalimentación inmediata
+  function renderPractica(topic) {
+    const list = PRACTICA[topic] || [];
+    if (!list.length) return "";
+    const st = pracState[topic] && pracState[topic].current ? pracState[topic] : pracNext(topic);
+    const items = st.current
+      .map((q, n) => {
+        const order = shuffle(q.opts.map((text, idx) => ({ text, idx })));
+        const correctPos = order.findIndex((o) => o.idx === q.ans);
+        const opts = order
+          .map((o, pos) => `<button type="button" class="opt" data-pos="${pos}">${String.fromCharCode(65 + pos)}) ${esc(o.text)}</button>`)
+          .join("");
+        return `<div class="pq" data-correct="${correctPos}">
+          <p class="pq-q"><span class="muted">${n + 1}.</span> ${esc(q.q)}</p>
+          <div class="pq-opts">${opts}</div>
+          <div class="pq-fb" hidden><div class="expl"><strong></strong> ${esc(q.expl)}<div class="ref">${esc(q.ref)}</div></div></div>
+        </div>`;
+      })
+      .join("");
+    return `<div class="practica" data-topic="${topic}">
+        <h3>Práctica · preguntas de este sistema</h3>
+        <div class="prac-bar">
+          <span class="muted">Tanda ${st.tanda} · ${list.length} preguntas en el banco. Elegí una opción: se marca la correcta y aparece la justificación.</span>
+          <button type="button" class="btn" data-next-set="${topic}">Otras preguntas</button>
+        </div>
+        ${items}
+      </div>`;
+  }
+
   function renderCap(c) {
-    // Capítulos con HTML propio (p. ej. el 12) se insertan tal cual
-    if (c.raw) return `<section class="cap" id="${c.id}">${c.raw}</section>`;
+    const practica = renderPractica(c.topic);
+    // Capítulos con HTML propio (12 a 17) se insertan tal cual, antes del cierre del details
+    if (c.raw) return `<section class="cap" id="${c.id}">${c.raw.replace(/<\/details>\s*$/, `${practica}</details>`)}</section>`;
     return `<section class="cap" id="${c.id}">
-      <details open>
+      <details>
         <summary><span class="num">${c.num}</span> ${esc(c.title)}</summary>
         <div class="cap-body">
           ${c.sections.map((s) => `<h3>${esc(s.h)}</h3>${s.blocks.map(renderBlock).join("")}`).join("")}
+          ${practica}
         </div>
       </details>
     </section>`;
@@ -90,7 +136,8 @@
       const dev = QUIZ.dev.map((d) => ({ kind: "dev", data: d }));
       return { mode, items: [...mc, ...dev], i: 0, answers: {}, checks: {}, revealed: {}, finished: false };
     }
-    const mc = QUIZ.mc.filter((q) => !topic || q.topic === topic).map(prepareMC);
+    const pool = topic ? PRACTICA[topic] || [] : Object.values(PRACTICA).flat();
+    const mc = pool.map(prepareMC);
     const dev = QUIZ.dev.filter((d) => !topic || d.topic === topic).map((d) => ({ kind: "dev", data: d }));
     return { mode, topic, items: [...shuffle(mc), ...dev], i: 0, answers: {}, checks: {}, revealed: {}, finished: false };
   }
@@ -106,6 +153,8 @@
           if (reveal) {
             if (pos === item.correctPos) cls += " correct";
             else if (pos === chosen) cls += " wrong";
+          } else if (pos === chosen) {
+            cls += " selected";
           }
           const dis = answered && session.mode === "practica" ? "disabled" : "";
           return `<button class="${cls}" data-pos="${pos}" ${dis}>${String.fromCharCode(65 + pos)}) ${esc(o.text)}</button>`;
@@ -220,6 +269,43 @@
     }
   });
 
+  // ---------- índice flotante, tema y texto ----------
+  const root = document.documentElement;
+  const tocBtn = document.getElementById("toc-toggle");
+  const setToc = (open) => {
+    toc.classList.toggle("open", open);
+    tocBtn.setAttribute("aria-expanded", String(open));
+  };
+  tocBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    setToc(!toc.classList.contains("open"));
+  });
+  document.addEventListener("click", (e) => {
+    if (toc.classList.contains("open") && !toc.contains(e.target)) setToc(false);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setToc(false);
+  });
+
+  document.getElementById("theme-toggle").addEventListener("click", () => {
+    const next = root.dataset.theme === "dark" ? "light" : "dark";
+    root.dataset.theme = next;
+    localStorage.setItem("theme", next);
+  });
+  document.getElementById("font-family").addEventListener("click", () => {
+    const next = root.dataset.font === "serif" ? "sans" : "serif";
+    root.dataset.font = next;
+    localStorage.setItem("font", next);
+  });
+  const setFs = (delta) => {
+    const cur = parseFloat(getComputedStyle(root).fontSize) || 16;
+    const px = Math.min(22, Math.max(14, cur + delta));
+    root.style.setProperty("--fs", px + "px");
+    localStorage.setItem("fs", String(px));
+  };
+  document.getElementById("font-down").addEventListener("click", () => setFs(-1));
+  document.getElementById("font-up").addEventListener("click", () => setFs(1));
+
   // ---------- router ----------
   function rerender() {
     const parts = (location.hash || "#/guia").replace(/^#\/?/, "").split("/");
@@ -242,6 +328,7 @@
     const a = e.target.closest("a[data-anchor]");
     if (!a) return;
     e.preventDefault();
+    setToc(false);
     const id = a.dataset.anchor;
     if (!location.hash.startsWith("#/guia")) location.hash = "#/guia";
     const go = () => {
@@ -252,6 +339,47 @@
       }
     };
     setTimeout(go, 0);
+  });
+
+  // Otra tanda de práctica para el sistema
+  view.addEventListener("click", (e) => {
+    const nb = e.target.closest("[data-next-set]");
+    if (!nb) return;
+    const topic = nb.dataset.nextSet;
+    pracNext(topic);
+    nb.closest(".practica").outerHTML = renderPractica(topic);
+  });
+
+  // Capítulos colapsables de a uno: al abrir uno, se cierran los demás
+  view.addEventListener(
+    "toggle",
+    (e) => {
+      const d = e.target;
+      if (d.tagName !== "DETAILS" || !d.open) return;
+      view.querySelectorAll(".cap details[open]").forEach((o) => {
+        if (o !== d) o.open = false;
+      });
+    },
+    true
+  );
+
+  // Preguntas de práctica dentro de cada capítulo: al elegir, se marca la correcta y se muestra la explicación
+  view.addEventListener("click", (e) => {
+    const b = e.target.closest(".pq .opt");
+    if (!b) return;
+    const pq = b.closest(".pq");
+    if (pq.dataset.done) return;
+    pq.dataset.done = "1";
+    const chosen = Number(b.dataset.pos);
+    const correct = Number(pq.dataset.correct);
+    pq.querySelectorAll(".opt").forEach((o, i) => {
+      o.disabled = true;
+      if (i === correct) o.classList.add("correct");
+      else if (i === chosen) o.classList.add("wrong");
+    });
+    const fb = pq.querySelector(".pq-fb");
+    fb.querySelector("strong").textContent = chosen === correct ? "Correcto." : "Incorrecto.";
+    fb.hidden = false;
   });
 
   window.addEventListener("hashchange", rerender);
