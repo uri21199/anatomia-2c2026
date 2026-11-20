@@ -12,7 +12,7 @@
     { num: 13, id: "fan-s13", title: "Sistema cardiovascular", topic: "circulatorio", sections: GUIA.circulatorio.sections, raw: S13_HTML },
     { num: 14, id: "fan-s14", title: "Aparato digestivo", topic: "digestivo", sections: GUIA.digestivo.sections, raw: S14_HTML },
     { num: 15, id: "fan-s15", title: "Aparato urinario", topic: "urinario", sections: GUIA.urinario.sections, raw: S15_HTML },
-    { num: 16, id: "fan-s16", title: "Sistema endócrino", topic: "endocrino", sections: GUIA.endocrino.sections },
+    { num: 16, id: "fan-s16", title: "Sistema endócrino", topic: "endocrino", sections: GUIA.endocrino.sections, raw: S16_HTML },
     { num: 17, id: "fan-s17", title: "Sistema nervioso", topic: "nervioso", sections: GUIA.nervioso.sections, raw: S17_HTML },
     { num: 18, id: "fan-s18", title: "Enfoque bioingenieril · los papers de la cátedra", topic: "bioingenieria", sections: CAP18.sections }
   ];
