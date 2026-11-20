@@ -3,36 +3,30 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Anatomía · 2do parcial</title>
+  <title>Anatomía · Guía del 2do parcial</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header class="top">
-    <a class="brand" href="#/inicio">Anatomía · 2do parcial</a>
+    <a class="brand" href="#/guia">Anatomía · 2do parcial</a>
     <nav>
-      <a href="#/inicio">Inicio</a>
-      <a href="#/temas">Temas</a>
-      <a href="#/quiz">Preguntas</a>
-      <a href="#/fuentes">Fuentes</a>
+      <a href="#/guia" data-tab="guia">Guía</a>
+      <a href="#/preguntas" data-tab="preguntas">Preguntas</a>
     </nav>
   </header>
 
   <div class="layout">
-    <aside id="filters" class="filters" hidden>
-      <h3>Mostrar por origen</h3>
-      <div id="filter-list"></div>
-      <button id="filter-all" type="button">Marcar todos</button>
-    </aside>
+    <aside id="toc" class="toc" aria-label="Índice"></aside>
     <main id="view" class="view" aria-live="polite"></main>
   </div>
 
   <footer class="foot">
-    Material de estudio armado a partir de fuentes de la cátedra, apuntes de compañera, guía web y videos. No reemplaza la bibliografía ni las clases.
+    Estructura y capítulos 12 a 18 de la guía de estudio. Contenido parafraseado; no reemplaza la bibliografía ni las clases.
   </footer>
 
-  <script src="js/data-sources.js"></script>
-  <script src="js/data-quiz.js"></script>
   <script src="js/data-guia.js"></script>
+  <script src="js/data-cap18.js"></script>
+  <script src="js/data-quiz.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
