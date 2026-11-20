@@ -130,15 +130,22 @@
     return { kind: "mc", data: q, opts: order, correctPos: order.findIndex((o) => o.idx === q.ans) };
   }
 
+  // Parcial por id ("p1", "p2", "p3"); si no existe, el primero
+  function parcialById(id) {
+    return PARCIALES.find((p) => p.id === id) || PARCIALES[0];
+  }
+
   function buildSession(mode, topic) {
     if (mode === "parcial") {
-      const mc = shuffle(QUIZ.mc).slice(0, 20).map(prepareMC);
-      const dev = QUIZ.dev.map((d) => ({ kind: "dev", data: d }));
-      return { mode, items: [...mc, ...dev], i: 0, answers: {}, checks: {}, revealed: {}, finished: false };
+      const p = parcialById(topic);
+      const mc = shuffle(p.mc).slice(0, 20).map(prepareMC);
+      const dev = p.dev.map((d) => ({ kind: "dev", data: d }));
+      return { mode, topic: p.id, items: [...mc, ...dev], i: 0, answers: {}, checks: {}, revealed: {}, finished: false };
     }
     const pool = topic ? PRACTICA[topic] || [] : Object.values(PRACTICA).flat();
     const mc = pool.map(prepareMC);
-    const dev = QUIZ.dev.filter((d) => !topic || d.topic === topic).map((d) => ({ kind: "dev", data: d }));
+    const allDev = PARCIALES.flatMap((p) => p.dev);
+    const dev = allDev.filter((d) => !topic || d.topic === topic).map((d) => ({ kind: "dev", data: d }));
     return { mode, topic, items: [...shuffle(mc), ...dev], i: 0, answers: {}, checks: {}, revealed: {}, finished: false };
   }
 
@@ -190,19 +197,40 @@
     const devPct = devIdx.length
       ? devIdx.reduce((acc, { n, it }) => acc + (session.checks[n] ? Object.values(session.checks[n]).filter(Boolean).length / it.data.checklist.length : 0), 0) / devIdx.length
       : 0;
+    // Revisión pregunta por pregunta: si acertó o no, cada opción con su justificación
     const review = mcIdx
       .map(({ it, n }) => {
-        const ok = session.answers[n] === it.correctPos;
-        return `<li>${ok ? "✔" : "✘"} ${esc(it.data.q)}<div class="expl" style="margin:.3rem 0">${esc(it.data.expl)} <span class="ref">${esc(it.data.ref)}</span></div></li>`;
+        const chosen = session.answers[n];
+        const estado = chosen === undefined ? "Sin respuesta" : chosen === it.correctPos ? "Respondiste bien" : "Respondiste mal";
+        const rows = it.opts
+          .map((o, pos) => {
+            const isOk = pos === it.correctPos;
+            const isChosen = pos === chosen;
+            const cls = isOk ? "correct" : isChosen ? "wrong" : "";
+            const tag = isOk ? "✔ Correcta" : isChosen ? "✘ Tu respuesta" : "Descartada";
+            const why = it.data.why ? it.data.why[o.idx] : "";
+            return `<li class="${cls}"><strong>${String.fromCharCode(65 + pos)}) ${esc(o.text)}</strong> <span class="ref">${tag}</span><div class="muted">${esc(why)}</div></li>`;
+          })
+          .join("");
+        return `<section class="card rv">
+          <p class="muted">Consigna ${n + 1} · ${estado} · ${esc(TOPIC_TITLE[it.data.topic] || "")}</p>
+          <h2 class="q">${esc(it.data.q)}</h2>
+          <ol class="rv-opts">${rows}</ol>
+          <div class="expl">${esc(it.data.expl)}<div class="ref">${esc(it.data.ref)}</div></div>
+        </section>`;
       })
       .join("");
     return `<section class="card">
         <h1>Resultado del parcial simulado</h1>
         <p class="score">Opción múltiple: ${mcOk} / ${mcIdx.length}</p>
         <p class="score">Desarrollo (autoevaluación): ${Math.round(devPct * 100)}% de la checklist</p>
-        <div class="actions"><a class="btn primary" href="#/preguntas/parcial" id="again">Nuevo parcial simulado</a></div>
+        <div class="actions">
+          <a class="btn primary" href="#/preguntas/parcial/${esc(session.topic)}" id="again">Nuevo parcial simulado</a>
+          ${PARCIALES.filter((p) => p.id !== session.topic).map((p) => `<a class="btn" href="#/preguntas/parcial/${esc(p.id)}">${esc(p.nombre)}</a>`).join("")}
+        </div>
       </section>
-      <section class="card"><h2>Revisión de opción múltiple</h2><ul class="review">${review}</ul></section>`;
+      <h2 class="rv-title">Revisión pregunta por pregunta</h2>
+      ${review}`;
   }
 
   function pagePreguntas(mode, topic) {
@@ -214,8 +242,14 @@
     const answered = item.kind === "mc" ? session.answers[n] !== undefined : true;
     const isLast = n === total - 1;
     const pct = Math.round((n / total) * 100);
-    const title = mode === "parcial" ? "Parcial simulado" : "Práctica";
-    const sel = mode === "parcial" ? "" : `
+    const parcial = mode === "parcial" ? parcialById(topic) : null;
+    const title = mode === "parcial" ? `Parcial simulado · ${parcial.nombre}` : "Práctica";
+    const parcialSel = mode === "parcial"
+      ? `<select id="parcial-select" aria-label="Parcial">
+        ${PARCIALES.map((p) => `<option value="${esc(p.id)}" ${parcial.id === p.id ? "selected" : ""}>${esc(p.nombre)}</option>`).join("")}
+      </select>`
+      : "";
+    const sel = mode === "parcial" ? parcialSel : `
       <select id="topic-select" aria-label="Capítulo">
         <option value="">Todos los capítulos</option>
         ${CAPS.map((c) => `<option value="${c.topic}" ${topic === c.topic ? "selected" : ""}>${esc(c.num + " · " + c.title)}</option>`).join("")}
@@ -224,7 +258,7 @@
       <section class="card">
         <div class="quiz-head">
           <h1>${esc(title)}</h1>
-          <div>${sel} <a class="btn" href="#/preguntas/parcial">Parcial simulado</a></div>
+          <div>${sel} <a class="btn" href="#/preguntas/parcial/p1">Parcial simulado</a></div>
         </div>
         <div class="progress"><div style="width:${pct}%"></div></div>
         <p class="muted">${mode === "parcial" ? "Sin respuestas ni explicaciones hasta el final." : "Respondé y leé la explicación con su referencia."}</p>
@@ -259,6 +293,10 @@
   });
   view.addEventListener("change", (e) => {
     const t = e.target;
+    if (t.id === "parcial-select") {
+      location.hash = `#/preguntas/parcial/${t.value}`;
+      return;
+    }
     if (t.id === "topic-select") {
       location.hash = t.value ? `#/preguntas/${t.value}` : "#/preguntas";
       return;
@@ -314,7 +352,7 @@
     document.querySelectorAll("[data-tab]").forEach((a) => a.classList.toggle("on", a.dataset.tab === (isQuiz ? "preguntas" : "guia")));
     toc.hidden = false;
     if (isQuiz) {
-      view.innerHTML = arg === "parcial" ? pagePreguntas("parcial") : pagePreguntas("practica", arg || "");
+      view.innerHTML = arg === "parcial" ? pagePreguntas("parcial", parts[2] || "p1") : pagePreguntas("practica", arg || "");
       window.scrollTo(0, 0);
       return;
     }

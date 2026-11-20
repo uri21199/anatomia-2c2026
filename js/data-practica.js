@@ -1,4 +1,4 @@
-// Banco de práctica: 20 a 30 preguntas de opción múltiple por sistema.
+// Banco de práctica: 30 preguntas de opción múltiple por sistema.
 // ans = índice de la correcta en opts. La app muestra tandas de 6 y mezcla el orden.
 const PRACTICA = {
   "respiratorio": [
@@ -351,6 +351,76 @@ const PRACTICA = {
       ],
       "ans": 0,
       "expl": "La tos cierra completamente la rima glótica y la espiración fuerte la abre y lanza el aire. El sollozo tiene una serie de inspiraciones, el bostezo es una inspiración profunda y el hipo es una contracción espasmódica del diafragma."
+    },
+    {
+      "id": "P-resp-26",
+      "topic": "respiratorio",
+      "ref": "sección 12",
+      "q": "¿Qué estructura de la cavidad nasal contiene los receptores del olfato?",
+      "opts": [
+        "El epitelio olfatorio del techo, sobre el cornete superior y la lámina cribosa.",
+        "El vestíbulo, revestido de piel con vibrisas que retienen partículas gruesas.",
+        "El cornete medio, que crea turbulencia y multiplica la superficie de contacto.",
+        "Las coanas, que comunican la cavidad nasal con la nasofaringe."
+      ],
+      "ans": 0,
+      "expl": "Los receptores olfatorios están en el epitelio olfatorio del techo de la cavidad nasal. El vestíbulo filtra partículas, los cornetes calientan el aire y las coanas comunican con la nasofaringe."
+    },
+    {
+      "id": "P-resp-27",
+      "topic": "respiratorio",
+      "ref": "sección 12",
+      "q": "¿Qué función cumplen los senos paranasales?",
+      "opts": [
+        "Producen la mayor parte del moco que humidifica el aire de la nasofaringe.",
+        "Alivianan el cráneo, resuenan la voz y drenan hacia la cavidad nasal.",
+        "Regulan la presión del aire inspirado para mantenerla por encima de la atmosférica.",
+        "Filtran el aire antes de que llegue a la laringe, reteniendo las partículas grandes."
+      ],
+      "ans": 1,
+      "expl": "Los senos paranasales alivianan el cráneo, resuenan la voz y drenan hacia la cavidad nasal. Los demás roles corresponden a otras estructuras de la vía aérea."
+    },
+    {
+      "id": "P-resp-28",
+      "topic": "respiratorio",
+      "ref": "sección 12",
+      "q": "¿Cuál es el número aproximado de alvéolos en un pulmón humano adulto?",
+      "opts": [
+        "Unos 30 millones, que se distribuyen entre los dos pulmones de forma pareja.",
+        "Unos 3 mil millones, que son necesarios para la superficie de intercambio.",
+        "Unos 300 millones, que dan la superficie alveolar total de unos 70 m².",
+        "Unos 300 mil, que bastan para cubrir la superficie necesaria del intercambio."
+      ],
+      "ans": 2,
+      "expl": "Hay unos 300 millones de alvéolos, con una superficie total de unos 70 m². Las otras cifras no corresponden a ese valor."
+    },
+    {
+      "id": "P-resp-29",
+      "topic": "respiratorio",
+      "ref": "sección 12",
+      "q": "¿Por qué el pulmón derecho es más corto que el izquierdo?",
+      "opts": [
+        "Porque el corazón está desplazado a la derecha y le quita espacio al pulmón de ese lado.",
+        "Porque el derecho tiene dos lóbulos y el izquierdo tiene tres, y los lóbulos acortan el pulmón.",
+        "Porque el bronquio derecho es más largo y horizontal, y tira del pulmón hacia abajo.",
+        "Porque el hígado empuja la base del pulmón derecho hacia arriba, por debajo del diafragma."
+      ],
+      "ans": 3,
+      "expl": "El hígado eleva el diafragma del lado derecho, así que el pulmón derecho es más corto y ancho. El corazón está a la izquierda, no a la derecha, y el número de lóbulos es al revés."
+    },
+    {
+      "id": "P-resp-30",
+      "topic": "respiratorio",
+      "ref": "sección 12",
+      "q": "¿Qué ocurre con la presión alveolar al final de una espiración tranquila?",
+      "opts": [
+        "Sube unos 2 mmHg por encima de la atmosférica, hasta 762 mmHg, y el aire sale.",
+        "Baja unos 2 mmHg por debajo de la atmosférica, hasta 758 mmHg, y el aire sale.",
+        "Se iguala con la atmosférica, de 760 mmHg, y el aire queda atrapado en el alvéolo.",
+        "Sube hasta 770 mmHg por la contracción del diafragma durante la espiración tranquila."
+      ],
+      "ans": 0,
+      "expl": "Al final de la espiración tranquila la presión alveolar sube a 762 mmHg, por encima de la atmosférica, y el aire sale. El valor de 758 corresponde a la inspiración."
     }
   ],
   "circulatorio": [
@@ -675,6 +745,104 @@ const PRACTICA = {
       ],
       "ans": 3,
       "expl": "Las válvulas venosas abundan en los miembros inferiores: la sangre venosa tiene poca presión y tiene que subir contra la gravedad. Las grandes venas del tórax no tienen válvulas. Las arterias tienen la válvula sigmoidea de salida, no válvulas venosas."
+    },
+    {
+      "id": "P-circ-24",
+      "topic": "circulatorio",
+      "ref": "sección 13",
+      "q": "¿De qué estructura nacen las arterias coronarias?",
+      "opts": [
+        "Del arco de la aorta, entre el tronco braquiocefálico y la carótida izquierda.",
+        "De la aorta ascendente, apenas por encima de la válvula aórtica.",
+        "Del tronco pulmonar, a la altura de la válvula pulmonar y del ventrículo derecho.",
+        "De la aurícula izquierda, por las venas pulmonares que llegan a ella."
+      ],
+      "ans": 1,
+      "expl": "Las coronarias derecha e izquierda nacen de la aorta ascendente, apenas por encima de la válvula aórtica. El arco y el tronco pulmonar no son su origen."
+    },
+    {
+      "id": "P-circ-25",
+      "topic": "circulatorio",
+      "ref": "sección 13",
+      "q": "¿Qué vaso drena la mayor parte de la sangre venosa del propio corazón?",
+      "opts": [
+        "La vena cava superior, que llega a la aurícula derecha por el lado derecho.",
+        "La vena pulmonar izquierda, que lleva la sangre oxigenada a la aurícula izquierda.",
+        "El seno coronario, que desemboca en la aurícula derecha.",
+        "La arteria coronaria derecha, que retorna la sangre venosa al tronco pulmonar."
+      ],
+      "ans": 2,
+      "expl": "La mayor parte de la sangre venosa del corazón vuelve por el seno coronario a la aurícula derecha. Las arterias coronarias llevan sangre oxigenada, no venosa."
+    },
+    {
+      "id": "P-circ-26",
+      "topic": "circulatorio",
+      "ref": "sección 13",
+      "q": "¿Qué tipo de célula del corazón tiene la mayor cantidad de mitocondrias por célula?",
+      "opts": [
+        "La fibra esquelética, que tiene más mitocondrias por la contracción voluntaria.",
+        "La fibra del músculo liso de los vasos, que necesita energía para mantener el tono.",
+        "La célula endotelial del endocardio, que consume energía para el intercambio.",
+        "La fibra cardíaca, que tiene más mitocondrias que las fibras esqueléticas y lisas."
+      ],
+      "ans": 3,
+      "expl": "La fibra cardíaca es la que tiene mayor número de mitocondrias por célula, por ser un órgano estrictamente aeróbico. El músculo esquelético y el liso tienen menos."
+    },
+    {
+      "id": "P-circ-27",
+      "topic": "circulatorio",
+      "ref": "sección 13",
+      "q": "¿Qué porcentaje aproximado del ATP cardíaco proviene de la oxidación de ácidos grasos en reposo?",
+      "opts": [
+        "Alrededor del 60 %, mientras que la glucosa aporta cerca del 35 %.",
+        "Alrededor del 10 %, porque la glucosa es la fuente principal del corazón.",
+        "Alrededor del 35 %, igual que la glucosa, porque ambas se usan por partes iguales.",
+        "Alrededor del 90 %, porque el corazón depende casi por completo de los ácidos grasos."
+      ],
+      "ans": 0,
+      "expl": "En reposo el corazón obtiene alrededor del 60 % del ATP de los ácidos grasos y cerca del 35 % de la glucosa. Es un órgano estrictamente aeróbico."
+    },
+    {
+      "id": "P-circ-28",
+      "topic": "circulatorio",
+      "ref": "sección 13",
+      "q": "¿Qué le ocurre a la perfusión de las coronarias durante una taquicardia?",
+      "opts": [
+        "Aumenta la perfusión, porque la sangre llega más rápido y en más cantidad al miocardio.",
+        "Se acorta sobre todo la diástole, que es la fase de perfusión, y aumenta la demanda.",
+        "No cambia, porque la perfusión depende sólo de la presión de la aorta, no del ritmo.",
+        "Se perfunde sobre todo en la sístole, porque el músculo se relaja y se llena de sangre."
+      ],
+      "ans": 1,
+      "expl": "El miocardio se perfunde sobre todo en diástole. La taquicardia acorta esa fase y aumenta la demanda, lo que explica la angina de esfuerzo."
+    },
+    {
+      "id": "P-circ-29",
+      "topic": "circulatorio",
+      "ref": "sección 13",
+      "q": "¿Qué tipo de capilar se encuentra en el hígado, el bazo y la médula ósea?",
+      "opts": [
+        "El capilar continuo, sin poros y con lámina basal continua en el músculo y el pulmón.",
+        "El capilar fenestrado, con poros de 70 a 100 nm que filtran el plasma en el glomérulo.",
+        "El capilar sinusoide, con luz amplia, grandes aberturas y lámina basal discontinua.",
+        "El capilar linfático, con válvulas que dirigen el líquido intersticial hacia los ganglios."
+      ],
+      "ans": 2,
+      "expl": "Los sinusoides están en el hígado, el bazo, la médula ósea y la adenohipófisis. Tienen aberturas grandes y lámina basal ausente o discontinua, lo que deja pasar proteínas."
+    },
+    {
+      "id": "P-circ-30",
+      "topic": "circulatorio",
+      "ref": "sección 13",
+      "q": "¿Qué sucede con los glóbulos rojos al pasar por los capilares?",
+      "opts": [
+        "Se deforman sólo en las arteriolas y los capilares tienen luz de más de 50 µm.",
+        "Se detienen en el capilar para dejar pasar a los leucocitos y luego siguen su curso.",
+        "Se mezclan con el plasma intersticial, porque el capilar no tiene endotelio continuo.",
+        "Pasan casi en fila india, porque el capilar tiene un diámetro de unos 5 a 10 µm."
+      ],
+      "ans": 3,
+      "expl": "El capilar mide unos 5 a 10 µm, así que los glóbulos rojos pasan casi en fila india. El endotelio sí es continuo en la mayoría de los capilares."
     }
   ],
   "digestivo": [
@@ -1013,6 +1181,90 @@ const PRACTICA = {
       ],
       "ans": 3,
       "expl": "El colédoco y el conducto pancreático se juntan en la ampolla de Vater y desembocan en la papila duodenal mayor, en la segunda porción del duodeno. El esfínter de Oddi regula ese paso."
+    },
+    {
+      "id": "P-dige-25",
+      "topic": "digestivo",
+      "ref": "sección 14",
+      "q": "¿Qué tipo de epitelio tapiza la mucosa del estómago?",
+      "opts": [
+        "Cilíndrico simple, que se invagina en fositas gástricas donde desembocan las glándulas.",
+        "Plano estratificado no queratinizado, que se descama para protegerse del ácido gástrico.",
+        "Cúbico simple con borde en cepillo, que absorbe los nutrientes del quimo gástrico.",
+        "Pseudoestratificado ciliado, que mueve el quimo hacia el duodeno con sus cilios."
+      ],
+      "ans": 0,
+      "expl": "El estómago tiene epitelio cilíndrico simple que forma fositas gástricas, donde desembocan las glándulas. El plano estratificado es del esófago, y el cúbico con borde en cepillo es del intestino."
+    },
+    {
+      "id": "P-dige-26",
+      "topic": "digestivo",
+      "ref": "sección 14",
+      "q": "Durante la fase faríngea de la deglución, ¿qué ocurre con la laringe?",
+      "opts": [
+        "Desciende hacia el esófago para ayudar a empujar el bolo alimenticio hacia abajo.",
+        "Se eleva y la epiglotis bascula hacia abajo y atrás, sellando la entrada laríngea.",
+        "Se separa de la faringe para que el aire siga entrando sin interrupción en la tráquea.",
+        "Se contrae de forma voluntaria, como en la fase bucal, para controlar el paso del bolo."
+      ],
+      "ans": 1,
+      "expl": "En la fase faríngea la laringe se eleva, la epiglotis bascula y las cuerdas vocales se cierran. La fase faríngea es involuntaria."
+    },
+    {
+      "id": "P-dige-27",
+      "topic": "digestivo",
+      "ref": "sección 14",
+      "q": "¿Qué formación peritoneal va desde la curvatura menor del estómago y el duodeno hasta el hígado?",
+      "opts": [
+        "El epiplón mayor, que cuelga de la curvatura mayor y cubre el intestino delgado.",
+        "El mesenterio, que suspende el yeyuno e íleon de la pared posterior del abdomen.",
+        "El epiplón menor, que es la vía de paso de la tríada portal hacia el hilio hepático.",
+        "El ligamento falciforme, que fija el hígado a la pared abdominal anterior."
+      ],
+      "ans": 2,
+      "expl": "El epiplón menor va de la curvatura menor del estómago y del duodeno al hígado, y permite el paso de la tríada portal. El epiplón mayor cuelga de la curvatura mayor."
+    },
+    {
+      "id": "P-dige-28",
+      "topic": "digestivo",
+      "ref": "sección 14",
+      "q": "¿Qué ligamento contiene en su borde libre el ligamento redondo, resto de la vena umbilical fetal?",
+      "opts": [
+        "El epiplón mayor, que cuelga de la curvatura mayor del estómago y cubre el intestino.",
+        "El mesocolon, que fija el colon transverso a la pared posterior del abdomen.",
+        "El mesenterio, que suspende el intestino delgado y lleva sangre y linfa.",
+        "El ligamento falciforme, que fija el hígado a la pared abdominal anterior y al diafragma."
+      ],
+      "ans": 3,
+      "expl": "El ligamento falciforme fija el hígado y en su borde libre corre el ligamento redondo, resto de la vena umbilical fetal."
+    },
+    {
+      "id": "P-dige-29",
+      "topic": "digestivo",
+      "ref": "sección 14",
+      "q": "¿Qué porcentaje aproximado de agua tiene la saliva?",
+      "opts": [
+        "Más del 99 %, y el resto son amilasa, lipasa lingual, lisozima y moco.",
+        "Alrededor del 50 %, y el resto son enzimas digestivas de alto peso molecular.",
+        "Alrededor del 80 %, con proteínas que forman el bolo alimenticio junto con el moco.",
+        "Alrededor del 20 %, porque la saliva es principalmente moco viscoso de protección."
+      ],
+      "ans": 0,
+      "expl": "La saliva es más del 99 % agua. Además tiene amilasa salival, lipasa lingual, lisozima y moco, y ablanda los alimentos para formar el bolo."
+    },
+    {
+      "id": "P-dige-30",
+      "topic": "digestivo",
+      "ref": "sección 14",
+      "q": "¿Cuál es la función principal de la vesícula biliar?",
+      "opts": [
+        "Producir la bilis a partir de los hepatocitos, que se vuelca en la vesícula.",
+        "Almacenar y concentrar la bilis, que luego se libera cuando la colecistocinina la contrae.",
+        "Secretar enzimas digestivas que se mezclan con la bilis antes de ir al duodeno.",
+        "Absorber los ácidos grasos del quimo y devolverlos a la sangre por la vena porta."
+      ],
+      "ans": 1,
+      "expl": "La vesícula almacena y concentra la bilis, y se vacía cuando la colecistocinina la contrae. La bilis la produce el hígado, no la vesícula."
     }
   ],
   "urinario": [
@@ -1351,6 +1603,90 @@ const PRACTICA = {
       ],
       "ans": 3,
       "expl": "El urotelio es un epitelio de transición con células en sombrilla y uniones estrechas: forma una barrera casi impermeable y se deforma sin romperse. Por eso la vía urinaria no se puede reemplazar por intestino sin problemas."
+    },
+    {
+      "id": "P-urin-25",
+      "topic": "urinario",
+      "ref": "sección 15",
+      "q": "¿Qué es la papila renal?",
+      "opts": [
+        "La base de cada pirámide renal, que se apoya en la corteza del riñón.",
+        "La cápsula que rodea el glomérulo y recibe el filtrado del espacio capsular.",
+        "El vértice de cada pirámide renal, por donde la orina pasa a un cáliz menor.",
+        "El conducto que une la pelvis renal con la vejiga a través del trígono."
+      ],
+      "ans": 2,
+      "expl": "La papila es el vértice de la pirámide renal, y por ella la orina pasa a un cáliz menor. La base de la pirámide se apoya en la corteza."
+    },
+    {
+      "id": "P-urin-26",
+      "topic": "urinario",
+      "ref": "sección 15",
+      "q": "¿Qué presión favorece la filtración glomerular?",
+      "opts": [
+        "La presión hidrostática capsular, que es la retrógrada del líquido del espacio capsular.",
+        "La presión osmótica coloidal, que retiene el agua dentro del capilar glomerular.",
+        "La presión intrapleural, que es subatmosférica y se transmite al glomérulo.",
+        "La presión hidrostática glomerular, que es la de la sangre en el capilar del glomérulo."
+      ],
+      "ans": 3,
+      "expl": "La presión hidrostática glomerular es la que favorece la filtración. Las otras dos se oponen, y la intrapleural no interviene en el glomérulo."
+    },
+    {
+      "id": "P-urin-27",
+      "topic": "urinario",
+      "ref": "sección 15",
+      "q": "¿Qué efecto tiene el péptido natriurético atrial sobre la diuresis?",
+      "opts": [
+        "La aumenta, porque inhibe la reabsorción de sodio y agua y baja el volumen.",
+        "La disminuye, porque aumenta la reabsorción de agua en el conducto colector.",
+        "No tiene efecto sobre la diuresis, porque sólo actúa sobre el corazón y no sobre el riñón.",
+        "La disminuye, porque estimula la aldosterona para retener sodio y agua."
+      ],
+      "ans": 0,
+      "expl": "El péptido natriurético atrial aumenta la diuresis: inhibe la ADH y la aldosterona, y frena la reabsorción de sodio y agua."
+    },
+    {
+      "id": "P-urin-28",
+      "topic": "urinario",
+      "ref": "sección 15",
+      "q": "¿Qué células del aparato yuxtaglomerular secretan renina?",
+      "opts": [
+        "Las células de la mácula densa del túbulo distal, que detectan el NaCl tubular.",
+        "Las células yuxtaglomerulares de la arteriola aferente, que son barorreceptores.",
+        "Las células mesangiales, que se contraen y reducen la superficie de filtración.",
+        "Las células parietales de la cápsula de Bowman, que tapizan el espacio capsular."
+      ],
+      "ans": 1,
+      "expl": "Las células yuxtaglomerulares de la arteriola aferente secretan renina y actúan como barorreceptores. La mácula densa es el sensor de NaCl."
+    },
+    {
+      "id": "P-urin-29",
+      "topic": "urinario",
+      "ref": "sección 15",
+      "q": "¿Qué efecto tiene la aldosterona sobre el conducto colector?",
+      "opts": [
+        "Aumenta la reabsorción de potasio y la excreción de sodio por la orina.",
+        "Inhibe la reabsorción de agua, porque la ADH deja de actuar sobre las células principales.",
+        "Aumenta la reabsorción de sodio y la secreción de potasio y protones.",
+        "Aumenta la filtración glomerular, porque abre las hendiduras de los podocitos."
+      ],
+      "ans": 2,
+      "expl": "La aldosterona actúa sobre las células principales del colector: reabsorbe sodio y secreta potasio y protones, lo que aumenta el volumen."
+    },
+    {
+      "id": "P-urin-30",
+      "topic": "urinario",
+      "ref": "sección 15",
+      "q": "¿Qué es la creatinina en el análisis de la función renal?",
+      "opts": [
+        "Una hormona que el riñón produce para regular la presión arterial y la volemia.",
+        "Una enzima que el túbulo proximal usa para reabsorber la glucosa filtrada.",
+        "Un pigmento que se forma en el intestino y se excreta por la bilis.",
+        "Un desecho del metabolismo muscular, cuya concentración plasmática estima la filtración."
+      ],
+      "ans": 3,
+      "expl": "La creatinina viene de la creatina fosfato muscular. Su concentración plasmática, y el clearance, estiman la filtración glomerular."
     }
   ],
   "endocrino": [
@@ -1689,6 +2025,90 @@ const PRACTICA = {
       ],
       "ans": 3,
       "expl": "El péptido natriurético atrial se libera cuando aumenta el volumen y el corazón se llena. Inhibe la ADH y la aldosterona, frena la reabsorción de sodio y agua, y aumenta la diuresis. Es el sistema opuesto al RAA."
+    },
+    {
+      "id": "P-endo-25",
+      "topic": "endocrino",
+      "ref": "sección 16",
+      "q": "¿En qué estructura ósea se aloja la hipófisis?",
+      "opts": [
+        "En la silla turca, y cuelga del hipotálamo por el tallo hipofisario.",
+        "En la base del cráneo, sobre el hueso occipital y por debajo del cerebelo.",
+        "En el hueso etmoides, por encima de la cavidad nasal y en contacto con los senos.",
+        "En la columna cervical, entre la primera y la segunda vértebra."
+      ],
+      "ans": 0,
+      "expl": "La hipófisis se aloja en la silla turca y cuelga del hipotálamo por el tallo. El resto de las ubicaciones no corresponde."
+    },
+    {
+      "id": "P-endo-26",
+      "topic": "endocrino",
+      "ref": "sección 16",
+      "q": "¿Qué hormona del timo ayuda a la maduración de los linfocitos T?",
+      "opts": [
+        "La melatonina, que la glándula pineal libera durante la noche.",
+        "La timosina, que está en el timo y tiene su máximo en la infancia.",
+        "La calcitonina, que la tiroides libera cuando sube la calcemia.",
+        "La eritropoyetina, que el riñón libera para estimular la médula ósea."
+      ],
+      "ans": 1,
+      "expl": "La timosina del timo ayuda a madurar los linfocitos T y su actividad es máxima en la infancia. La melatonina es pineal, la calcitonina tiroidea y la eritropoyetina renal."
+    },
+    {
+      "id": "P-endo-27",
+      "topic": "endocrino",
+      "ref": "sección 16",
+      "q": "¿En qué zona de la corteza suprarrenal se produce el cortisol?",
+      "opts": [
+        "En la zona glomerular, que sintetiza la aldosterona bajo la acción de la angiotensina II.",
+        "En la zona reticular, que sintetiza los andrógenos suprarrenales.",
+        "En la zona fasciculada, que sintetiza el glucocorticoide cortisol.",
+        "En la médula suprarrenal, donde se sintetiza la adrenalina por acción simpática."
+      ],
+      "ans": 2,
+      "expl": "El cortisol se produce en la zona fasciculada. La glomerular hace aldosterona, la reticular andrógenos y la médula adrenalina."
+    },
+    {
+      "id": "P-endo-28",
+      "topic": "endocrino",
+      "ref": "sección 16",
+      "q": "¿Qué células de la corteza suprarrenal producen la aldosterona?",
+      "opts": [
+        "Las de la zona fasciculada, que responden a la ACTH y producen cortisol.",
+        "Las de la zona reticular, que producen los andrógenos y la progesterona.",
+        "Las cromafines de la médula, que producen la adrenalina y la noradrenalina.",
+        "Las de la zona glomerular, que responden a la angiotensina II y al potasio."
+      ],
+      "ans": 3,
+      "expl": "La zona glomerular produce aldosterona, y la estimulan la angiotensina II y el potasio. La fasciculada hace cortisol y las cromafines de la médula hacen catecolaminas."
+    },
+    {
+      "id": "P-endo-29",
+      "topic": "endocrino",
+      "ref": "sección 16",
+      "q": "¿Qué hormona regula el metabolismo y la temperatura corporal junto con los ritmos de la tiroides?",
+      "opts": [
+        "La T3 y la T4, que regulan el metabolismo basal de todas las células.",
+        "La calcitonina, que frena los osteoclastos y regula la temperatura corporal.",
+        "La PTH, que sube la calcemia y regula la temperatura del cuerpo.",
+        "La insulina, que regula la temperatura al favorecer la captación de glucosa."
+      ],
+      "ans": 0,
+      "expl": "T3 y T4 regulan el metabolismo basal de todas las células y ayudan a mantener la temperatura corporal. La calcitonina y la PTH regulan el calcio."
+    },
+    {
+      "id": "P-endo-30",
+      "topic": "endocrino",
+      "ref": "sección 16",
+      "q": "¿Qué célula del islote pancreático produce la somatostatina?",
+      "opts": [
+        "La célula alfa, que sintetiza glucagón y aumenta la glucemia.",
+        "La célula D, que inhibe la secreción de insulina y de glucagón.",
+        "La célula beta, que sintetiza insulina y disminuye la glucemia.",
+        "La célula parafolicular, que sintetiza calcitonina en la tiroides."
+      ],
+      "ans": 1,
+      "expl": "La célula D del islote produce somatostatina, que inhibe la insulina y el glucagón. La alfa produce glucagón, la beta insulina; la parafolicular está en la tiroides."
     }
   ],
   "nervioso": [
@@ -2027,6 +2447,90 @@ const PRACTICA = {
       ],
       "ans": 3,
       "expl": "El vago (X) es mixto y regula órganos del tórax y del abdomen, además de intervenir en la fonación y la deglución. El accesorio (XI) es motor para cuello y hombros, el hipogloso (XII) mueve la lengua y el trigémino (V) da sensibilidad a la cara."
+    },
+    {
+      "id": "P-nerv-25",
+      "topic": "nervioso",
+      "ref": "sección 17",
+      "q": "¿Qué estructura forma el cuerpo calloso?",
+      "opts": [
+        "Las fibras de asociación, que conectan regiones de un mismo hemisferio en trayecto longitudinal.",
+        "Las fibras de proyección, que comunican la corteza con estructuras inferiores en trayecto vertical.",
+        "Las fibras comisurales, que unen un hemisferio cerebral con el otro en trayecto transversal.",
+        "Los ganglios basales, que coordinan el movimiento voluntario desde el telencéfalo."
+      ],
+      "ans": 2,
+      "expl": "El cuerpo calloso es un conjunto de fibras comisurales: une los dos hemisferios en trayecto transversal."
+    },
+    {
+      "id": "P-nerv-26",
+      "topic": "nervioso",
+      "ref": "sección 17",
+      "q": "¿Qué lóbulo cerebral procesa la información visual que llega desde la retina?",
+      "opts": [
+        "El temporal, debajo del surco lateral, donde está el área de Wernicke.",
+        "El parietal, detrás del surco central, que procesa la sensibilidad somática.",
+        "El frontal, que contiene el área de Broca y la planificación motora.",
+        "El occipital, en el polo posterior del cerebro, detrás del surco parietooccipital."
+      ],
+      "ans": 3,
+      "expl": "El lóbulo occipital recibe e interpreta la información visual. El temporal tiene la audición y Wernicke, y el parietal la sensibilidad."
+    },
+    {
+      "id": "P-nerv-27",
+      "topic": "nervioso",
+      "ref": "sección 17",
+      "q": "¿Qué funciones cumple el nervio vestibulococlear, el par VIII?",
+      "opts": [
+        "Audición y equilibrio, y es un nervio sensitivo.",
+        "Movimiento de los músculos de la lengua y la faringe, y es un nervio motor.",
+        "Control de la expresión facial y de las glándulas lagrimales, y es un nervio mixto.",
+        "Movimiento del globo ocular hacia afuera, y es un nervio motor."
+      ],
+      "ans": 0,
+      "expl": "El vestibulococlear (VIII) es sensitivo y cumple audición y equilibrio. El hipogloso mueve la lengua, el facial controla la expresión facial y el abducens mueve el ojo."
+    },
+    {
+      "id": "P-nerv-28",
+      "topic": "nervioso",
+      "ref": "sección 17",
+      "q": "¿Qué estructura forma el cuarto ventrículo del sistema ventricular?",
+      "opts": [
+        "Un espacio en el telencéfalo, en contacto con el hipocampo y la amígdala.",
+        "Un espacio detrás del tronco encefálico, que se relaciona con el LCR.",
+        "Un espacio en el diencéfalo, que se ubica en el centro del tálamo.",
+        "Un espacio en el mesencéfalo, que se comunica con el espacio subdural."
+      ],
+      "ans": 1,
+      "expl": "El cuarto ventrículo está detrás del tronco encefálico. Los ventrículos laterales son del telencéfalo y el tercero es del diencéfalo."
+    },
+    {
+      "id": "P-nerv-29",
+      "topic": "nervioso",
+      "ref": "sección 17",
+      "q": "¿Qué surco separa el lóbulo temporal del lóbulo frontal?",
+      "opts": [
+        "El surco central, que separa el frontal del parietal.",
+        "El surco parietooccipital, que separa el parietal del occipital.",
+        "El surco lateral, que se ubica debajo del lóbulo frontal y separa el temporal.",
+        "El surco de la ínsula, que separa el lóbulo frontal del límbico."
+      ],
+      "ans": 2,
+      "expl": "El surco lateral separa el temporal del frontal y el parietal. El central separa el frontal del parietal, y el parietooccipital, el parietal del occipital."
+    },
+    {
+      "id": "P-nerv-30",
+      "topic": "nervioso",
+      "ref": "sección 17",
+      "q": "¿Qué es la cola de caballo?",
+      "opts": [
+        "Una estructura del tronco encefálico que coordina la respiración y la presión arterial.",
+        "La parte del cerebelo que coordina el equilibrio y la postura del cuerpo.",
+        "La capa externa de las meninges, que contacta con el hueso del cráneo.",
+        "El conjunto de nervios lumbares, sacros y bajos que desciende por el canal vertebral desde L1-L2."
+      ],
+      "ans": 3,
+      "expl": "La cola de caballo es el conjunto de nervios lumbares, sacros y bajos que desciende por el canal vertebral desde la parte inferior de la médula, a la altura de L1-L2."
     }
   ],
   "bioingenieria": [
@@ -2379,6 +2883,76 @@ const PRACTICA = {
       ],
       "ans": 0,
       "expl": "El epitelio tubular está polarizado: la Na+/K+-ATPasa basolateral y las acuaporinas permiten reabsorber de forma selectiva. La rama descendente es impermeable a solutos, el urotelio es de la vía urinaria y la cápsula no reabsorbe."
+    },
+    {
+      "id": "P-bioi-26",
+      "topic": "bioingenieria",
+      "ref": "sección 18",
+      "q": "¿Qué células madre pueden originar un organismo completo y sus anexos?",
+      "opts": [
+        "Las totipotentes, como el cigoto y las blastómeras.",
+        "Las pluripotentes, como las de la masa celular interna del blastocisto.",
+        "Las multipotentes, como las de la médula ósea o el cordón umbilical.",
+        "Las unipotentes, como el neumocito tipo II que regenera el neumocito tipo I."
+      ],
+      "ans": 0,
+      "expl": "Las totipotentes forman el organismo completo con sus anexos: cigoto, blastómeras y mórula. Las pluripotentes no forman anexos, y las multipotentes y unipotentes tienen un linaje más limitado."
+    },
+    {
+      "id": "P-bioi-27",
+      "topic": "bioingenieria",
+      "ref": "sección 18",
+      "q": "¿Qué célula madre es unipotente y regenera los neumocitos tipo I del alvéolo?",
+      "opts": [
+        "El macrófago alveolar, que fagocita las partículas que llegan al alvéolo.",
+        "El neumocito tipo II, que es la célula progenitora que repone a los tipo I.",
+        "La célula caliciforme de la vía aérea, que secreta moco para atrapar partículas.",
+        "La célula ependimaria, que reviste los ventrículos y participa en el LCR."
+      ],
+      "ans": 1,
+      "expl": "El neumocito tipo II es unipotente: su linaje da origen a neumocitos tipo I. Las otras células tienen funciones distintas."
+    },
+    {
+      "id": "P-bioi-28",
+      "topic": "bioingenieria",
+      "ref": "sección 18",
+      "q": "¿Qué fuente de células madre adultas tiene aplicación clínica consolidada?",
+      "opts": [
+        "El cerebro adulto, que aporta neuronas nuevas para reparar lesiones corticales.",
+        "La piel adulta, que aporta melanocitos para trasplantes de piel completos.",
+        "La médula ósea, que aporta células hematopoyéticas para el trasplante.",
+        "El músculo cardíaco adulto, que se regenera por mitosis de sus fibras maduras."
+      ],
+      "ans": 2,
+      "expl": "El trasplante de médula ósea es la aplicación consolidada de células hematopoyéticas. El músculo cardíaco no se regenera por mitosis: sus fibras maduras no se dividen."
+    },
+    {
+      "id": "P-bioi-29",
+      "topic": "bioingenieria",
+      "ref": "sección 18",
+      "q": "¿Qué riesgo tienen las células iPS por el método de reprogramación?",
+      "opts": [
+        "La reprogramación genera células que rechazan siempre al receptor por antígenos.",
+        "La reprogramación impide que las células se diferencien en ningún linaje.",
+        "La reprogramación produce células con más de un núcleo que no pueden dividirse.",
+        "El transgén puede quedar integrado en el genoma y reactivar el c-Myc."
+      ],
+      "ans": 3,
+      "expl": "Las iPS son autólogas, pero el transgén puede quedar en el genoma y reactivar el c-Myc. Ese es el riesgo de su método."
+    },
+    {
+      "id": "P-bioi-30",
+      "topic": "bioingenieria",
+      "ref": "sección 18",
+      "q": "¿Qué proteína secretan las células de Paneth de las criptas intestinales?",
+      "opts": [
+        "La lisozima y las defensinas, para el control bacteriano en la luz intestinal.",
+        "La pepsina, que digiere las proteínas del quimo en la luz del intestino delgado.",
+        "La gastrina, que estimula la producción de ácido clorhídrico en el estómago.",
+        "La amilasa pancreática, que degrada el almidón en disacáridos y dextrinas."
+      ],
+      "ans": 0,
+      "expl": "Las células de Paneth secretan lisozima y defensinas, que controlan las bacterias de la luz intestinal. La pepsina es gástrica, la gastrina la secretan las células G y la amilasa pancreática no es de las criptas."
     }
   ]
 };
