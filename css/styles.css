@@ -70,6 +70,27 @@ select { font: inherit; padding: .35rem .5rem; border-radius: 8px; border: 1px s
 .score { font-size: 1.3rem; font-weight: 700; margin: .3rem 0; }
 .review li { margin: .5rem 0; }
 
+/* Capítulo con HTML propio (data-s12.js) */
+.cap .content { padding: .2rem 1.3rem 1.2rem; border-top: 1px solid var(--line); }
+.cap .content h3 { font-size: 1.05rem; margin: 1.4rem 0 .4rem; padding-bottom: .25rem; border-bottom: 1px solid var(--line); }
+.cap .content h4 { font-size: 1rem; margin: 1.2rem 0 .3rem; }
+.cap .content table { width: 100%; border-collapse: collapse; font-size: .9rem; margin: .3rem 0; }
+.cap .content th, .cap .content td { border: 1px solid var(--line); padding: .35rem .5rem; text-align: left; vertical-align: top; }
+.cap .content th { background: #f0f3f8; }
+.tabla-desliza { overflow-x: auto; }
+.tabla-aviso[hidden] { display: none; }
+.key { margin: .8rem 0; padding: .7rem .9rem; border-radius: 9px; background: #f5f8ff; border: 1px solid #d6e2ff; }
+.ky-t { font-weight: 700; margin-bottom: .3rem; }
+.trap { margin: .8rem 0; padding: .55rem .8rem; background: var(--trampa); color: var(--trampa-ink); border-left: 4px solid #e08a00; border-radius: 0 8px 8px 0; }
+.tr-t { font-weight: 700; margin-bottom: .25rem; }
+.formula { margin: .6rem 0; padding: .6rem .8rem; border-radius: 9px; background: #f6f7f9; border: 1px solid var(--line); font-family: ui-monospace, Consolas, monospace; font-size: .9rem; line-height: 1.7; }
+.fig { margin: 1rem 0; }
+.fig svg { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+.fig-cap { font-size: .85rem; color: var(--muted); margin-top: .4rem; }
+.fig-ampliar[hidden] { display: none; }
+.example { margin: .8rem 0; padding: .55rem .8rem; background: #f3faf6; border-left: 4px solid var(--ok); border-radius: 0 8px 8px 0; }
+.ex-t { font-weight: 700; margin-bottom: .25rem; }
+
 .foot { text-align: center; color: var(--muted); font-size: .85rem; padding: 1.5rem 1rem; }
 
 @media (max-width: 860px) {

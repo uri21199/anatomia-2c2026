@@ -8,12 +8,12 @@
 
   // Capítulos 12 a 18, con los títulos de la guía
   const CAPS = [
-    { num: 12, id: "fan-s12", title: "Esplacnología: tórax y aparato respiratorio", topic: "respiratorio", sections: GUIA.respiratorio.sections },
-    { num: 13, id: "fan-s13", title: "Sistema cardiovascular", topic: "circulatorio", sections: GUIA.circulatorio.sections },
-    { num: 14, id: "fan-s14", title: "Aparato digestivo", topic: "digestivo", sections: GUIA.digestivo.sections },
-    { num: 15, id: "fan-s15", title: "Aparato urinario", topic: "urinario", sections: GUIA.urinario.sections },
+    { num: 12, id: "fan-s12", title: "Esplacnología: tórax y aparato respiratorio", topic: "respiratorio", sections: GUIA.respiratorio.sections, raw: S12_HTML },
+    { num: 13, id: "fan-s13", title: "Sistema cardiovascular", topic: "circulatorio", sections: GUIA.circulatorio.sections, raw: S13_HTML },
+    { num: 14, id: "fan-s14", title: "Aparato digestivo", topic: "digestivo", sections: GUIA.digestivo.sections, raw: S14_HTML },
+    { num: 15, id: "fan-s15", title: "Aparato urinario", topic: "urinario", sections: GUIA.urinario.sections, raw: S15_HTML },
     { num: 16, id: "fan-s16", title: "Sistema endócrino", topic: "endocrino", sections: GUIA.endocrino.sections },
-    { num: 17, id: "fan-s17", title: "Sistema nervioso", topic: "nervioso", sections: GUIA.nervioso.sections },
+    { num: 17, id: "fan-s17", title: "Sistema nervioso", topic: "nervioso", sections: GUIA.nervioso.sections, raw: S17_HTML },
     { num: 18, id: "fan-s18", title: "Enfoque bioingenieril · los papers de la cátedra", topic: "bioingenieria", sections: CAP18.sections }
   ];
   const TOPIC_TITLE = Object.fromEntries(CAPS.map((c) => [c.topic, `${c.num} · ${c.title}`]));
@@ -49,6 +49,8 @@
   }
 
   function renderCap(c) {
+    // Capítulos con HTML propio (p. ej. el 12) se insertan tal cual
+    if (c.raw) return `<section class="cap" id="${c.id}">${c.raw}</section>`;
     return `<section class="cap" id="${c.id}">
       <details open>
         <summary><span class="num">${c.num}</span> ${esc(c.title)}</summary>
