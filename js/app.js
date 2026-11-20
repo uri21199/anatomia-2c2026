@@ -134,7 +134,7 @@
         <h2>Pendientes y límites</h2>
         <ul>
           <li><strong>Videos sisbiofiuba:</strong> no se pudieron ver ni transcribir; sólo hay etiquetas (auditivo, visual, gustativo, olfativo, táctil).</li>
-          <li><strong>Guía guiasdeingenieria:</strong> sitio no oficial. Se leyeron las secciones 1 a 3 y partes de la 5, 13 y 14. Las secciones 4, 6, 7 (33 preguntas reales) y 8 (simulacro) no se leyeron. Respiratorio, digestivo y urinario tienen confianza baja.</li>
+          <li><strong>Guía guiasdeingenieria:</strong> sitio no oficial, con fuente no preaprobada: el contenido está parafraseado. Secciones 12 (respiratorio), 13 (cardiovascular), 14 (digestivo), 16 (endócrino) y la primera parte de la 15 (urinario) se leyeron casi completas. El resto de la 15 y la 17 (nervioso) llegaron como resumen y se marcan \"resumen\" en la referencia. Las secciones 4, 6, 7 (33 preguntas reales) y 8 (simulacro) no se leyeron.</li>
           <li><strong>Apuntes de compañera:</strong> pueden tener errores. Ejemplo: la ubicación de la renina.</li>
           <li><strong>Preguntas generadas:</strong> las escribí yo y se marcan como generadas. No son de la cátedra.</li>
         </ul>
@@ -331,6 +331,15 @@
   }
 
   window.addEventListener("hashchange", rerender);
+
+  // Integra el contenido extendido de la guía (secciones 12 a 17) en cada tema.
+  TOPICS.forEach((t) => {
+    const g = GUIA[t.id];
+    if (!g) return;
+    t.sections = g.mode === "replace" ? g.sections : t.sections.concat(g.sections);
+    if (g.conf) t.conf = g.conf;
+    if (g.intro) t.intro = g.intro;
+  });
 
   buildFilters();
   rerender();

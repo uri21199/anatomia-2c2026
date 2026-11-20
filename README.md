@@ -19,6 +19,7 @@ index.html
 css/styles.css
 js/data-sources.js   contenido por tema (bloques con src y ref)
 js/data-quiz.js      banco de preguntas
+js/data-guia.js      contenido extendido de la guía (secciones 12 a 17)
 js/app.js            lógica: rutas, filtros, quiz
 tools/validate_quiz.mjs   valida cantidades y sesgo de longitud
 ```
