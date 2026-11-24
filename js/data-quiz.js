@@ -1,6 +1,7 @@
 // Bancos de parcial simulado. Cada parcial: 20 opción múltiple y 5 de desarrollo.
 // mc: 4 opciones, ans = índice de la correcta, why = justificación de cada opción (mismo orden que opts).
 // dev: consigna con checklist de puntos clave, respuesta modelo y justificación.
+// sec = encabezado de la teoría que justifica la respuesta (secTopic si está en otro sistema).
 
 const PARCIALES = [
   {
@@ -25,7 +26,8 @@ const PARCIALES = [
           "Descartada: el izquierdo es más largo y horizontal, no más vertical; la frase invierte las características de los dos bronquios.",
           "Descartada: es al revés. El derecho es el corto y vertical; el izquierdo es el largo y horizontal, y pasa por debajo del arco de la aorta.",
           "Descartada: el izquierdo da dos bronquios lobares y el derecho tres; los lobares corresponden a los lóbulos de cada pulmón."
-        ]
+        ],
+        "sec": "El árbol bronquial y sus gradientes"
       },
       {
         "id": "PC2",
@@ -45,7 +47,8 @@ const PARCIALES = [
           "Correcta: la tensión superficial del líquido alveolar tiende a colapsar el alvéolo, y el surfactante la reduce; sin surfactante suficiente, el alvéolo colapsa en la espiración.",
           "Descartada: el déficit de surfactante aumenta la tensión superficial y reduce la distensibilidad, no la aumenta.",
           "Descartada: la vía aérea está permeable en este cuadro; la resistencia no explica el colapso alveolar."
-        ]
+        ],
+        "sec": "El alvéolo y la membrana alveolocapilar, capa por capa"
       },
       {
         "id": "PC3",
@@ -65,7 +68,8 @@ const PARCIALES = [
           "Descartada: 756 mmHg es la presión intrapleural, que siempre es subatmosférica y no es la presión alveolar.",
           "Correcta: al aumentar el volumen torácico, la presión alveolar cae unos 2 mmHg por debajo de la atmosférica, hasta 758, y entra aire.",
           "Descartada: en la inspiración la presión alveolar sí cambia y baja; si no cambiara, el aire no entraría."
-        ]
+        ],
+        "sec": "Mecánica ventilatoria"
       },
       {
         "id": "PC4",
@@ -85,7 +89,8 @@ const PARCIALES = [
           "Descartada: la mitral separa la aurícula izquierda del ventrículo izquierdo; la salida hacia la aorta es por la válvula aórtica.",
           "Descartada: la aorta no nace de la aurícula; las venas pulmonares llegan a la aurícula izquierda, no salen hacia la aorta.",
           "Correcta: la aorta nace del ventrículo izquierdo por la válvula aórtica y lleva sangre oxigenada a todo el cuerpo."
-        ]
+        ],
+        "sec": "Cámaras, tabiques y accidentes internos"
       },
       {
         "id": "PC5",
@@ -105,7 +110,8 @@ const PARCIALES = [
           "Descartada: en la sístole auricular las AV están abiertas y las sigmoideas cerradas; además el volumen de la aurícula sí cambia.",
           "Descartada: en la eyección las sigmoideas están abiertas y el volumen ventricular disminuye, así que no hay isovolumetría.",
           "Descartada: en el llenado las AV están abiertas y el volumen aumenta; no hay válvulas cerradas."
-        ]
+        ],
+        "sec": "Ciclo cardíaco y ruidos"
       },
       {
         "id": "PC6",
@@ -125,7 +131,8 @@ const PARCIALES = [
           "Correcta: con más presión que vencer para abrir las sigmoideas, el volumen sistólico disminuye en cada latido.",
           "Descartada: el volumen sistólico sí depende de la poscarga; la frecuencia no es el único factor.",
           "Descartada: la contractilidad y el estiramiento de las fibras son otros determinantes; el estiramiento corresponde a la precarga, no a la poscarga."
-        ]
+        ],
+        "sec": "Gasto cardíaco y sus determinantes"
       },
       {
         "id": "PC7",
@@ -145,7 +152,8 @@ const PARCIALES = [
           "Descartada: el hepático derecho se une al hepático izquierdo para formar el hepático común, no al conducto pancreático dentro del páncreas.",
           "Correcta: sin vesícula, la bilis llega desde el hígado por el hepático común, que se continúa como colédoco y desemboca en la papila duodenal mayor.",
           "Descartada: el conducto pancreático lleva jugo pancreático, no bilis, y desemboca en la segunda porción del duodeno, no en la primera."
-        ]
+        ],
+        "sec": "Hígado, vesícula y páncreas exocrino"
       },
       {
         "id": "PC8",
@@ -165,7 +173,8 @@ const PARCIALES = [
           "Descartada: las placas de Peyer están en el íleon, no en el duodeno, y no secretan jugo pancreático.",
           "Descartada: el plexo submucoso es nervioso y regula la secreción y la vasoconstricción; no es tejido linfático.",
           "Correcta: el MALT es el tejido linfático asociado a mucosas, con folículos prominentes en la lámina propia."
-        ]
+        ],
+        "sec": "Intestino delgado: los tres niveles de amplificación"
       },
       {
         "id": "PC9",
@@ -185,7 +194,8 @@ const PARCIALES = [
           "Descartada: el ácido clorhídrico no emulsiona grasas; actúa sobre proteínas y activa el pepsinógeno.",
           "Descartada: la amilasa salival actúa sobre el almidón, no sobre los lípidos.",
           "Descartada: la tripsina actúa sobre proteínas, no sobre triglicéridos; la lipasa es la que rompe los triglicéridos."
-        ]
+        ],
+        "sec": "Digestión y absorción por nutriente"
       },
       {
         "id": "PC10",
@@ -205,7 +215,8 @@ const PARCIALES = [
           "Correcta: la uretra femenina es corta y se abre cerca del ano, así que las bacterias recorren un trayecto breve hasta la vejiga.",
           "Descartada: el trígono sí tiene mucosa, lisa y adherida a la capa muscular, y no deja pasar bacterias.",
           "Descartada: la glucosa no está en la orina normal, y su presencia no explica por qué la uretra femenina se infecta más."
-        ]
+        ],
+        "sec": "Uréteres, vejiga, uretra y micción"
       },
       {
         "id": "PC11",
@@ -225,7 +236,8 @@ const PARCIALES = [
           "Descartada: la rama descendente delgada es impermeable a solutos y no regula el calcio.",
           "Correcta: el túbulo contorneado distal, cúbico simple sin borde en cepillo, es donde la PTH regula la reabsorción de Ca2+.",
           "Descartada: el colector regula sodio y potasio por aldosterona; la vejiga no forma parte de la nefrona."
-        ]
+        ],
+        "sec": "2 · Túbulo renal, segmento por segmento"
       },
       {
         "id": "PC12",
@@ -245,7 +257,8 @@ const PARCIALES = [
           "Descartada: la calcitonina regula el calcio, no la presión ni el volumen.",
           "Descartada: la eritropoyetina regula la producción de glóbulos rojos; no actúa sobre la arteriola eferente ni sobre el volumen.",
           "Correcta: el sistema renina-angiotensina-aldosterona genera angiotensina II, que contrae la eferente, y aldosterona, que retiene sodio y agua."
-        ]
+        ],
+        "sec": "Aparato yuxtaglomerular"
       },
       {
         "id": "PC13",
@@ -265,7 +278,8 @@ const PARCIALES = [
           "Descartada: la célula folicular produce T3 y T4, no calcitonina.",
           "Descartada: la paratiroides produce PTH, que sube la calcemia; la calcitonina la produce la tiroides y hace lo contrario.",
           "Descartada: la parafolicular no contacta el coloide, y la calcitonina baja la calcemia, no la sube."
-        ]
+        ],
+        "sec": "Tiroides y paratiroides · el par del calcio"
       },
       {
         "id": "PC14",
@@ -285,7 +299,8 @@ const PARCIALES = [
           "Correcta: el cortisol de la zona fasciculada de la corteza eleva la glucemia actuando sobre el hígado, sobre todo en el ayuno.",
           "Descartada: la aldosterona regula el sodio y el potasio, no la glucemia.",
           "Descartada: la insulina es pancreática y baja la glucemia; no es una hormona de la corteza suprarrenal."
-        ]
+        ],
+        "sec": "Suprarrenales · afuera corteza, adentro médula"
       },
       {
         "id": "PC15",
@@ -305,7 +320,8 @@ const PARCIALES = [
           "Descartada: la T4 no es una hormona peptídica; es una tiroidea liposoluble que no se degrada en el estómago.",
           "Correcta: T3 y T4 son liposolubles, por eso se administran por vía oral y se absorben en el yeyuno e íleon.",
           "Descartada: la T4 es liposoluble, no hidrosoluble, y se absorbe en el intestino delgado, no por la pared del estómago."
-        ]
+        ],
+        "sec": "Hormona: distribución universal, acción específica"
       },
       {
         "id": "PC16",
@@ -325,7 +341,8 @@ const PARCIALES = [
           "Descartada: el lóbulo temporal contiene Wernicke y procesa la audición, no el tacto ni el dolor.",
           "Descartada: el lóbulo occipital procesa la información visual, no la sensibilidad somática.",
           "Correcta: el área somatosensorial primaria está en el lóbulo parietal, detrás de la cisura central."
-        ]
+        ],
+        "sec": "Lóbulos corticales · la cátedra lo toma"
       },
       {
         "id": "PC17",
@@ -345,7 +362,8 @@ const PARCIALES = [
           "Descartada: la microglía es la que fagocita; los astrocitos son los que forman la cicatriz.",
           "Descartada: la barrera hematoencefálica la forman los astrocitos, y los oligodendrocitos no regulan el SNP.",
           "Descartada: en el SNP la mielina la hacen las células de Schwann, no los oligodendrocitos ni las satélite."
-        ]
+        ],
+        "sec": "Neuroglía: la pregunta de distractores vecinos por excelencia"
       },
       {
         "id": "PC18",
@@ -365,7 +383,8 @@ const PARCIALES = [
           "Correcta: el impulso salta de nodo de Ranvier a nodo, y la mielina reduce la pérdida de corriente, así que la velocidad aumenta.",
           "Descartada: el calibre influye, pero la mielina también; la conducción no depende sólo del calibre.",
           "Descartada: la velocidad varía con la mielinización y el calibre; no es igual en todas las fibras."
-        ]
+        ],
+        "sec": "Mielina, fibra nerviosa y conducción saltatoria"
       },
       {
         "id": "PC19",
@@ -385,7 +404,8 @@ const PARCIALES = [
           "Descartada: las vellosidades son el segundo nivel, no el tercero.",
           "Correcta: las microvellosidades son el tercer nivel, evaginaciones de la membrana apical de cada enterocito que forman el borde en cepillo.",
           "Descartada: las criptas secretan lisozima y defensinas, no amplifican el área de absorción."
-        ]
+        ],
+        "sec": "Tabla de traducción: requisito → estructura"
       },
       {
         "id": "PC20",
@@ -405,7 +425,8 @@ const PARCIALES = [
           "Descartada: la presión osmótica de la orina no forma parte de la barrera de filtración.",
           "Descartada: la matriz de colágeno y la membrana basal se conservan en el andamio; lo que falta son los podocitos que retienen la albúmina.",
           "Correcta: la barrera de carga y las hendiduras de filtración de los podocitos son las que retienen la albúmina; sin ellos hay filtración libre."
-        ]
+        ],
+        "sec": "Paper 1: riñón bioingenierizado"
       }
     ],
     "dev": [
@@ -423,7 +444,8 @@ const PARCIALES = [
           "Justifica con el eje tiroideo: TRH → TSH → T3/T4 con retroalimentación negativa."
         ],
         "modelo": "En el hipotiroidismo primario la glándula no produce suficiente T4 y T3. Como esas hormonas ya no ejercen retroalimentación negativa sobre la hipófisis, la TSH sube. En el secundario la hipófisis no libera TSH, así que la TSH queda baja o normal inadecuadamente, mientras la T4 está baja.",
-        "justificacion": "Lo que decide la localización es la dirección de la hormona trófica respecto de la periférica. Primario: periférica baja y trófica alta. Secundario: periférica y trófica bajas."
+        "justificacion": "Lo que decide la localización es la dirección de la hormona trófica respecto de la periférica. Primario: periférica baja y trófica alta. Secundario: periférica y trófica bajas.",
+        "sec": "Retroalimentación negativa y los ejes"
       },
       {
         "id": "DV2",
@@ -439,7 +461,8 @@ const PARCIALES = [
           "Justifica: las sales biliares emulsionan grasas; no las digieren."
         ],
         "modelo": "La bilis se produce en el hígado y sale por los conductos hepáticos derecho e izquierdo, que se unen en el conducto hepático común. Ese conducto se une al cístico, que viene de la vesícula biliar, donde la bilis se almacena y concentra. Así se forma el colédoco, que desemboca en la segunda porción del duodeno.",
-        "justificacion": "Las sales biliares emulsionan las grasas para que la lipasa pancreática pueda actuar; no las digieren. Por eso su llegada al duodeno es clave."
+        "justificacion": "Las sales biliares emulsionan las grasas para que la lipasa pancreática pueda actuar; no las digieren. Por eso su llegada al duodeno es clave.",
+        "sec": "Hígado, vesícula y páncreas exocrino"
       },
       {
         "id": "DV3",
@@ -455,7 +478,8 @@ const PARCIALES = [
           "Relaciona con el ECG: la onda P, el intervalo P-Q (con el retraso) y el complejo QRS."
         ],
         "modelo": "El orden es: nódulo SA → nódulo AV → haz de His → ramas derecha e izquierda → fibras de Purkinje. El nódulo AV introduce un retraso para que las aurículas terminen de vaciarse antes de la contracción ventricular. Es el único puente eléctrico entre aurículas y ventrículos, por eso ese retraso se refleja en el intervalo P-Q del ECG.",
-        "justificacion": "Sin ese retraso, la contracción auricular y la ventricular serían casi simultáneas y el llenado ventricular sería menos eficiente."
+        "justificacion": "Sin ese retraso, la contracción auricular y la ventricular serían casi simultáneas y el llenado ventricular sería menos eficiente.",
+        "sec": "Sistema de conducción y su lectura en el ECG"
       },
       {
         "id": "DV4",
@@ -471,7 +495,8 @@ const PARCIALES = [
           "Justifica: el colapso ocurre aunque la vía aérea esté permeable."
         ],
         "modelo": "La pleura parietal tapiza la pared torácica, el diafragma y el mediastino; la visceral recubre el pulmón y entra en las fisuras. Entre ambas hay una cavidad con una película de líquido que reduce la fricción y, por tensión superficial, mantiene las hojas unidas. Si entra aire (neumotórax), las hojas se separan y el pulmón colapsa por su retroceso elástico.",
-        "justificacion": "El pulmón se mantiene expandido por la presión negativa de la cavidad pleural. Al perderla, se colapsa aunque la vía aérea siga abierta."
+        "justificacion": "El pulmón se mantiene expandido por la presión negativa de la cavidad pleural. Al perderla, se colapsa aunque la vía aérea siga abierta.",
+        "sec": "Pulmones y pleuras"
       },
       {
         "id": "DV5",
@@ -487,7 +512,8 @@ const PARCIALES = [
           "Justifica: si un constructo falla con el tiempo, sospechar primero del andamio."
         ],
         "modelo": "Los autores atribuyen la caída de estradiol a la calcificación del alginato entrelazado con Ca²⁺: el calcio precipita y el constructo se endurece, comprometiendo la difusión. El cambio que lo resolvió fue usar Sr²⁺ como entrecruzante, con estradiol estable durante 90 días y sin calcificación.",
-        "justificacion": "Diagnóstico por eliminación: si las células son sanas (progesterona, FSH y LH sin cambios) y la hormona cae, la falla está en el material que las rodea."
+        "justificacion": "Diagnóstico por eliminación: si las células son sanas (progesterona, FSH y LH sin cambios) y la hormona cae, la falla está en el material que las rodea.",
+        "sec": "Paper 2: constructo ovárico encapsulado"
       }
     ]
   },
@@ -513,7 +539,8 @@ const PARCIALES = [
           "Descartada: los aritenoides mueven las cuerdas vocales, pero no se alejan para ampliar la vía en la maniobra."
         ],
         "ans": 0,
-        "expl": "En la maniobra de Valsalva se cierran los pliegues vestibulares: la espiración forzada queda contra la rima glótica cerrada."
+        "expl": "En la maniobra de Valsalva se cierran los pliegues vestibulares: la espiración forzada queda contra la rima glótica cerrada.",
+        "sec": "Laringe: nueve cartílagos y dos pares de pliegues"
       },
       {
         "id": "P2-2",
@@ -533,7 +560,8 @@ const PARCIALES = [
           "Descartada: el epitelio cilíndrico con microvellosidades es del intestino delgado, no de la vía aérea."
         ],
         "ans": 1,
-        "expl": "La nasofaringe es respiratoria: epitelio cilíndrico seudoestratificado ciliado con caliciformes. La orofaringe y la laringofaringe son de epitelio plano estratificado."
+        "expl": "La nasofaringe es respiratoria: epitelio cilíndrico seudoestratificado ciliado con caliciformes. La orofaringe y la laringofaringe son de epitelio plano estratificado.",
+        "sec": "Faringe: tres porciones, y sólo una es exclusivamente aérea"
       },
       {
         "id": "P2-3",
@@ -553,7 +581,8 @@ const PARCIALES = [
           "Descartada: la intrapleural no se iguala a la alveolar; por eso el pulmón se mantiene expandido."
         ],
         "ans": 2,
-        "expl": "La presión intrapleural es siempre subatmosférica y baja un poco más al inspirar (de 756 a 754 mmHg). Esa presión negativa es lo que mantiene el pulmón abierto."
+        "expl": "La presión intrapleural es siempre subatmosférica y baja un poco más al inspirar (de 756 a 754 mmHg). Esa presión negativa es lo que mantiene el pulmón abierto.",
+        "sec": "Mecánica ventilatoria"
       },
       {
         "id": "P2-4",
@@ -573,7 +602,8 @@ const PARCIALES = [
           "Correcta: la pulmonar es una sigmoidea de tres valvas entre el ventrículo derecho y el tronco pulmonar."
         ],
         "ans": 3,
-        "expl": "La válvula pulmonar es sigmoidea, de tres valvas, y regula la salida del ventrículo derecho al tronco pulmonar."
+        "expl": "La válvula pulmonar es sigmoidea, de tres valvas, y regula la salida del ventrículo derecho al tronco pulmonar.",
+        "sec": "Válvulas: cuatro, dos tipos, un solo objetivo"
       },
       {
         "id": "P2-5",
@@ -593,7 +623,8 @@ const PARCIALES = [
           "Descartada: la reserva cardíaca es la diferencia entre el gasto máximo y el de reposo, no una suma."
         ],
         "ans": 0,
-        "expl": "GC = VS × FC. El volumen sistólico es la diferencia entre el volumen de fin de diástole y el de fin de sístole."
+        "expl": "GC = VS × FC. El volumen sistólico es la diferencia entre el volumen de fin de diástole y el de fin de sístole.",
+        "sec": "Gasto cardíaco y sus determinantes"
       },
       {
         "id": "P2-6",
@@ -613,7 +644,8 @@ const PARCIALES = [
           "Descartada: los volúmenes deben ser iguales en promedio; si no lo fueran, uno de los circuitos se congestionaría."
         ],
         "ans": 1,
-        "expl": "El corazón bombea a los dos circuitos en serie, así que los volúmenes de los dos ventrículos deben ser iguales en promedio."
+        "expl": "El corazón bombea a los dos circuitos en serie, así que los volúmenes de los dos ventrículos deben ser iguales en promedio.",
+        "sec": "La circulación, paso a paso, sin saltearse ninguna válvula"
       },
       {
         "id": "P2-7",
@@ -633,7 +665,8 @@ const PARCIALES = [
           "Descartada: la válvula ileocecal separa el intestino delgado del colon, no el estómago del duodeno."
         ],
         "ans": 2,
-        "expl": "El píloro, con el esfínter pilórico, separa el estómago del duodeno y regula el paso del quimo."
+        "expl": "El píloro, con el esfínter pilórico, separa el estómago del duodeno y regula el paso del quimo.",
+        "sec": "Estómago"
       },
       {
         "id": "P2-8",
@@ -653,7 +686,8 @@ const PARCIALES = [
           "Correcta: la función principal de las vellosidades es la absorción, con la asa capilar y el vaso quilífero central."
         ],
         "ans": 3,
-        "expl": "Las vellosidades son la principal superficie de absorción del intestino delgado. Cada una tiene un asa capilar y un vaso quilífero central."
+        "expl": "Las vellosidades son la principal superficie de absorción del intestino delgado. Cada una tiene un asa capilar y un vaso quilífero central.",
+        "sec": "Intestino delgado: los tres niveles de amplificación"
       },
       {
         "id": "P2-9",
@@ -673,7 +707,8 @@ const PARCIALES = [
           "Descartada: el amoníaco no se elimina sin transformación; el hígado lo convierte en urea."
         ],
         "ans": 0,
-        "expl": "El amoníaco es tóxico. El hígado lo convierte en urea, que se excreta por la orina."
+        "expl": "El amoníaco es tóxico. El hígado lo convierte en urea, que se excreta por la orina.",
+        "sec": "Hígado, vesícula y páncreas exocrino"
       },
       {
         "id": "P2-10",
@@ -693,7 +728,8 @@ const PARCIALES = [
           "Descartada: la rama ascendente diluye el filtrado y no lo filtra."
         ],
         "ans": 1,
-        "expl": "El corpúsculo renal, con el glomérulo y la cápsula glomerular, es donde se filtra el plasma. El resto de la nefrona modifica el filtrado."
+        "expl": "El corpúsculo renal, con el glomérulo y la cápsula glomerular, es donde se filtra el plasma. El resto de la nefrona modifica el filtrado.",
+        "sec": "1 · Corpúsculo renal: donde se filtra"
       },
       {
         "id": "P2-11",
@@ -713,7 +749,8 @@ const PARCIALES = [
           "Descartada: las células parietales forman el revestimiento de la cápsula, no regulan la superficie de filtración."
         ],
         "ans": 2,
-        "expl": "Las células mesangiales son contráctiles y fagocíticas. Al contraerse reducen la superficie disponible para filtrar."
+        "expl": "Las células mesangiales son contráctiles y fagocíticas. Al contraerse reducen la superficie disponible para filtrar.",
+        "sec": "1 · Corpúsculo renal: donde se filtra"
       },
       {
         "id": "P2-12",
@@ -733,7 +770,8 @@ const PARCIALES = [
           "Correcta: la reabsorción lleva sustancias del filtrado a la sangre; por eso casi todo el agua y la glucosa vuelven al cuerpo."
         ],
         "ans": 3,
-        "expl": "La reabsorción es el paso del filtrado a la sangre. La secreción es el paso inverso. La filtración es el primer paso, en el glomérulo."
+        "expl": "La reabsorción es el paso del filtrado a la sangre. La secreción es el paso inverso. La filtración es el primer paso, en el glomérulo.",
+        "sec": "2 · Túbulo renal, segmento por segmento"
       },
       {
         "id": "P2-13",
@@ -753,7 +791,8 @@ const PARCIALES = [
           "Descartada: el terciario supone T4 y TSH bajas por falla del hipotálamo; la T4 alta descarta ese diagnóstico."
         ],
         "ans": 0,
-        "expl": "T4 alta con TSH suprimida indica hiperfunción primaria de la tiroides, como en la enfermedad de Graves."
+        "expl": "T4 alta con TSH suprimida indica hiperfunción primaria de la tiroides, como en la enfermedad de Graves.",
+        "sec": "Tiroides y paratiroides · el par del calcio"
       },
       {
         "id": "P2-14",
@@ -773,7 +812,8 @@ const PARCIALES = [
           "Descartada: la ACTH estimula la corteza suprarrenal y no tiene función en el ovario."
         ],
         "ans": 1,
-        "expl": "La LH forma y mantiene el cuerpo lúteo; la FSH madura los folículos primarios."
+        "expl": "La LH forma y mantiene el cuerpo lúteo; la FSH madura los folículos primarios.",
+        "sec": "Hipotálamo e hipófisis"
       },
       {
         "id": "P2-15",
@@ -793,7 +833,8 @@ const PARCIALES = [
           "Descartada: la glucosa no se excreta por la orina en condiciones normales; la insulina baja la glucemia por captación."
         ],
         "ans": 2,
-        "expl": "La insulina baja la glucemia porque favorece la entrada de glucosa a las células. El glucagón hace lo contrario."
+        "expl": "La insulina baja la glucemia porque favorece la entrada de glucosa a las células. El glucagón hace lo contrario.",
+        "sec": "Páncreas endócrino · islotes de Langerhans"
       },
       {
         "id": "P2-16",
@@ -813,7 +854,8 @@ const PARCIALES = [
           "Correcta: en el cerebelo la sustancia blanca es central y la gris es periférica, a diferencia de la médula."
         ],
         "ans": 3,
-        "expl": "El cerebelo tiene sustancia blanca central y gris periférica. Sus núcleos dentados están dentro del cerebelo."
+        "expl": "El cerebelo tiene sustancia blanca central y gris periférica. Sus núcleos dentados están dentro del cerebelo.",
+        "sec": "Anatomía del SNC"
       },
       {
         "id": "P2-17",
@@ -833,7 +875,8 @@ const PARCIALES = [
           "Descartada: el facial (VII) no inerva ningún músculo del ojo; controla expresión facial y glándulas."
         ],
         "ans": 0,
-        "expl": "El troclear (IV) inerva el oblicuo superior. El oculomotor (III) controla la mayoría de los músculos del ojo, el abducens (VI) el recto lateral."
+        "expl": "El troclear (IV) inerva el oblicuo superior. El oculomotor (III) controla la mayoría de los músculos del ojo, el abducens (VI) el recto lateral.",
+        "sec": "Pares craneales"
       },
       {
         "id": "P2-18",
@@ -853,7 +896,8 @@ const PARCIALES = [
           "Descartada: la ínsula está en la profundidad del surco lateral y no separa al frontal del parietal."
         ],
         "ans": 1,
-        "expl": "El surco central separa los lóbulos frontal y parietal. El lateral separa el temporal, y el parietooccipital, el parietal del occipital."
+        "expl": "El surco central separa los lóbulos frontal y parietal. El lateral separa el temporal, y el parietooccipital, el parietal del occipital.",
+        "sec": "Lóbulos corticales · la cátedra lo toma"
       },
       {
         "id": "P2-19",
@@ -873,7 +917,8 @@ const PARCIALES = [
           "Descartada: el cordón umbilical tiene menos antígenos, pero no garantiza ausencia de rechazo en cualquier donante."
         ],
         "ans": 2,
-        "expl": "Las células adultas del propio paciente y las iPS autólogas evitan el rechazo; las embrionarias y los donantes ajenos no."
+        "expl": "Las células adultas del propio paciente y las iPS autólogas evitan el rechazo; las embrionarias y los donantes ajenos no.",
+        "sec": "Paper 3: células madre (revisión)"
       },
       {
         "id": "P2-20",
@@ -893,7 +938,8 @@ const PARCIALES = [
           "Correcta: el colágeno tipo I en fibras orientadas resiste la tracción en una dirección, como un tendón."
         ],
         "ans": 3,
-        "expl": "Un tendón resiste tracción en una dirección gracias al colágeno tipo I orientado, que forma el componente fibrilar de la matriz."
+        "expl": "Un tendón resiste tracción en una dirección gracias al colágeno tipo I orientado, que forma el componente fibrilar de la matriz.",
+        "sec": "Tabla de traducción: requisito → estructura"
       }
     ],
     "dev": [
@@ -909,7 +955,8 @@ const PARCIALES = [
           "Aumenta la distancia de difusión y se afecta la respiración externa"
         ],
         "modelo": "En el enfisema se fusionan alvéolos, lo que reduce la superficie de intercambio. Se reemplaza tejido elástico por conectivo fibroso, así que se pierde el retroceso elástico y la espiración pasiva falla, con aire atrapado. Sube la resistencia de la vía aérea y aumenta la distancia de difusión, por lo que fallan la ventilación y la respiración externa.",
-        "justificacion": "El enfisema combina pérdida de superficie, pérdida de retroceso elástico y aumento de la resistencia. Por eso la ventilación y el intercambio fallan a la vez."
+        "justificacion": "El enfisema combina pérdida de superficie, pérdida de retroceso elástico y aumento de la resistencia. Por eso la ventilación y el intercambio fallan a la vez.",
+        "sec": "Mecánica ventilatoria"
       },
       {
         "id": "P2-D2",
@@ -923,7 +970,8 @@ const PARCIALES = [
           "Ambas salen de ventrículos, que expulsan la sangre hacia las grandes arterias"
         ],
         "modelo": "La aorta sale del ventrículo izquierdo, que recibe la sangre oxigenada desde las venas pulmonares. La arteria pulmonar sale del ventrículo derecho, que recibe sangre desoxigenada de la circulación sistémica. Ambas son arterias porque salen del corazón; lo que las diferencia es la oxigenación de la sangre que llevan, no el sentido del flujo. Las dos salen de ventrículos y vencen la presión de la salida a través de una válvula sigmoidea.",
-        "justificacion": "Arteria es el vaso que sale del corazón, no el que tiene sangre oxigenada. Por eso la diferencia de oxigenación depende de la cámara de origen y del circuito, no del nombre del vaso."
+        "justificacion": "Arteria es el vaso que sale del corazón, no el que tiene sangre oxigenada. Por eso la diferencia de oxigenación depende de la cámara de origen y del circuito, no del nombre del vaso.",
+        "sec": "La circulación, paso a paso, sin saltearse ninguna válvula"
       },
       {
         "id": "P2-D3",
@@ -938,7 +986,8 @@ const PARCIALES = [
           "Si falla el hipotálamo: baja la TRH, baja la TSH y baja la T4 (terciario)"
         ],
         "modelo": "El hipotálamo libera TRH, que estimula la adenohipófisis para liberar TSH. La TSH estimula la tiroides para producir T3 y T4, que frenan por retroalimentación negativa a la hipófisis y al hipotálamo. Si falla el hipotálamo, la TRH baja, la TSH baja y la T4 también baja: es un hipotiroidismo terciario, porque el piso roto es el de más arriba.",
-        "justificacion": "Contar desde abajo: si falla el órgano final es primario; si falla la hipófisis es secundario; si falla el hipotálamo es terciario. La TRH es lo que permite separar secundario de terciario."
+        "justificacion": "Contar desde abajo: si falla el órgano final es primario; si falla la hipófisis es secundario; si falla el hipotálamo es terciario. La TRH es lo que permite separar secundario de terciario.",
+        "sec": "Retroalimentación negativa y los ejes"
       },
       {
         "id": "P2-D4",
@@ -952,7 +1001,8 @@ const PARCIALES = [
           "El andamio filtra, pero no concentra la orina ni secreta hormonas"
         ],
         "modelo": "La hemodiálisis reproduce sólo la filtración con una membrana semipermeable acelular. No hace reabsorción selectiva ni secreción tubular, y no produce eritropoyetina ni calcitriol. El riñón descelularizado filtra, pero tampoco concentra la orina ni secreta hormonas, porque no tiene asas de Henle funcionales ni aparato yuxtaglomerular. Por eso no reemplaza al riñón por completo.",
-        "justificacion": "Un órgano que reemplaza al riñón tiene que hacer más que filtrar: perfusión, filtración, secreción, reabsorción y drenaje de orina. La diálisis y el andamio sólo cumplen parte de esas funciones."
+        "justificacion": "Un órgano que reemplaza al riñón tiene que hacer más que filtrar: perfusión, filtración, secreción, reabsorción y drenaje de orina. La diálisis y el andamio sólo cumplen parte de esas funciones.",
+        "sec": "Funciones del riñón: mucho más que \"filtrar\""
       },
       {
         "id": "P2-D5",
@@ -966,7 +1016,8 @@ const PARCIALES = [
           "Un epitelio intestinal no sirve, porque absorbe y genera acidosis y litiasis"
         ],
         "modelo": "El órgano necesita impermeabilidad, que dan las uniones estrechas entre las células, y distensibilidad, que da un epitelio que se deforma sin romperse. El epitelio de transición o urotelio cumple ambas cosas gracias a sus células en sombrilla y a sus uniones. Un epitelio intestinal no sirve, porque absorbe el contenido y puede causar acidosis metabólica y litiasis.",
-        "justificacion": "Por eso la vía urinaria no se reemplaza con intestino sin pagar un precio: el epitelio intestinal absorbe, y el urotelio es casi impermeable y se distiende."
+        "justificacion": "Por eso la vía urinaria no se reemplaza con intestino sin pagar un precio: el epitelio intestinal absorbe, y el urotelio es casi impermeable y se distiende.",
+        "sec": "Tabla de traducción: requisito → estructura"
       }
     ]
   },
@@ -992,7 +1043,8 @@ const PARCIALES = [
           "Descartada: la separación de la nasofaringe y la orofaringe la hace el paladar blando, no la epiglotis."
         ],
         "ans": 0,
-        "expl": "La epiglotis bascula durante la deglución y cierra la entrada laríngea. Así separa la vía aérea del paso del alimento."
+        "expl": "La epiglotis bascula durante la deglución y cierra la entrada laríngea. Así separa la vía aérea del paso del alimento.",
+        "sec": "Laringe: nueve cartílagos y dos pares de pliegues"
       },
       {
         "id": "P3-2",
@@ -1012,7 +1064,8 @@ const PARCIALES = [
           "Descartada: elevar el esternón es función de los músculos inspiratorios forzados, como el esternocleidomastoideo, no del intercostal externo tranquilo."
         ],
         "ans": 1,
-        "expl": "Los intercostales externos son inspiratorios: elevan las costillas y aumentan los diámetros anteroposterior y lateral."
+        "expl": "Los intercostales externos son inspiratorios: elevan las costillas y aumentan los diámetros anteroposterior y lateral.",
+        "sec": "Mecánica ventilatoria"
       },
       {
         "id": "P3-3",
@@ -1032,7 +1085,8 @@ const PARCIALES = [
           "Descartada: la tráquea no está en la cavidad nasal; empieza en el cricoides, debajo de la laringe."
         ],
         "ans": 2,
-        "expl": "La tráquea baja por delante del esófago. Sus anillos están abiertos hacia atrás para permitir la expansión del esófago."
+        "expl": "La tráquea baja por delante del esófago. Sus anillos están abiertos hacia atrás para permitir la expansión del esófago.",
+        "sec": "Tráquea: por qué los anillos son incompletos"
       },
       {
         "id": "P3-4",
@@ -1052,7 +1106,8 @@ const PARCIALES = [
           "Correcta: el nodo AV introduce un retraso en el impulso, para que las aurículas terminen de vaciarse antes de que arranque el ventrículo."
         ],
         "ans": 3,
-        "expl": "El nodo auriculoventricular retrasa el impulso. El nodo sinusal es el marcapasos, el haz de His es la única vía hacia los ventrículos y Purkinje es la última parte."
+        "expl": "El nodo auriculoventricular retrasa el impulso. El nodo sinusal es el marcapasos, el haz de His es la única vía hacia los ventrículos y Purkinje es la última parte.",
+        "sec": "Sistema de conducción y su lectura en el ECG"
       },
       {
         "id": "P3-5",
@@ -1072,7 +1127,8 @@ const PARCIALES = [
           "Descartada: en la relajación isovolumétrica las cuatro válvulas están cerradas y la presión baja; tampoco hay llenado."
         ],
         "ans": 0,
-        "expl": "El grueso del llenado ventricular es pasivo: entra con las AV abiertas, sin contracción auricular."
+        "expl": "El grueso del llenado ventricular es pasivo: entra con las AV abiertas, sin contracción auricular.",
+        "sec": "Ciclo cardíaco y ruidos"
       },
       {
         "id": "P3-6",
@@ -1092,7 +1148,8 @@ const PARCIALES = [
           "Descartada: la válvula ileocecal comunica el íleon con el ciego, no el duodeno con el estómago."
         ],
         "ans": 1,
-        "expl": "La bilis y el jugo pancreático salen por la papila duodenal mayor, en la segunda porción del duodeno."
+        "expl": "La bilis y el jugo pancreático salen por la papila duodenal mayor, en la segunda porción del duodeno.",
+        "sec": "Hígado, vesícula y páncreas exocrino"
       },
       {
         "id": "P3-7",
@@ -1112,7 +1169,8 @@ const PARCIALES = [
           "Descartada: las células mucosas secretan moco de protección, no enzimas."
         ],
         "ans": 2,
-        "expl": "Las células principales secretan pepsinógeno. Las parietales, ácido y factor intrínseco; las G, gastrina."
+        "expl": "Las células principales secretan pepsinógeno. Las parietales, ácido y factor intrínseco; las G, gastrina.",
+        "sec": "Estómago"
       },
       {
         "id": "P3-8",
@@ -1132,7 +1190,8 @@ const PARCIALES = [
           "Correcta: en el recto la capa longitudinal vuelve a ser continua, y desaparecen las tres rasgos del colon."
         ],
         "ans": 3,
-        "expl": "Los tres rasgos del colon (tenias, haustros y apéndices epiploicos) desaparecen en el recto."
+        "expl": "Los tres rasgos del colon (tenias, haustros y apéndices epiploicos) desaparecen en el recto.",
+        "sec": "Intestino grueso"
       },
       {
         "id": "P3-9",
@@ -1152,7 +1211,8 @@ const PARCIALES = [
           "Descartada: el asa descendente y los colectores no forman parte del aparato yuxtaglomerular."
         ],
         "ans": 0,
-        "expl": "El aparato yuxtaglomerular está formado por la mácula densa y las células yuxtaglomerulares; regula la presión y la renina."
+        "expl": "El aparato yuxtaglomerular está formado por la mácula densa y las células yuxtaglomerulares; regula la presión y la renina.",
+        "sec": "Aparato yuxtaglomerular"
       },
       {
         "id": "P3-10",
@@ -1172,7 +1232,8 @@ const PARCIALES = [
           "Descartada: el detrusor se contrae con el parasimpático durante la micción; el simpático lo relaja, pero eso no depende del esfínter externo."
         ],
         "ans": 1,
-        "expl": "El esfínter externo es esquelético y voluntario: al contraerlo se puede posponer la micción."
+        "expl": "El esfínter externo es esquelético y voluntario: al contraerlo se puede posponer la micción.",
+        "sec": "Uréteres, vejiga, uretra y micción"
       },
       {
         "id": "P3-11",
@@ -1192,7 +1253,8 @@ const PARCIALES = [
           "Descartada: el conducto papilar no modifica la orina; las intercaladas están antes, en el colector."
         ],
         "ans": 2,
-        "expl": "Las células intercaladas del colector regulan el equilibrio ácido-base. Las principales regulan agua y sodio."
+        "expl": "Las células intercaladas del colector regulan el equilibrio ácido-base. Las principales regulan agua y sodio.",
+        "sec": "La nefrona, parte por parte"
       },
       {
         "id": "P3-12",
@@ -1212,7 +1274,8 @@ const PARCIALES = [
           "Correcta: la adrenalina de la médula desencadena la respuesta de lucha, huida o alerta, mediada por el simpático."
         ],
         "ans": 3,
-        "expl": "La adrenalina es de la médula y desencadena la respuesta de lucha, huida o alerta."
+        "expl": "La adrenalina es de la médula y desencadena la respuesta de lucha, huida o alerta.",
+        "sec": "Suprarrenales · afuera corteza, adentro médula"
       },
       {
         "id": "P3-13",
@@ -1232,7 +1295,8 @@ const PARCIALES = [
           "Descartada: la FSH actúa sobre el ovario y los folículos; no estimula la corteza suprarrenal."
         ],
         "ans": 0,
-        "expl": "La ACTH es la hormona trófica del cortisol: estimula el crecimiento de la corteza y la secreción de cortisol."
+        "expl": "La ACTH es la hormona trófica del cortisol: estimula el crecimiento de la corteza y la secreción de cortisol.",
+        "sec": "Hipotálamo e hipófisis"
       },
       {
         "id": "P3-14",
@@ -1252,7 +1316,8 @@ const PARCIALES = [
           "Descartada: la urea viene del metabolismo de proteínas; el glucagón no degrada glucógeno para formarla."
         ],
         "ans": 1,
-        "expl": "El glucagón libera glucosa del hígado en el ayuno; la insulina hace lo contrario después de comer."
+        "expl": "El glucagón libera glucosa del hígado en el ayuno; la insulina hace lo contrario después de comer.",
+        "sec": "Páncreas endócrino · islotes de Langerhans"
       },
       {
         "id": "P3-15",
@@ -1272,7 +1337,8 @@ const PARCIALES = [
           "Descartada: el occipital procesa la visión; no es el área del lenguaje."
         ],
         "ans": 2,
-        "expl": "Wernicke comprende el lenguaje y está en el temporal izquierdo. Broca forma las palabras y está en el frontal."
+        "expl": "Wernicke comprende el lenguaje y está en el temporal izquierdo. Broca forma las palabras y está en el frontal.",
+        "sec": "Lóbulos corticales · la cátedra lo toma"
       },
       {
         "id": "P3-16",
@@ -1292,7 +1358,8 @@ const PARCIALES = [
           "Correcta: el tronco encefálico conecta el cerebro con la médula y controla respiración, frecuencia cardíaca y presión arterial."
         ],
         "ans": 3,
-        "expl": "El tronco encefálico conecta el cerebro con la médula y regula funciones vitales como respiración y presión."
+        "expl": "El tronco encefálico conecta el cerebro con la médula y regula funciones vitales como respiración y presión.",
+        "sec": "Anatomía del SNC"
       },
       {
         "id": "P3-17",
@@ -1312,7 +1379,8 @@ const PARCIALES = [
           "Descartada: el subpial es un espacio virtual, no un espacio por donde circula el LCR."
         ],
         "ans": 0,
-        "expl": "El LCR circula por el espacio subaracnoideo, entre la aracnoides y la piamadre."
+        "expl": "El LCR circula por el espacio subaracnoideo, entre la aracnoides y la piamadre.",
+        "sec": "Meninges y líquido cefalorraquídeo"
       },
       {
         "id": "P3-18",
@@ -1332,7 +1400,9 @@ const PARCIALES = [
           "Descartada: la ependimaria es ectodérmica y reviste los ventrículos."
         ],
         "ans": 1,
-        "expl": "La microglía es la única glía del SNC de origen mesodérmico; llega desde la médula ósea."
+        "expl": "La microglía es la única glía del SNC de origen mesodérmico; llega desde la médula ósea.",
+        "sec": "Neuroglía: la pregunta de distractores vecinos por excelencia",
+        "secTopic": "nervioso"
       },
       {
         "id": "P3-19",
@@ -1352,7 +1422,8 @@ const PARCIALES = [
           "Descartada: la concentración de la orina depende de las asas de Henle y los vasos rectos; la vasculatura del andamio no las reemplaza."
         ],
         "ans": 2,
-        "expl": "El riñón entero cuelga de una arteria: por ahí se distribuyen el detergente y, luego, las células a todo el órgano."
+        "expl": "El riñón entero cuelga de una arteria: por ahí se distribuyen el detergente y, luego, las células a todo el órgano.",
+        "sec": "Paper 1: riñón bioingenierizado"
       },
       {
         "id": "P3-20",
@@ -1372,7 +1443,8 @@ const PARCIALES = [
           "Correcta: la aórtica es una sigmoidea que se cierra cuando el ventrículo se relaja, y evita el reflujo desde la aorta."
         ],
         "ans": 3,
-        "expl": "La válvula aórtica es sigmoidea y evita que la sangre regrese de la aorta al ventrículo izquierdo durante la diástole."
+        "expl": "La válvula aórtica es sigmoidea y evita que la sangre regrese de la aorta al ventrículo izquierdo durante la diástole.",
+        "sec": "Válvulas: cuatro, dos tipos, un solo objetivo"
       }
     ],
     "dev": [
@@ -1389,7 +1461,8 @@ const PARCIALES = [
           "Con corticoides prolongados, el eje se frena y la corteza puede atrofiarse por falta de ACTH"
         ],
         "modelo": "El hipotálamo libera CRH, que estimula la adenohipófisis para liberar ACTH. La ACTH estimula la corteza suprarrenal para producir cortisol, que frena por retroalimentación negativa a la adenohipófisis y al hipotálamo. Con corticoides externos por mucho tiempo, el eje queda frenado: se deja de producir ACTH y la corteza puede atrofiarse, por lo que al suspender el tratamiento hay riesgo de insuficiencia suprarrenal.",
-        "justificacion": "El cortisol es el freno del eje suprarrenal. Un aporte externo de corticoides actúa como si el freno estuviera siempre encendido, así que la corteza deja de recibir estímulo."
+        "justificacion": "El cortisol es el freno del eje suprarrenal. Un aporte externo de corticoides actúa como si el freno estuviera siempre encendido, así que la corteza deja de recibir estímulo.",
+        "sec": "Retroalimentación negativa y los ejes"
       },
       {
         "id": "P3-D2",
@@ -1403,7 +1476,8 @@ const PARCIALES = [
           "La vía motora tiene dos neuronas: la motoneurona superior y la inferior"
         ],
         "modelo": "La vía sensitiva ascendente entra a la médula por la raíz dorsal, con el soma de la neurona en el ganglio raquídeo. Tiene tres neuronas en cadena y la estación obligada es el tálamo, salvo el olfato. La vía motora descendente sale por la raíz ventral, con el soma en el asta ventral. Tiene dos neuronas: la motoneurona superior, en la corteza, y la motoneurona inferior, en el asta ventral.",
-        "justificacion": "Las dos vías se diferencian por el sentido del impulso y por la raíz: la sensitiva entra por la dorsal y la motora sale por la ventral."
+        "justificacion": "Las dos vías se diferencian por el sentido del impulso y por la raíz: la sensitiva entra por la dorsal y la motora sale por la ventral.",
+        "sec": "Vías sensitivas y motoras"
       },
       {
         "id": "P3-D3",
@@ -1417,7 +1491,8 @@ const PARCIALES = [
           "Frank-Starling: más precarga, más volumen sistólico"
         ],
         "modelo": "El gasto cardíaco es el producto del volumen sistólico por la frecuencia. Si el volumen sistólico se mantiene y la frecuencia sube, el gasto aumenta en la misma proporción. El volumen sistólico depende de tres determinantes: la precarga, que aumenta el volumen según Frank-Starling; la contractilidad, que lo aumenta; y la poscarga, que lo disminuye.",
-        "justificacion": "El gasto es un producto, así que se puede subir por cualquiera de los dos factores. Para entender el volumen sistólico hay que mirar los tres determinantes, no sólo la frecuencia."
+        "justificacion": "El gasto es un producto, así que se puede subir por cualquiera de los dos factores. Para entender el volumen sistólico hay que mirar los tres determinantes, no sólo la frecuencia.",
+        "sec": "Gasto cardíaco y sus determinantes"
       },
       {
         "id": "P3-D4",
@@ -1432,7 +1507,8 @@ const PARCIALES = [
           "Sin vesícula, la bilis sigue llegando por el hepático común y el colédoco"
         ],
         "modelo": "La bilis sale del hígado por los conductos hepáticos derecho e izquierdo, que se unen en el hepático común. El cístico trae la bilis de la vesícula y se une al hepático común para formar el colédoco, que desemboca junto con el conducto pancreático en la papila duodenal mayor de la segunda porción del duodeno. Después de una colecistectomía, la bilis sigue llegando desde el hígado por el hepático común, así que el colédoco sigue funcionando, aunque sin el almacenamiento y la concentración de la vesícula.",
-        "justificacion": "La vesícula almacena y concentra la bilis, pero no es necesaria para que la bilis llegue al duodeno. Por eso, sin ella, el colédoco sigue cumpliendo su función."
+        "justificacion": "La vesícula almacena y concentra la bilis, pero no es necesaria para que la bilis llegue al duodeno. Por eso, sin ella, el colédoco sigue cumpliendo su función.",
+        "sec": "Hígado, vesícula y páncreas exocrino"
       },
       {
         "id": "P3-D5",
@@ -1446,7 +1522,1034 @@ const PARCIALES = [
           "Sin podocitos, el andamio filtra sin selectividad y pierde albúmina"
         ],
         "modelo": "La barrera de filtración la forman el endotelio fenestrado, la membrana basal glomerular con carga negativa y los podocitos con sus hendiduras. El endotelio fenestrado deja pasar todo el plasma; la retención de proteínas la hacen la membrana basal y las hendiduras de los podocitos, por tamaño y carga. Un andamio que pierde los podocitos filtra sin selectividad y pierde albúmina, aunque conserve la membrana basal.",
-        "justificacion": "El andamio puede conservar la arquitectura y la membrana basal, pero si faltan los podocitos no retiene las proteínas. Confundir arquitectura con función es la trampa principal del tema."
+        "justificacion": "El andamio puede conservar la arquitectura y la membrana basal, pero si faltan los podocitos no retiene las proteínas. Confundir arquitectura con función es la trampa principal del tema.",
+        "sec": "Paper 1: riñón bioingenierizado"
+      }
+    ]
+  },
+  {
+    "id": "p4",
+    "nombre": "Parcial 4",
+    "mc": [
+      {
+        "id": "P4-01",
+        "topic": "respiratorio",
+        "ref": "sección 12",
+        "q": "Durante un esfuerzo intenso el músculo produce CO₂ y ácido, y se calienta. ¿Qué pasa con la unión del O₂ a la hemoglobina en ese tejido?",
+        "opts": [
+          "La afinidad aumenta y la curva se desplaza a la izquierda, así que la hemoglobina retiene más O₂ dentro del músculo.",
+          "La afinidad no cambia, porque el O₂ se une a la hemoglobina sólo según su PO₂ y no según el pH ni la temperatura.",
+          "La afinidad baja y la curva se desplaza a la derecha, así que la hemoglobina entrega más O₂ al músculo que trabaja.",
+          "La hemoglobina libera el O₂ porque la PO₂ del músculo sube por encima de la alveolar durante el ejercicio intenso."
+        ],
+        "ans": 2,
+        "expl": "El pH bajo (efecto Bohr), la PCO₂ alta y la temperatura alta bajan la afinidad y desplazan la curva a la derecha, entregando más O₂ al tejido activo. La trampa es pensar que la hemoglobina retiene el O₂ justo donde más hace falta.",
+        "why": [
+          "Descartada: eso es lo contrario de lo que ocurre: la caída del pH, la suba de PCO₂ y de temperatura bajan la afinidad de la hemoglobina.",
+          "Descartada: el pH, la PCO₂, la temperatura y el 2,3-BPG modifican la afinidad; el efecto Bohr existe justamente por eso.",
+          "Correcta: el pH bajo (efecto Bohr), la PCO₂ y la temperatura altas desplazan la curva a la derecha y el tejido activo recibe más O₂.",
+          "Descartada: la PO₂ del tejido es baja (alrededor de 40 mmHg) y siempre menor que la alveolar; el gradiente va del capilar al tejido, no al revés."
+        ],
+        "sec": "Transporte de gases en la sangre"
+      },
+      {
+        "id": "P4-02",
+        "topic": "respiratorio",
+        "ref": "sección 12",
+        "q": "Una persona retiene CO₂ y su PCO₂ arterial sube. ¿Qué detectan los quimiorreceptores centrales del bulbo para aumentar la ventilación?",
+        "opts": [
+          "El aumento de H⁺ en el líquido cefalorraquídeo, que depende de la PCO₂ y no de la PO₂ directamente.",
+          "La caída de la PO₂ arterial, que es el estímulo dominante en condiciones normales y activa a los centrales.",
+          "El aumento de H⁺ y de PCO₂ en los cuerpos carotídeos y aórticos, que son los quimiorreceptores centrales.",
+          "La tensión de los músculos intercostales, que informa al bulbo del esfuerzo respiratorio y sube la frecuencia."
+        ],
+        "ans": 0,
+        "expl": "Los quimiorreceptores centrales del bulbo sensan los H⁺ del LCR, que reflejan la PCO₂. Los periféricos, en los cuerpos carotídeos y aórticos, responden a PO₂ baja, PCO₂ alta y H⁺; la trampa es confundir cuál es cuál.",
+        "why": [
+          "Correcta: los centrales del bulbo responden a los H⁺ del LCR, que dependen de la PCO₂, y el estímulo dominante normal es la PCO₂.",
+          "Descartada: el estímulo dominante normal es la PCO₂, y la hipoxia sólo pesa con PO₂ muy baja; además la PO₂ la sensan sobre todo los periféricos.",
+          "Descartada: los cuerpos carotídeos y aórticos son los quimiorreceptores periféricos; los centrales están en el bulbo.",
+          "Descartada: no es un estímulo químico; el control por quimiorreceptores se basa en H⁺, PCO₂ y PO₂, no en la tensión muscular."
+        ],
+        "sec": "Control de la respiración"
+      },
+      {
+        "id": "P4-03",
+        "topic": "respiratorio",
+        "ref": "sección 12",
+        "q": "Una espirometría de un adulto sano mide el volumen de reserva inspiratorio, el volumen corriente y el de reserva espiratorio. Si se suman los tres, ¿qué capacidad resulta y qué pasa con el volumen residual?",
+        "opts": [
+          "Capacidad residual funcional, que es lo que queda tras una espiración normal e incluye siempre el volumen residual del pulmón.",
+          "Capacidad inspiratoria, que mide lo que se inspira desde una espiración normal y deja afuera el residual.",
+          "Capacidad pulmonar total, que abarca todo lo que el pulmón contiene, con el residual incluido en la suma.",
+          "Capacidad vital, que es todo lo movilizable; el residual queda en el pulmón y la espirometría no lo mide."
+        ],
+        "ans": 3,
+        "expl": "La capacidad vital es VRI + VC + VRE: todo lo movilizable. El volumen residual queda tras una espiración forzada y sólo entra en la capacidad residual funcional y en la pulmonar total.",
+        "why": [
+          "Descartada: la CRF es VR más VRE, e incluye el residual; no se obtiene sumando VRI, VC y VRE.",
+          "Descartada: la capacidad inspiratoria suma sólo VC y VRI; no incluye el volumen de reserva espiratorio.",
+          "Descartada: la CPT es la única que incluye el residual, y no resulta de sumar sólo esos tres volúmenes.",
+          "Correcta: VRI más VC más VRE es la capacidad vital; el volumen residual (unos 1.200 mL) no se puede movilizar ni medir con espirometría."
+        ],
+        "sec": "Volúmenes y capacidades pulmonares"
+      },
+      {
+        "id": "P4-04",
+        "topic": "circulatorio",
+        "ref": "sección 13",
+        "q": "Una herida deja entrar una hemorragia pequeña y rápida en la cavidad pericárdica, y el paciente cae en shock. ¿Por qué un volumen tan chico es tan grave?",
+        "opts": [
+          "Porque la sangre se mezcla con el líquido pericárdico y deja de lubricar las hojas, lo que frena la contracción del miocardio.",
+          "Porque el pericardio fibroso es poco elástico, no se estira de golpe y el líquido comprime las cámaras e impide que se llenen.",
+          "Porque la sangre atraviesa el epicardio e infiltra el miocardio, y las fibras infiltradas dejan de contraerse.",
+          "Porque el pericardio seroso se desgarra y los grandes vasos pierden la fijación al diafragma que sostiene el corazón."
+        ],
+        "ans": 1,
+        "expl": "El pericardio fibroso es denso y poco elástico, así que un líquido que se acumula rápido comprime las cámaras y les impide llenarse: es el taponamiento. La trampa es creer que el daño viene de la lubricación o de la infiltración del músculo.",
+        "why": [
+          "Descartada: el problema no es la lubricación sino el espacio: la sangre ocupa una bolsa que no se puede expandir.",
+          "Correcta: el pericardio fibroso es denso y poco elástico, por eso el líquido acumulado produce un taponamiento cardíaco.",
+          "Descartada: la sangre queda en la cavidad pericárdica, entre las hojas serosas; no infiltra el miocardio, y el epicardio es la hoja visceral del pericardio seroso.",
+          "Descartada: la fijación al diafragma y a los grandes vasos la da el pericardio fibroso, y eso no explica el shock."
+        ],
+        "sec": "Pericardio: tres capas y una cavidad"
+      },
+      {
+        "id": "P4-05",
+        "topic": "circulatorio",
+        "ref": "sección 13",
+        "q": "Al auscultar un corazón sano, ¿qué origina el primer ruido (lub) y qué indicaría un soplo?",
+        "opts": [
+          "La apertura de las válvulas auriculoventriculares al llenarse el ventrículo; un soplo indicaría falla del miocardio ventricular.",
+          "El cierre de las válvulas sigmoideas al terminar la sístole; un soplo indicaría alteración de los nódulos.",
+          "La apertura de las sigmoideas al iniciar la eyección; un soplo indicaría alteración del pericardio.",
+          "El cierre de las válvulas auriculoventriculares al empezar la sístole ventricular; un soplo indicaría alteración valvular."
+        ],
+        "ans": 3,
+        "expl": "Los ruidos son cierres: el primero es el de las AV al empezar la sístole y el segundo el de las sigmoideas al terminarla. Los soplos indican alteración valvular; la trampa es hablar de aperturas.",
+        "why": [
+          "Descartada: la apertura de una válvula sana es silenciosa, y los soplos indican alteración de las válvulas, no del miocardio.",
+          "Descartada: ese es el segundo ruido (dup), y los soplos no reflejan alteración de los nódulos del sistema de conducción.",
+          "Descartada: las aperturas no suenan en una válvula sana, y un soplo no es un problema del pericardio.",
+          "Correcta: el primer ruido es el cierre de las AV al empezar la sístole ventricular, y los soplos delatan válvulas alteradas."
+        ],
+        "sec": "Ciclo cardíaco y ruidos"
+      },
+      {
+        "id": "P4-06",
+        "topic": "circulatorio",
+        "ref": "sección 13",
+        "q": "Se diseña un tejido que deje pasar proteínas plasmáticas en ambas direcciones, como entre la sangre y los hepatocitos. ¿Qué tipo de capilar conviene copiar?",
+        "opts": [
+          "Sinusoide, con aberturas grandes y lámina basal ausente o interrumpida, por donde pasan proteínas y hasta células.",
+          "Fenestrado, con poros en la célula endotelial y lámina basal continua, que deja pasar libremente las proteínas.",
+          "Continuo, con uniones estrechas y sin poros, que facilita el paso de proteínas entre las células endoteliales.",
+          "Fenestrado, porque es el del hígado y reproduce la barrera del glomérulo para retener las proteínas plasmáticas."
+        ],
+        "ans": 0,
+        "expl": "El hígado es sinusoidal: aberturas grandes y lámina basal interrumpida dejan pasar proteínas en las dos direcciones. El fenestrado conserva la lámina basal, y por eso el glomérulo filtra plasma pero retiene proteínas.",
+        "why": [
+          "Correcta: el sinusoide tiene aberturas amplias y lámina basal discontinua, lo que lo hace el más permeable: es el del hígado.",
+          "Descartada: la lámina basal continua retiene las proteínas; por eso el glomérulo, que es fenestrado, retiene la albúmina.",
+          "Descartada: el continuo es el más restrictivo; su endotelio y su lámina basal íntegros no dejan pasar proteínas.",
+          "Descartada: el hígado tiene capilar sinusoide, no fenestrado, y precisamente necesita dejar pasar las proteínas."
+        ],
+        "sec": "Histología de los vasos"
+      },
+      {
+        "id": "P4-07",
+        "topic": "digestivo",
+        "ref": "sección 14",
+        "q": "A una persona se le extirpa todo el estómago y, meses después, desarrolla anemia por déficit de vitamina B12. ¿Qué célula faltante lo explica?",
+        "opts": [
+          "La célula principal, que secreta el pepsinógeno necesario para que la vitamina B12 se absorba luego en el íleon terminal.",
+          "La célula G del antro, cuya gastrina permite absorber la vitamina B12 en el duodeno al estimular el HCl.",
+          "La célula parietal, que secreta factor intrínseco, imprescindible para absorber B12 en el íleon, además de HCl.",
+          "La célula mucosa del cuello, que secreta el moco alcalino que transporta la vitamina B12 hasta el íleon."
+        ],
+        "ans": 2,
+        "expl": "La célula parietal fabrica HCl y factor intrínseco; sin éste la B12 no se absorbe en el íleon. La trampa es pensar que la 'principal' hace lo principal: ella secreta pepsinógeno.",
+        "why": [
+          "Descartada: la célula principal secreta pepsinógeno, que no interviene en la absorción de B12.",
+          "Descartada: la célula G secreta gastrina, una hormona que estimula HCl y pepsinógeno; no habilita la absorción de B12.",
+          "Correcta: la parietal secreta HCl y factor intrínseco; sin ella no hay absorción de B12 y aparece anemia perniciosa.",
+          "Descartada: el moco alcalino protege la mucosa del ácido; no transporta ni permite absorber la B12."
+        ],
+        "sec": "Estómago"
+      },
+      {
+        "id": "P4-08",
+        "topic": "digestivo",
+        "ref": "sección 14",
+        "q": "Un cirujano repasa dos tramos del tubo digestivo: en uno la capa externa es serosa con mesotelio y en el otro es adventicia. ¿Cuál tiene adventicia?",
+        "opts": [
+          "El yeyuno, porque su pared externa es sólo tejido conectivo, sin mesotelio, al estar suspendido por el mesenterio.",
+          "El esófago, porque casi todo su trayecto queda fuera de la cavidad peritoneal y su capa externa es sólo conectivo.",
+          "El estómago, porque de su curvatura mayor cuelga el omento mayor y esa capa externa carece de mesotelio.",
+          "El colon transverso, porque cuelga del mesocolon y su capa externa no está cubierta por el peritoneo visceral."
+        ],
+        "ans": 1,
+        "expl": "Serosa y adventicia dependen de la topografía: con peritoneo hay serosa y mesotelio; si el órgano es retroperitoneal o está fuera de la cavidad, adventicia. El esófago (casi todo) es el ejemplo clásico.",
+        "why": [
+          "Descartada: el yeyuno es intraperitoneal y su capa externa es serosa, con mesotelio.",
+          "Correcta: la adventicia aparece en órganos retroperitoneales o fuera del abdomen, como el esófago casi en su totalidad.",
+          "Descartada: el estómago está tapizado por peritoneo y su capa externa es serosa, con mesotelio.",
+          "Descartada: el colon transverso es intraperitoneal con serosa; los que tienen adventicia son el ascendente y el descendente."
+        ],
+        "sec": "Las cuatro túnicas: el esqueleto de todo el tema"
+      },
+      {
+        "id": "P4-09",
+        "topic": "digestivo",
+        "ref": "sección 14",
+        "q": "Llega quimo ácido desde el estómago al duodeno. ¿Qué célula responde y qué hormona libera para contrarrestar el ácido?",
+        "opts": [
+          "La célula S del duodeno libera secretina, que estimula el bicarbonato pancreático y biliar que neutraliza el ácido.",
+          "La célula G del antro libera gastrina, que estimula más HCl y pepsinógeno para completar la digestión en el duodeno.",
+          "La célula de Paneth del fondo de las criptas libera lisozima, que neutraliza el pH ácido del quimo duodenal.",
+          "La célula parietal gástrica libera factor intrínseco, que amortigua el ácido que baja con el quimo hacia el duodeno."
+        ],
+        "ans": 0,
+        "expl": "La secretina de las células S del duodeno estimula el bicarbonato pancreático y biliar y contrarresta el ácido gástrico. La trampa es la gastrina, que hace lo contrario: sube el HCl.",
+        "why": [
+          "Correcta: la secretina, de las células S del duodeno ante quimo ácido, estimula el bicarbonato pancreático y biliar.",
+          "Descartada: la gastrina es gástrica y aumenta el ácido; no contrarresta el pH ácido del quimo.",
+          "Descartada: la célula de Paneth secreta lisozima y defensinas para el control bacteriano; no regula el pH.",
+          "Descartada: el factor intrínseco sirve para absorber B12, no para amortiguar el ácido, y la parietal está en el estómago."
+        ],
+        "sec": "Intestino delgado: los tres niveles de amplificación"
+      },
+      {
+        "id": "P4-10",
+        "topic": "urinario",
+        "ref": "sección 15",
+        "q": "Un paciente con enfermedad renal crónica avanzada presenta anemia. ¿Qué función endócrina del riñón explica la anemia?",
+        "opts": [
+          "Falla el control del tamaño de los glóbulos rojos, que el riñón regula directamente al filtrar la sangre.",
+          "Falla la secreción de renina, que estimula a la médula ósea para que produzca glóbulos rojos.",
+          "Falla la secreción de aldosterona, que el riñón libera para mantener la masa de glóbulos rojos.",
+          "Falla la producción de eritropoyetina, hormona renal que estimula la formación de glóbulos rojos."
+        ],
+        "ans": 3,
+        "expl": "El riñón produce eritropoyetina, que estimula la formación de glóbulos rojos. Regula la producción, no el tamaño de los glóbulos; la renina y la aldosterona son de otro sistema.",
+        "why": [
+          "Descartada: el riñón no regula el tamaño de las células sanguíneas; regula su producción, a través de la eritropoyetina.",
+          "Descartada: la renina forma parte del sistema renina-angiotensina-aldosterona y regula presión y volumen, no la eritropoyesis.",
+          "Descartada: la aldosterona la secreta la corteza suprarrenal y actúa sobre la reabsorción de Na⁺, no sobre los glóbulos rojos.",
+          "Correcta: el riñón produce eritropoyetina y calcitriol; sin la primera baja la eritropoyesis y aparece anemia."
+        ],
+        "sec": "Funciones del riñón: mucho más que \"filtrar\""
+      },
+      {
+        "id": "P4-11",
+        "topic": "urinario",
+        "ref": "sección 15",
+        "q": "Un segmento de la nefrona es impermeable al agua y reabsorbe Na⁺, K⁺ y Cl⁻ por transporte. ¿Qué segmento es y qué efecto tiene sobre el intersticio medular?",
+        "opts": [
+          "La rama descendente delgada del asa, que concentra el líquido tubular y vuelve hipotónico el intersticio medular.",
+          "La rama ascendente del asa de Henle, que diluye el líquido tubular y vuelve hipertónico el intersticio medular.",
+          "El túbulo colector, cuyas células principales reabsorben agua por ADH y vuelven hipertónico el intersticio.",
+          "El túbulo contorneado proximal, que reabsorbe iones por transporte y no deja pasar agua hacia el intersticio."
+        ],
+        "ans": 1,
+        "expl": "La rama ascendente del asa de Henle es impermeable al agua, reabsorbe Na⁺, K⁺ y Cl⁻, diluye el líquido tubular e hipertoniza la médula. La descendente hace lo contrario respecto del agua.",
+        "why": [
+          "Descartada: la rama descendente es permeable al agua, no a los solutos, y no reabsorbe iones por transporte.",
+          "Correcta: la ascendente es impermeable al agua y reabsorbe iones, así que diluye el líquido y hace hipertónica la médula.",
+          "Descartada: el colector reabsorbe agua según la ADH y no es impermeable de manera fija; no es el que genera la hipertonicidad medular.",
+          "Descartada: el túbulo proximal reabsorbe agua junto con los solutos, así que no es impermeable al agua."
+        ],
+        "sec": "2 · Túbulo renal, segmento por segmento"
+      },
+      {
+        "id": "P4-12",
+        "topic": "urinario",
+        "ref": "sección 15",
+        "q": "En una cistoscopia se busca el área triangular del suelo de la vejiga cuya mucosa está adherida y no forma pliegues. ¿Qué estructuras la delimitan?",
+        "opts": [
+          "La cara superior de la vejiga, la única con serosa, cuyas rugosidades se borran cuando el órgano se llena.",
+          "Los dos orificios ureterales y el esfínter uretral externo, ya por fuera de la pared vesical.",
+          "Los dos orificios ureterales y el orificio uretral interno, en el suelo de la vejiga.",
+          "Las tres capas del detrusor, que se disponen en triángulo y se pliegan al llenarse la vejiga."
+        ],
+        "ans": 2,
+        "expl": "El trígono es el área lisa delimitada por los dos orificios ureterales y el orificio uretral interno. La trampa es confundirlo con el detrusor o con los esfínteres.",
+        "why": [
+          "Descartada: la serosa de la cara superior no delimita el trígono, y las rugosidades que se borran son las de la mucosa del resto de la pared.",
+          "Descartada: el vértice anterior del trígono es el orificio uretral interno; el esfínter externo no forma parte de la vejiga.",
+          "Correcta: los orificios ureterales son los vértices posterolaterales y el uretral interno el anterior; la mucosa lisa se adhiere y no se pliega.",
+          "Descartada: el detrusor es la capa muscular de toda la pared, y el trígono justamente no se pliega."
+        ],
+        "sec": "Uréteres, vejiga, uretra y micción"
+      },
+      {
+        "id": "P4-13",
+        "topic": "endocrino",
+        "ref": "sección 16",
+        "q": "En la lactancia, la succión del pezón dispara dos hormonas que vuelven por la sangre a la mama. ¿Cuál libera la neurohipófisis y qué hace?",
+        "opts": [
+          "La oxitocina, fabricada por el hipotálamo y liberada por la neurohipófisis, que eyecta la leche.",
+          "La prolactina, fabricada y liberada por la neurohipófisis, que provoca la eyección de la leche.",
+          "La prolactina, fabricada por el hipotálamo y liberada por la neurohipófisis, que contrae el útero.",
+          "La oxitocina, fabricada y liberada por la adenohipófisis, que estimula la producción de leche."
+        ],
+        "ans": 0,
+        "expl": "La oxitocina la fabrica el hipotálamo, la libera la neurohipófisis y eyecta la leche. La prolactina es de la adenohipófisis y produce la leche; ambas se disparan con el mismo estímulo y de ahí la confusión.",
+        "why": [
+          "Correcta: la oxitocina es neurohipofisaria y provoca la eyección láctea y las contracciones uterinas.",
+          "Descartada: la prolactina la fabrica la adenohipófisis y estimula la producción de leche; la neurohipófisis no fabrica nada.",
+          "Descartada: la prolactina es adenohipofisaria; la que contrae el útero y eyecta la leche es la oxitocina.",
+          "Descartada: la oxitocina no sale de la adenohipófisis ni produce leche; eso corresponde a la prolactina."
+        ],
+        "sec": "Hipotálamo e hipófisis"
+      },
+      {
+        "id": "P4-14",
+        "topic": "endocrino",
+        "ref": "sección 16",
+        "q": "Un adulto de 45 años nota que le crecen las manos, los pies y la mandíbula, y se le detecta un tumor de la adenohipófisis. ¿Qué hormona está en exceso?",
+        "opts": [
+          "La TSH, que en exceso estimula de forma crónica el crecimiento de los huesos y de las partes blandas.",
+          "La ACTH, que estimula la corteza suprarrenal y produce un crecimiento óseo exagerado en el adulto.",
+          "La hormona de crecimiento, cuyo exceso produce acromegalia en el adulto y gigantismo en el niño.",
+          "La prolactina, que en exceso en el adulto mantiene el crecimiento de los huesos y produce gigantismo."
+        ],
+        "ans": 2,
+        "expl": "El exceso de GH produce gigantismo en niños y acromegalia en adultos. Las otras hormonas adenohipofisarias tienen blancos distintos: tiroides, corteza suprarrenal y mama.",
+        "why": [
+          "Descartada: la TSH es trófica de la tiroides; su exceso produce hipertiroidismo, no crecimiento óseo.",
+          "Descartada: la ACTH estimula la secreción de cortisol por la corteza suprarrenal, no el crecimiento de los huesos.",
+          "Correcta: la GH actúa sobre hueso y músculo; en exceso causa acromegalia en el adulto y gigantismo en el niño.",
+          "Descartada: la prolactina actúa sobre la mama y el cuerpo lúteo; no estimula el crecimiento de los huesos."
+        ],
+        "sec": "Hipotálamo e hipófisis"
+      },
+      {
+        "id": "P4-15",
+        "topic": "endocrino",
+        "ref": "sección 16",
+        "q": "Se infunde una hormona en la sangre: llega a todos los tejidos, pero sólo responden algunas células. ¿Qué lo explica?",
+        "opts": [
+          "La hormona se degrada en los tejidos que no responden antes de que llegue a las células.",
+          "Sólo responden las células con el receptor específico: la distribución es universal y la acción específica.",
+          "La hormona viaja sólo por los vasos de los órganos blanco, por lo que no alcanza a las demás células.",
+          "Todas las células la reconocen, pero responden sólo las más cercanas a la glándula endócrina que la secretó."
+        ],
+        "ans": 1,
+        "expl": "La distribución de una hormona es universal por la sangre y la acción es específica porque sólo responden las células con receptor. Confundir ambas es el error conceptual más frecuente.",
+        "why": [
+          "Descartada: la hormona sí llega a todos los tejidos porque la sangre la distribuye a todos lados; lo que difiere es la respuesta.",
+          "Correcta: la acción depende del receptor, que está en la célula blanco, por eso la respuesta es específica aunque la llegada sea universal.",
+          "Descartada: la sangre transporta la hormona a todo el organismo; no hay un reparto selectivo por vasos.",
+          "Descartada: no es un tema de distancia: células lejanas con receptor responden y las cercanas sin receptor no."
+        ],
+        "sec": "Hormona: distribución universal, acción específica"
+      },
+      {
+        "id": "P4-16",
+        "topic": "nervioso",
+        "ref": "sección 17",
+        "q": "Tras un ACV, un paciente entiende todo lo que le dicen pero no logra formar las palabras. ¿Qué área está lesionada y en qué lóbulo?",
+        "opts": [
+          "El área de Wernicke, en el lóbulo temporal, responsable de comprender el lenguaje que se escucha.",
+          "El área somatosensorial primaria, en el lóbulo parietal, que procesa el tacto, el dolor y la temperatura corporal.",
+          "El cerebelo, que no es un lóbulo cortical y coordina los movimientos voluntarios y el equilibrio.",
+          "El área de Broca, en el lóbulo frontal, responsable de formar las palabras, o sea del lenguaje expresivo."
+        ],
+        "ans": 3,
+        "expl": "Broca (frontal) forma las palabras y Wernicke (temporal) las comprende; si entiende pero no habla, es Broca. La trampa es invertirlas o elegir el cerebelo.",
+        "why": [
+          "Descartada: Wernicke es la comprensión del lenguaje; este paciente entiende, así que esa área está sana.",
+          "Descartada: esa área maneja la sensibilidad somática y no la producción del habla.",
+          "Descartada: el cerebelo coordina movimiento y equilibrio, y no es un lóbulo cortical; no es el origen del lenguaje expresivo.",
+          "Correcta: Broca es producción del habla en el lóbulo frontal; la comprensión queda intacta, como en este paciente."
+        ],
+        "sec": "Lóbulos corticales · la cátedra lo toma"
+      },
+      {
+        "id": "P4-17",
+        "topic": "nervioso",
+        "ref": "sección 17",
+        "q": "Una persona se asusta y entra en modo luchar o huir. ¿Qué pasa con su vejiga y su recto?",
+        "opts": [
+          "La vejiga se relaja y el recto se contrae, así que el simpático retiene la orina y la materia fecal.",
+          "La vejiga se contrae y el recto se relaja, así que el simpático favorece la evacuación de ambos.",
+          "La vejiga y el recto se contraen, porque el simpático contrae todo el músculo liso del organismo por igual.",
+          "La vejiga y el recto se relajan, porque el simpático inhibe toda la actividad digestiva y urinaria."
+        ],
+        "ans": 0,
+        "expl": "El simpático relaja la vejiga y contrae el recto; el parasimpático hace lo inverso. En el modo luchar o huir conviene retener, no evacuar.",
+        "why": [
+          "Correcta: el simpático relaja la vejiga y contrae el recto, por lo que en situación de peligro se retiene.",
+          "Descartada: eso es lo que hace el parasimpático, que contrae la vejiga y relaja el recto.",
+          "Descartada: la intuición de que el simpático contrae todo es falsa: relaja bronquios y vejiga.",
+          "Descartada: el simpático inhibe la actividad digestiva en general, pero el recto es una excepción: se contrae."
+        ],
+        "sec": "Sistema nervioso autónomo, órgano por órgano"
+      },
+      {
+        "id": "P4-18",
+        "topic": "nervioso",
+        "ref": "sección 17",
+        "q": "Un tumor bloquea la reabsorción del líquido cefalorraquídeo y los ventrículos se dilatan. ¿Dónde se produce y dónde se reabsorbe normalmente ese líquido?",
+        "opts": [
+          "Se produce en las vellosidades aracnoideas y se reabsorbe en los plexos coroideos de los ventrículos.",
+          "Se produce en el espacio epidural y se reabsorbe en la piamadre hacia los vasos del encéfalo.",
+          "Se produce en los plexos coroideos de los ventrículos y se reabsorbe en las vellosidades aracnoideas.",
+          "Se produce en las células ependimarias del canal del epéndimo y se reabsorbe en el espacio subdural."
+        ],
+        "ans": 2,
+        "expl": "Los plexos coroideos producen el LCR y las vellosidades aracnoideas lo reabsorben; si se bloquea la salida, los ventrículos se dilatan. Las ependimarias sólo revisten las cavidades.",
+        "why": [
+          "Descartada: está invertido: los plexos coroideos lo producen y las vellosidades aracnoideas lo reabsorben.",
+          "Descartada: el espacio epidural queda entre el cráneo y la duramadre y no produce LCR; el LCR circula en el espacio subaracnoideo.",
+          "Correcta: el LCR se produce en los plexos coroideos, circula por ventrículos y espacio subaracnoideo y se reabsorbe en las vellosidades aracnoideas.",
+          "Descartada: las células ependimarias revisten los ventrículos y el canal del epéndimo; el sitio de producción son los plexos coroideos."
+        ],
+        "sec": "Meninges y líquido cefalorraquídeo"
+      },
+      {
+        "id": "P4-19",
+        "topic": "bioingenieria",
+        "ref": "sección 18",
+        "q": "Un equipo quiere obtener, desde una sola línea celular, neuronas (ectodermo) y cardiomiocitos (mesodermo) para un modelo de órgano. ¿Qué potencialidad necesita esa línea?",
+        "opts": [
+          "Multipotente, como las células de la médula ósea, que pasan sin problema entre capas germinales distintas.",
+          "Pluripotente, como la masa celular interna del blastocisto o las iPS, que forma las tres capas germinales.",
+          "Totipotente, porque forma las tres capas y además los anexos, así que es la única válida para dos linajes.",
+          "Unipotente, como el neumocito tipo II, que regenera su linaje y puede reprogramarse hacia otra capa."
+        ],
+        "ans": 1,
+        "expl": "Si se necesitan linajes de dos capas germinales distintas hace falta una célula pluripotente. La multipotente no cruza capas y la totipotente sobra porque forma anexos.",
+        "why": [
+          "Descartada: la multipotente forma varios tipos dentro de su linaje y no cruza capas germinales.",
+          "Correcta: dos linajes de capas distintas exigen pluripotencia: forma las tres capas germinales sin anexos.",
+          "Descartada: la totipotente forma también los anexos extraembrionarios, por lo que sobra; basta la pluripotente.",
+          "Descartada: la unipotente genera un solo linaje, así que no sirve para dos capas germinales."
+        ],
+        "sec": "Paper 3: células madre (revisión)"
+      },
+      {
+        "id": "P4-20",
+        "topic": "bioingenieria",
+        "ref": "sección 18",
+        "q": "Crías de ratones macho condicionados con acetofenona, nunca expuestas al olor, lo detectan a concentraciones más bajas. ¿Qué hallazgo anatómico y molecular describe el paper?",
+        "opts": [
+          "Glomérulos M71 más chicos en el bulbo olfatorio y mutaciones en la secuencia de Olfr151 de los espermatozoides del macho condicionado.",
+          "Menos neuronas M71 en el epitelio olfatorio e hipermetilación de CpG en Olfr151 en los espermatozoides de los machos F0 y F1.",
+          "Glomérulos M71 agrandados que desaparecen con la fecundación in vitro y con la crianza cruzada de las crías nunca expuestas.",
+          "Glomérulos M71 agrandados e hipometilación de CpG en Olfr151 en espermatozoides, sin cambio en el ADN."
+        ],
+        "ans": 3,
+        "expl": "La experiencia parental se hereda por marca epigenética: agranda los glomérulos M71 y hipometila CpG en Olfr151, sin cambiar la secuencia del ADN. Persiste con IVF y crianza cruzada.",
+        "why": [
+          "Descartada: los glomérulos M71 están agrandados, y la herencia es epigenética: no hay cambio en la secuencia del ADN.",
+          "Descartada: hay más neuronas M71 en el epitelio y hipometilación, no hipermetilación, de CpG en Olfr151.",
+          "Descartada: el efecto persiste con fecundación in vitro y con crianza cruzada, y por eso la vía es germinal.",
+          "Correcta: el paper muestra glomérulos M71 agrandados e hipometilación de CpG en Olfr151 en espermatozoides de F0 y F1, sin alterar la secuencia."
+        ],
+        "sec": "Paper 4: experiencia olfatoria parental"
+      }
+    ],
+    "dev": [
+      {
+        "id": "P4-D1",
+        "topic": "respiratorio",
+        "src": "guia",
+        "ref": "sección 12",
+        "q": "Una persona con fibrosis pulmonar tiene engrosada la membrana alveolocapilar. Explicá qué esperás que pase con el intercambio de O₂ y de CO₂, nombrando las capas que debe atravesar el gas y cuál de los dos gases se afecta primero.",
+        "checklist": [
+          "Nombra las capas de la barrera: líquido con surfactante, neumocito tipo I, membranas basales fusionadas y endotelio capilar.",
+          "La difusión depende del gradiente de presiones parciales (alvéolo 105 mmHg contra sangre venosa 40 mmHg) y de la distancia a recorrer.",
+          "Un engrosamiento alarga el camino y enlentece la difusión, de modo que la sangre sale con menos O₂ (hipoxemia).",
+          "El O₂ se afecta antes que el CO₂ porque el CO₂ es unas 24 veces más soluble (ley de Henry).",
+          "Aclara que el problema es de difusión a través de la membrana y no de mecánica ni de calibre de las vías aéreas."
+        ],
+        "modelo": "El gas debe cruzar el líquido con surfactante, el neumocito tipo I, las membranas basales fusionadas y el endotelio del capilar. Si esa barrera se engruesa, la difusión por gradiente de presiones parciales se enlentece y la sangre sale con menos O₂, o sea hipoxemia. El CO₂, unas 24 veces más soluble que el O₂ según la ley de Henry, difunde mucho mejor y se afecta más tarde. El problema es de difusión y no de calibre de las vías aéreas. Con un gradiente de unos 105 mmHg en el alvéolo contra 40 mmHg en la sangre venosa. No es un problema de mecánica ventilatoria ni de calibre de las vías aéreas.",
+        "justificacion": "La barrera alveolocapilar está hecha mínima para la difusión; alterarla compromete sobre todo al O₂, que es menos soluble.",
+        "sec": "Intercambio de gases: dos leyes y cuatro números"
+      },
+      {
+        "id": "P4-D2",
+        "topic": "circulatorio",
+        "src": "guia",
+        "ref": "sección 13",
+        "q": "Un hombre de 60 años sufre una obstrucción de la rama interventricular anterior de la coronaria izquierda. Explicá qué territorio se afecta, cuándo se riega normalmente el miocardio y por qué la lesión deja una cicatriz y no un tejido nuevo.",
+        "checklist": [
+          "Las coronarias nacen de la aorta ascendente, apenas por encima de la válvula aórtica.",
+          "La interventricular anterior (rama de la coronaria izquierda) irriga ventrículo izquierdo y tabique interventricular.",
+          "El miocardio se perfunde en diástole, cuando las sigmoideas cerradas dejan entrar sangre a las coronarias.",
+          "Una frecuencia alta acorta la diástole y reduce la perfusión de un miocardio ya comprometido.",
+          "El miocardio no se repara: no tiene células madre y las fibras maduras no hacen mitosis, así que lo perdido se reemplaza por cicatriz."
+        ],
+        "modelo": "Las coronarias nacen de la aorta ascendente sobre la válvula aórtica, y la interventricular anterior de la izquierda irriga el ventrículo izquierdo y el tabique. Si se obstruye, ese territorio queda sin flujo, y como el corazón se riega en diástole, una taquicardia acorta ese tiempo y empeora la perfusión. El miocardio no tiene células madre y sus fibras maduras no se dividen, por eso el tejido muerto se reemplaza por cicatriz y no por músculo nuevo.",
+        "justificacion": "Une la ubicación de las coronarias, el momento de perfusión y la falta de regeneración del miocardio, todos puntos del capítulo.",
+        "sec": "Circulación coronaria: el corazón se riega a sí mismo, y en diástole"
+      },
+      {
+        "id": "P4-D3",
+        "topic": "digestivo",
+        "src": "guia",
+        "ref": "sección 14",
+        "q": "Un fármaco A es hidrosoluble y un fármaco B es muy liposoluble; los dos se absorben en el intestino delgado. Explicá por qué ruta llega cada uno a la circulación general y cuál sufre más el primer pasaje hepático. Suponé que B se absorbe como los lípidos de la dieta (micelas y quilomicrones).",
+        "checklist": [
+          "Las vellosidades (segundo nivel de amplificación) aportan la superficie de absorción, con un asa capilar y un vaso quilífero central.",
+          "Hidratos de carbono y aminoácidos (y un fármaco hidrosoluble, por analogía) pasan al capilar de la vellosidad.",
+          "Esa sangre va por la vena porta directo al hígado antes de llegar al resto del cuerpo (primer pasaje).",
+          "Los lípidos forman micelas, se resintetizan como triglicéridos en el enterocito y salen en quilomicrones por el vaso quilífero (linfa).",
+          "La linfa llega a la circulación por el conducto torácico, salteándose el hígado en el primer pasaje; por eso B escapa más al efecto de primer paso."
+        ],
+        "modelo": "El fármaco hidrosoluble A se absorbe como los hidratos de carbono: pasa al capilar de la vellosidad y por la vena porta va directo al hígado, que lo procesa antes de que llegue al resto del cuerpo. El liposoluble B se incorpora como los lípidos: micelas, resíntesis en el enterocito y salida en quilomicrones por el vaso quilífero hacia la linfa y el conducto torácico. Así B se saltea el hígado en el primer pasaje y sufre menos el efecto de primer paso.",
+        "justificacion": "La vía de absorción (sangre portal o linfa) decide si el hígado procesa la sustancia antes de que llegue a la circulación general.",
+        "sec": "Digestión y absorción por nutriente"
+      },
+      {
+        "id": "P4-D4",
+        "topic": "urinario",
+        "src": "guia",
+        "ref": "sección 15",
+        "q": "Una paciente con diabetes descompensada orina mucho y su orina contiene glucosa. Explicá en qué parte de la nefrona se reabsorbe normalmente la glucosa, por qué ahora aparece en la orina y por qué eso no es normal.",
+        "checklist": [
+          "El corpúsculo renal filtra el plasma y el filtrado contiene glucosa libre, porque la glucosa pasa la barrera de filtración.",
+          "Normalmente la glucosa se reabsorbe por completo en el túbulo contorneado proximal y no aparece en la orina.",
+          "Con glucemia muy alta el filtrado trae más glucosa de la que el túbulo contorneado proximal puede reabsorber: se superó su capacidad.",
+          "El exceso queda en el túbulo y aparece en la orina: eso es glucosuria, que no forma parte de la orina normal.",
+          "La glucosa que queda en la luz retiene agua por ósmosis, por lo que aumenta el volumen urinario."
+        ],
+        "modelo": "El glomérulo filtra la glucosa junto con el plasma, y en condiciones normales el túbulo contorneado proximal la reabsorbe toda, por eso la orina no la contiene. En la diabetes descompensada la glucemia es tan alta que el filtrado trae más glucosa que la capacidad de reabsorción del túbulo proximal, y el excedente pasa a la orina: glucosuria, que no es un hallazgo normal. Esa glucosa arrastra agua por ósmosis y explica el mayor volumen de orina.",
+        "justificacion": "Se apoya en que la orina normal no tiene glucosa y en que el túbulo proximal reabsorbe hasta un límite.",
+        "sec": "Orina: qué es normal y qué no"
+      },
+      {
+        "id": "P4-D5",
+        "topic": "nervioso",
+        "src": "guia",
+        "ref": "sección 17",
+        "q": "Dos pacientes sufren un ACV: uno por obstrucción de la arteria cerebral media y otro por obstrucción de la arteria basilar. Explicá qué sistema arterial irriga cada territorio, qué estructuras quedan en riesgo en cada caso y qué papel juega el polígono de Willis.",
+        "checklist": [
+          "La cerebral media forma parte de la circulación anterior (sistema carotídeo): la carótida interna da las arterias cerebrales anterior y media.",
+          "Ese sistema irriga la mayor parte de los lóbulos frontal, parietal y temporal; la lesión puede afectar, por ejemplo, el área de Broca o la somatosensorial.",
+          "La basilar pertenece a la circulación posterior (vertebrobasilar), formada por las arterias vertebrales, la basilar y la cerebral posterior.",
+          "Ese sistema irriga el tronco encefálico, el cerebelo, el lóbulo occipital y parte del temporal; el compromiso del tronco pone en riesgo funciones vitales como la respiración y la presión arterial.",
+          "El polígono de Willis une ambos sistemas y puede dar flujo colateral, así que en muchos casos otros vasos suplen la zona afectada."
+        ],
+        "modelo": "La cerebral media viene del sistema carotídeo (circulación anterior) e irriga gran parte de los lóbulos frontal, parietal y temporal, por lo que podría afectar áreas como Broca o la somatosensorial. La basilar es del sistema vertebrobasilar (circulación posterior) e irriga tronco encefálico, cerebelo, lóbulo occipital y parte del temporal; si se lesiona el tronco, se comprometen funciones vitales como respiración y presión arterial. El polígono de Willis conecta los dos sistemas y en muchos casos permite que otros vasos suplan el flujo de la zona.",
+        "justificacion": "Los dos sistemas arteriales tienen territorios distintos y el polígono de Willis es el puente colateral entre ambos.",
+        "sec": "Irrigación del encéfalo: dos sistemas unidos por el polígono de Willis"
+      }
+    ]
+  },
+  {
+    "id": "p5",
+    "nombre": "Parcial 5",
+    "mc": [
+      {
+        "id": "P5-01",
+        "topic": "respiratorio",
+        "ref": "sección 12",
+        "q": "Un traumatismo secciona la médula cervical por encima de C3. ¿Por qué la persona no puede respirar por sí sola?",
+        "opts": [
+          "Se paralizan los intercostales externos, que son los únicos músculos que agrandan el tórax en la inspiración tranquila.",
+          "Se corta el nervio vago, que lleva la orden motora al diafragma y a los músculos intercostales.",
+          "Se interrumpe el estímulo al nervio frénico (C3-C5), que inerva el diafragma, el principal músculo de la inspiración.",
+          "Se pierde el esternocleidomastoideo, que es el músculo principal de la inspiración tranquila."
+        ],
+        "ans": 2,
+        "expl": "El nervio frénico nace en C3-C5 y es el que inerva el diafragma. Si la lesión queda por encima, el diafragma deja de contraerse y la inspiración tranquila falla.",
+        "why": [
+          "Descartada: los intercostales externos colaboran con el diafragma, pero no son los únicos; lo decisivo es el diafragma.",
+          "Descartada: el vago es parasimpático y no inerva el diafragma; la orden motora al diafragma viaja por el frénico.",
+          "Correcta: el frénico (C3-C5) inerva el diafragma, que es el principal músculo de la inspiración; sin esa orden, no hay inspiración tranquila eficaz.",
+          "Descartada: el esternocleidomastoideo es accesorio de la inspiración forzada, no el principal en la tranquila."
+        ],
+        "sec": "Mecánica ventilatoria"
+      },
+      {
+        "id": "P5-02",
+        "topic": "respiratorio",
+        "ref": "sección 12",
+        "q": "¿Cómo se transporta en la sangre la mayor parte del CO2 que producen los tejidos?",
+        "opts": [
+          "Como ion bicarbonato en el plasma, formado dentro del eritrocito por la anhidrasa carbónica.",
+          "Como carbaminohemoglobina, unido a la globina, que es el mecanismo dominante del transporte de CO2.",
+          "Disuelto en el plasma, porque el CO2 es muy soluble y casi no necesita otro transportador.",
+          "Como carboxihemoglobina, unido al grupo hemo en el mismo sitio donde viaja el oxígeno."
+        ],
+        "ans": 0,
+        "expl": "Cerca del 70 % del CO2 viaja como bicarbonato; la carbaminohemoglobina ronda el 23 % y el disuelto apenas el 7 %. El bicarbonato se forma en el eritrocito y sale al plasma por intercambio con cloruro.",
+        "why": [
+          "Correcta: cerca del 70 % del CO2 viaja como bicarbonato, generado en el eritrocito por la anhidrasa carbónica.",
+          "Descartada: la carbaminohemoglobina existe (cerca del 23 %), pero no es el mecanismo dominante.",
+          "Descartada: el CO2 es más soluble que el O2, pero lo disuelto es una fracción pequeña (cerca del 7 %).",
+          "Descartada: la carboxihemoglobina es la unión del monóxido de carbono al hemo; el CO2 se une a la globina."
+        ],
+        "sec": "Transporte de gases en la sangre"
+      },
+      {
+        "id": "P5-03",
+        "topic": "respiratorio",
+        "ref": "sección 12",
+        "q": "En reposo, ¿qué cambio detectan los quimiorreceptores centrales del bulbo para ajustar la ventilación?",
+        "opts": [
+          "La caída de la PO2 del líquido cefalorraquídeo, que es su estímulo principal en reposo.",
+          "La presión arterial sistémica, cuyas variaciones modifican el ritmo respiratorio.",
+          "El estiramiento de los alvéolos al final de cada inspiración, que frena la inspiración.",
+          "El aumento de H⁺ en el líquido cefalorraquídeo, que depende de la PCO2 de la sangre arterial."
+        ],
+        "ans": 3,
+        "expl": "Los quimiorreceptores centrales del bulbo responden a los H⁺ del LCR, que reflejan la PCO2. La PO2 baja la detectan sobre todo los quimiorreceptores periféricos (cuerpos carotídeos y aórticos).",
+        "why": [
+          "Descartada: la PO2 baja la detectan sobre todo los quimiorreceptores periféricos, no los centrales; el estímulo central es el H⁺.",
+          "Descartada: la presión arterial la detectan barorreceptores, no los quimiorreceptores del bulbo.",
+          "Descartada: el estiramiento alveolar es un reflejo mecánico, no un estímulo químico.",
+          "Correcta: responden a los H⁺ del LCR, que dependen de la PCO2 arterial; así la ventilación sigue al CO2."
+        ],
+        "sec": "Control de la respiración"
+      },
+      {
+        "id": "P5-04",
+        "topic": "circulatorio",
+        "ref": "sección 13",
+        "q": "Una persona con taquicardia sostenida tiene dolor torácico de esfuerzo. ¿Por qué aumenta el riesgo de isquemia del miocardio?",
+        "opts": [
+          "La taquicardia alarga la sístole, que es cuando las coronarias se llenan al máximo, y deja sin tiempo de llenado al ventrículo.",
+          "La taquicardia acorta sobre todo la diástole, que es cuando el miocardio se perfunde, y a la vez sube la demanda de oxígeno.",
+          "La taquicardia cierra antes la válvula aórtica, y las coronarias, que nacen del ventrículo, reciben menos sangre.",
+          "La taquicardia reduce el consumo de oxígeno del miocardio, de modo que sus fibras entran en isquemia por falta de uso."
+        ],
+        "ans": 1,
+        "expl": "El ventrículo izquierdo recibe flujo coronario en diástole, porque en sístole la contracción comprime los vasos intramurales. Al acelerarse el corazón se recorta sobre todo la diástole, que es la ventana de aporte.",
+        "why": [
+          "Descartada: en sístole las coronarias se comprimen, no se llenan al máximo; el llenado coronario es diastólico.",
+          "Correcta: se acorta sobre todo la diástole, cuando el miocardio se perfunde, y sube la demanda: aporte menor con consumo mayor.",
+          "Descartada: las coronarias nacen de la aorta (seno aórtico), no del ventrículo, y el problema es la duración de la diástole.",
+          "Descartada: la taquicardia aumenta el consumo de oxígeno; no lo reduce."
+        ],
+        "sec": "Circulación coronaria: el corazón se riega a sí mismo, y en diástole"
+      },
+      {
+        "id": "P5-05",
+        "topic": "circulatorio",
+        "ref": "sección 13",
+        "q": "Un traumatismo provoca una hemorragia pequeña pero rápida en la cavidad pericárdica y aparece un taponamiento. ¿Por qué comprime las cámaras?",
+        "opts": [
+          "La hemorragia desgarra el epicardio, que se adhiere a la aorta ascendente y aumenta la poscarga del ventrículo izquierdo.",
+          "La sangre pasa a la cavidad pleural y el pulmón colapsado comprime el corazón por fuera del pericardio.",
+          "El pericardio seroso se contrae por reflejo ante la sangre y estrecha las cámaras desde la pared del ventrículo.",
+          "El saco pericárdico fibroso es poco distensible, y el líquido acumulado comprime las cámaras e impide que se llenen."
+        ],
+        "ans": 3,
+        "expl": "El pericardio fibroso no se estira de golpe, por eso un pequeño volumen de líquido rápido comprime las cámaras y limita su llenado. Esa misma rigidez evita que el corazón se dilate sin límite ante una sobrecarga aguda.",
+        "why": [
+          "Descartada: el epicardio es la hoja visceral del pericardio seroso y no explica el cuadro; el problema es el llenado, no la poscarga.",
+          "Descartada: la cavidad pericárdica es independiente de la pleural; el líquido está dentro del pericardio, no en la pleura.",
+          "Descartada: el pericardio seroso es una membrana y no se contrae; el mecanismo es la compresión por un saco poco distensible.",
+          "Correcta: el pericardio fibroso es rígido, no se estira de golpe, y el líquido comprime las cámaras e impide su llenado."
+        ],
+        "sec": "Pericardio: tres capas y una cavidad"
+      },
+      {
+        "id": "P5-06",
+        "topic": "circulatorio",
+        "ref": "sección 13",
+        "q": "Tras un infarto extenso, ¿con qué se reemplaza el miocardio necrosado y por qué?",
+        "opts": [
+          "Con músculo liso que migra desde las paredes de las coronarias, porque el miocardio dañado se repara con ese tejido.",
+          "Con nuevos cardiomiocitos que proliferan desde los bordes de la lesión, porque el miocardio se regenera con facilidad.",
+          "Con tejido conectivo cicatrizal, porque los cardiomiocitos casi no se dividen y no se repara la fibra muscular.",
+          "Con fibras de Purkinje, que se dividen para llenar la zona necrosada y conservan la contracción."
+        ],
+        "ans": 2,
+        "expl": "El miocardio se reemplaza y no se repara: los cardiomiocitos casi no se dividen, y el tejido muerto lo ocupa una cicatriz de conectivo que no se contrae. Por eso un infarto grande reduce la contractilidad de forma permanente.",
+        "why": [
+          "Descartada: no hay migración de músculo liso a la zona infartada; el músculo liso es de la pared vascular.",
+          "Descartada: la proliferación de cardiomiocitos es mínima; si fuera fácil, el infarto no dejaría secuela.",
+          "Correcta: los cardiomiocitos casi no se dividen, así que el tejido muerto lo ocupa una cicatriz conectiva que no se contrae.",
+          "Descartada: las fibras de Purkinje son células de conducción que tampoco se dividen para reparar el tejido."
+        ],
+        "sec": "El miocardio como tejido: por qué hay que reemplazarlo y no repararlo"
+      },
+      {
+        "id": "P5-07",
+        "topic": "digestivo",
+        "ref": "sección 14",
+        "q": "Un cirujano compara el yeyuno con el duodeno (salvo su primera porción). ¿Qué diferencia espera en la túnica externa?",
+        "opts": [
+          "El yeyuno tiene serosa con mesotelio, y el duodeno tiene adventicia sin mesotelio, porque es retroperitoneal.",
+          "Ambos tienen serosa, porque las dos porciones forman parte del intestino delgado y están tapizadas por peritoneo.",
+          "Ambos tienen adventicia, porque en el intestino delgado la túnica externa es siempre conectivo sin mesotelio.",
+          "El yeyuno tiene adventicia por estar sujeto al mesenterio, y el duodeno tiene serosa por rodear al páncreas."
+        ],
+        "ans": 0,
+        "expl": "La túnica externa es serosa (con mesotelio) donde el órgano es intraperitoneal y adventicia donde es retroperitoneal. El duodeno es retroperitoneal salvo su primera porción; el yeyuno es intraperitoneal.",
+        "why": [
+          "Correcta: el yeyuno es intraperitoneal y tiene serosa; el duodeno es retroperitoneal y tiene adventicia sin mesotelio.",
+          "Descartada: el duodeno es retroperitoneal; el peritoneo no lo tapiza por completo, así que no tiene serosa.",
+          "Descartada: el yeyuno es intraperitoneal y sí tiene serosa; la túnica externa depende de la relación con el peritoneo.",
+          "Descartada: el mesenterio sujeta al yeyuno y lo deja intraperitoneal, con serosa; el duodeno, retroperitoneal, tiene adventicia."
+        ],
+        "sec": "Las cuatro túnicas: el esqueleto de todo el tema"
+      },
+      {
+        "id": "P5-08",
+        "topic": "digestivo",
+        "ref": "sección 14",
+        "q": "Años después de una gastrectomía total, un paciente desarrolla anemia megaloblástica. ¿Cuál es la causa?",
+        "opts": [
+          "Se perdieron las células principales, que secretan pepsinógeno, y sin él no se absorbe la vitamina B12.",
+          "Se perdieron las células parietales, que secretan el factor intrínseco necesario para absorber la B12.",
+          "Se perdieron las células G, y sin gastrina el intestino delgado deja de absorber el hierro de la dieta.",
+          "Se perdieron las células mucosas, y sin moco no se emulsionan las grasas ni se absorbe la vitamina B12."
+        ],
+        "ans": 1,
+        "expl": "Las células parietales secretan HCl y factor intrínseco; sin éste no se absorbe la vitamina B12 y aparece anemia megaloblástica. El nombre de las células principales engaña: ellas secretan pepsinógeno.",
+        "why": [
+          "Descartada: el pepsinógeno participa en la digestión proteica, no en la absorción de B12.",
+          "Correcta: las parietales secretan el factor intrínseco, necesario para absorber la B12; sin ellas falla la maduración de los eritrocitos.",
+          "Descartada: la gastrina regula la secreción gástrica y no la absorción de hierro, y la anemia megaloblástica es por B12.",
+          "Descartada: el moco protege la mucosa; las grasas se emulsionan con la bilis, y la B12 depende del factor intrínseco."
+        ],
+        "sec": "Estómago"
+      },
+      {
+        "id": "P5-09",
+        "topic": "digestivo",
+        "ref": "sección 14",
+        "q": "Una persona ingiere en una misma comida glucosa y triglicéridos. ¿Cómo llega cada nutriente a la circulación?",
+        "opts": [
+          "La glucosa y los triglicéridos entran al capilar de la vellosidad y llegan juntos al hígado por la vena porta.",
+          "La glucosa sale por el vaso quilífero hacia la linfa, y los triglicéridos pasan al capilar y a la vena porta.",
+          "La glucosa va por el capilar y la porta al hígado; los triglicéridos, como quilomicrones, por el quilífero.",
+          "La glucosa y los triglicéridos se empaquetan en quilomicrones y llegan a la sangre por el conducto torácico."
+        ],
+        "ans": 2,
+        "expl": "Los monosacáridos y los aminoácidos van al capilar de la vellosidad y por la porta al hígado. Los lípidos se resintetizan en el enterocito, se empaquetan en quilomicrones y salen por el vaso quilífero (linfa), salteándose el hígado en el primer pasaje.",
+        "why": [
+          "Descartada: los triglicéridos no entran al capilar de la vellosidad; salen como quilomicrones por el quilífero.",
+          "Descartada: la glucosa no viaja por el quilífero; la vía linfática es la de los lípidos.",
+          "Correcta: la glucosa va por el capilar y la porta; los triglicéridos, como quilomicrones, por el quilífero y la linfa.",
+          "Descartada: la glucosa no forma quilomicrones; sólo los lípidos se empaquetan así."
+        ],
+        "sec": "Digestión y absorción por nutriente"
+      },
+      {
+        "id": "P5-10",
+        "topic": "urinario",
+        "ref": "sección 15",
+        "q": "¿Qué vaso sigue a los capilares glomerulares, y qué particularidad tiene esa disposición?",
+        "opts": [
+          "La vénula peritubular, como ocurre en cualquier lecho capilar, que lleva la sangre directamente hacia la vena renal.",
+          "La arteria arcuata, que cierra el circuito dentro de la corteza y devuelve la sangre a las pirámides.",
+          "La vena interlobulillar, que recoge la sangre filtrada y la lleva a las venas arcuatas.",
+          "La arteriola eferente, por lo que el glomérulo queda entre dos arteriolas y no entre una arteriola y una vénula."
+        ],
+        "ans": 3,
+        "expl": "Tras el glomérulo viene una arteriola eferente (no una vénula), así que el glomérulo queda entre dos arteriolas. De la eferente nacen los capilares peritubulares y los vasos rectos.",
+        "why": [
+          "Descartada: después del glomérulo viene una arteriola eferente; saltearla es el error típico.",
+          "Descartada: la arcuata está antes del glomérulo, en la base de las pirámides, no después.",
+          "Descartada: la vena interlobulillar viene mucho después, luego de los capilares peritubulares y las vénulas.",
+          "Correcta: la eferente deja al glomérulo entre dos arteriolas y de ella nacen los capilares peritubulares y los vasos rectos."
+        ],
+        "sec": "Irrigación renal, en orden"
+      },
+      {
+        "id": "P5-11",
+        "topic": "urinario",
+        "ref": "sección 15",
+        "q": "Una persona con diabetes mal controlada presenta glucosuria. ¿Por qué aparece glucosa en la orina?",
+        "opts": [
+          "La glucosa filtrada supera lo que reabsorbe el túbulo contorneado proximal, que normalmente recupera casi toda.",
+          "El glomérulo normalmente no filtra glucosa, y en la diabetes se rompe la membrana basal y deja pasar la glucosa.",
+          "El asa de Henle comienza a secretar glucosa hacia la luz tubular cuando la glucemia es alta.",
+          "El túbulo colector deja pasar glucosa hacia la orina por efecto de la ADH, que aumenta en la diabetes."
+        ],
+        "ans": 0,
+        "expl": "La glucosa se filtra libremente y el túbulo proximal reabsorbe casi el 100 %, pero los transportadores se saturan si la carga filtrada es muy alta. Entonces el excedente se pierde en la orina.",
+        "why": [
+          "Correcta: el túbulo proximal reabsorbe casi toda la glucosa filtrada, pero sus transportadores se saturan si la glucemia es muy alta.",
+          "Descartada: la glucosa sí se filtra libremente; la barrera no se rompe, y lo que falla es la capacidad de reabsorción.",
+          "Descartada: el asa de Henle no secreta glucosa; la reabsorción de la glucosa ocurre en el proximal.",
+          "Descartada: la ADH actúa sobre el agua en el colector y no libera glucosa a la orina."
+        ],
+        "sec": "2 · Túbulo renal, segmento por segmento"
+      },
+      {
+        "id": "P5-12",
+        "topic": "urinario",
+        "ref": "sección 15",
+        "q": "Si se perdieran selectivamente las nefronas yuxtamedulares, ¿qué capacidad se comprometería?",
+        "opts": [
+          "La filtración glomerular, porque sólo ellas tienen corpúsculo renal con podocitos y capilares fenestrados.",
+          "Concentrar la orina, porque sus asas largas y sus vasos rectos mantienen el gradiente osmótico medular.",
+          "La reabsorción de glucosa, porque sólo ellas poseen un túbulo contorneado proximal con borde en cepillo.",
+          "La síntesis de ADH, porque sus asas largas la producen en respuesta a la osmolaridad medular."
+        ],
+        "ans": 1,
+        "expl": "Las nefronas yuxtamedulares son minoría, pero sus asas de Henle largas y los vasos rectos mantienen el gradiente osmótico medular. Sin ellas no se puede concentrar la orina.",
+        "why": [
+          "Descartada: todas las nefronas tienen corpúsculo renal, y la mayoría son corticales, así que la filtración se conserva.",
+          "Correcta: las asas largas y los vasos rectos de las yuxtamedulares crean el gradiente osmótico medular necesario para concentrar la orina.",
+          "Descartada: todas las nefronas tienen túbulo contorneado proximal, y las corticales lo hacen igual.",
+          "Descartada: la ADH la sintetizan neuronas del hipotálamo; el riñón es su órgano blanco."
+        ],
+        "sec": "Nefrona cortical vs yuxtamedular"
+      },
+      {
+        "id": "P5-13",
+        "topic": "endocrino",
+        "ref": "sección 16",
+        "q": "¿Dónde se sintetiza la ADH y por qué un corte del tallo hipofisario afecta su liberación?",
+        "opts": [
+          "En las células glandulares de la neurohipófisis, que la liberan directo a la sangre y no dependen del tallo.",
+          "En la adenohipófisis, que la libera hacia el sistema porta en respuesta a las hormonas hipotalámicas.",
+          "En las células del túbulo colector, que la liberan al percibir la osmolaridad plasmática.",
+          "En neuronas del hipotálamo; sus axones bajan por el tallo hasta la neurohipófisis y el corte interrumpe ese paso."
+        ],
+        "ans": 3,
+        "expl": "La neurohipófisis no produce hormonas: es el sitio donde los axones de las neuronas neurosecretoras hipotalámicas liberan ADH y oxitocina. Cortar el tallo interrumpe ese eje.",
+        "why": [
+          "Descartada: la neurohipófisis sólo almacena y libera; sintetiza el hipotálamo, y su dependencia del tallo es total.",
+          "Descartada: la adenohipófisis produce GH, prolactina, TSH, ACTH, FSH, LH y MSH; no ADH.",
+          "Descartada: el colector es el órgano blanco de la ADH, no el sitio donde se sintetiza.",
+          "Correcta: la sintetizan neuronas hipotalámicas; sus axones bajan por el tallo y la liberan en la neurohipófisis."
+        ],
+        "sec": "Hipotálamo e hipófisis"
+      },
+      {
+        "id": "P5-14",
+        "topic": "endocrino",
+        "ref": "sección 16",
+        "q": "Una hemorragia grave activa el sistema renina-angiotensina-aldosterona. ¿Qué zona de la corteza suprarrenal responde y con qué efecto?",
+        "opts": [
+          "La zona glomerular libera aldosterona, que hace retener sodio y agua para recuperar volumen y presión.",
+          "La zona fascicular libera aldosterona, que hace excretar sodio y agua para disminuir la presión arterial.",
+          "La zona reticular libera cortisol, que hace retener sodio y agua para recuperar el volumen circulante.",
+          "La médula libera aldosterona, que hace retener sodio y agua para sostener el volumen circulante."
+        ],
+        "ans": 0,
+        "expl": "La aldosterona se produce en la zona glomerular de la corteza y retiene sodio y agua. El cortisol es de la zona fascicular y la médula secreta adrenalina.",
+        "why": [
+          "Correcta: la zona glomerular produce aldosterona, que retiene sodio y agua y así recupera volumen y presión.",
+          "Descartada: la aldosterona no es de la fascicular y retiene sodio, no lo excreta.",
+          "Descartada: la reticular produce andrógenos, no cortisol; el cortisol es de la zona fascicular.",
+          "Descartada: la médula produce adrenalina y noradrenalina, no aldosterona."
+        ],
+        "sec": "Suprarrenales · afuera corteza, adentro médula"
+      },
+      {
+        "id": "P5-15",
+        "topic": "endocrino",
+        "ref": "sección 16",
+        "q": "Una paciente tiene cortisol bajo, ACTH baja y CRH normal o alta. ¿En qué piso del eje está la falla?",
+        "opts": [
+          "En la suprarrenal (primario), porque la glándula final no produce cortisol y la ACTH tendría que estar alta.",
+          "En el hipotálamo (terciario), porque la CRH hipotalámica está disminuida y no estimula a la hipófisis.",
+          "En la hipófisis (secundario): no secreta ACTH pese a una CRH normal o alta, y la suprarrenal no estimulada rinde menos.",
+          "En ninguno: con cortisol bajo, la ACTH baja es la respuesta normal de la retroalimentación negativa."
+        ],
+        "ans": 2,
+        "expl": "Con la hormona periférica baja y la trófica también baja, el problema está arriba. Con la hipotalámica normal o alta, la falla es hipofisaria (secundario); si la hipotalámica estuviera baja, sería terciario.",
+        "why": [
+          "Descartada: en la falla suprarrenal primaria la ACTH está alta, no baja.",
+          "Descartada: la CRH está normal o alta; con CRH baja sería terciario.",
+          "Correcta: periférica baja, trófica baja e hipotalámica normal o alta: la hipófisis no responde, y es un hipopituitarismo secundario.",
+          "Descartada: con cortisol bajo la retroalimentación debería elevar la ACTH; una ACTH baja indica que la hipófisis no responde."
+        ],
+        "sec": "EL MÉTODO · localizar la lesión en el eje"
+      },
+      {
+        "id": "P5-16",
+        "topic": "nervioso",
+        "ref": "sección 17",
+        "q": "¿Qué células revisten los ventrículos cerebrales y participan en la producción del líquido cefalorraquídeo?",
+        "opts": [
+          "Los astrocitos, que conservan la barrera hematoencefálica y forman la cicatriz glial.",
+          "Las células ependimarias, que revisten ventrículos y canal del epéndimo y participan en los plexos coroideos.",
+          "Los oligodendrocitos, que forman la vaina de mielina de los axones del sistema nervioso central.",
+          "Las células de Schwann, que revisten los axones del sistema nervioso periférico."
+        ],
+        "ans": 1,
+        "expl": "Las células ependimarias revisten ventrículos y canal del epéndimo, y los plexos coroideos producen el LCR. Los astrocitos cumplen otra función: barrera hematoencefálica y cicatriz glial.",
+        "why": [
+          "Descartada: los astrocitos mantienen la barrera hematoencefálica y la cicatriz; no revisten los ventrículos.",
+          "Correcta: las ependimarias forman el epitelio que reviste los ventrículos y participan en el plexo coroideo que produce el LCR.",
+          "Descartada: los oligodendrocitos mielinizan axones del SNC; no revisten ventrículos.",
+          "Descartada: las células de Schwann son del sistema nervioso periférico, y los ventrículos están en el SNC."
+        ],
+        "sec": "Neuroglía: la pregunta de distractores vecinos por excelencia"
+      },
+      {
+        "id": "P5-17",
+        "topic": "nervioso",
+        "ref": "sección 17",
+        "q": "Una persona tiene una carótida interna obstruida por ateroma, pero no presenta déficit neurológico. ¿Qué lo explica?",
+        "opts": [
+          "El polígono de Willis une los sistemas carotídeo y vertebrobasilar y suple el flujo de la zona afectada.",
+          "Las meninges aportan sangre colateral a la corteza afectada cuando falta una arteria principal.",
+          "El líquido cefalorraquídeo aporta suficiente oxígeno y glucosa a la corteza cuando falta una arteria.",
+          "Las arterias vertebrales irrigan solas ambos hemisferios y la carótida interna es una vía accesoria."
+        ],
+        "ans": 0,
+        "expl": "Dos sistemas irrigan el encéfalo (carotídeo y vertebrobasilar) y el polígono de Willis los une, dando flujo colateral. Por eso, ante una obstrucción, otros vasos pueden suplir la zona.",
+        "why": [
+          "Correcta: el polígono de Willis conecta los dos sistemas arteriales y da flujo colateral al territorio afectado.",
+          "Descartada: las meninges no aportan sangre colateral a la corteza; su rol es protector.",
+          "Descartada: el LCR no sustituye al flujo sanguíneo en el aporte de oxígeno y glucosa.",
+          "Descartada: la carótida interna irriga una gran parte de los hemisferios; no es una vía accesoria."
+        ],
+        "sec": "Irrigación del encéfalo: dos sistemas unidos por el polígono de Willis"
+      },
+      {
+        "id": "P5-18",
+        "topic": "nervioso",
+        "ref": "sección 17",
+        "q": "Una persona siente miedo intenso y activa su sistema simpático. ¿Qué esperás en la pupila, la salivación y los bronquios?",
+        "opts": [
+          "Miosis, salivación aumentada y bronquios contraídos, por predominio de la actividad parasimpática.",
+          "Midriasis, salivación aumentada y bronquios contraídos, ya que el simpático estimula las tres respuestas.",
+          "Miosis, salivación inhibida y bronquios dilatados, como si el simpático actuara sólo sobre los bronquios.",
+          "Midriasis, salivación inhibida y bronquios dilatados, porque el simpático prepara para luchar o huir."
+        ],
+        "ans": 3,
+        "expl": "El simpático dilata la pupila, inhibe la salivación y relaja (dilata) los bronquios; el parasimpático hace lo inverso. En luchar o huir se priorizan oxígeno y visión y no la digestión.",
+        "why": [
+          "Descartada: miosis, salivación aumentada y broncoconstricción son parasimpáticas; no es lo que ocurre con miedo intenso.",
+          "Descartada: el simpático inhibe la salivación y relaja los bronquios; no contrae ni estimula esas dos respuestas.",
+          "Descartada: el simpático actúa también sobre la pupila (la dilata); no sólo sobre los bronquios.",
+          "Correcta: el simpático dilata la pupila, inhibe la salivación y dilata los bronquios para luchar o huir."
+        ],
+        "sec": "Sistema nervioso autónomo, órgano por órgano"
+      },
+      {
+        "id": "P5-19",
+        "topic": "bioingenieria",
+        "ref": "sección 18",
+        "q": "Un equipo necesita obtener linajes derivados de endodermo y de mesodermo para un órgano. ¿Qué tipo de célula madre conviene?",
+        "opts": [
+          "Una célula multipotente de la médula ósea, que puede formar tipos de varias capas germinales distintas.",
+          "Una célula totipotente, porque forma el organismo completo y sus anexos, y por eso es la más adecuada.",
+          "Una célula pluripotente, porque forma las tres capas germinales sin generar anexos embrionarios.",
+          "Una célula unipotente como el neumocito II, que regenera su tipo celular y los linajes vecinos."
+        ],
+        "ans": 2,
+        "expl": "Si se necesitan linajes de dos capas germinales, hace falta una célula pluripotente. La multipotente no cruza capas y la totipotente sobra porque también forma anexos.",
+        "why": [
+          "Descartada: la multipotente se limita a un linaje y no cruza capas germinales.",
+          "Descartada: la totipotente forma también los anexos, lo que la hace innecesaria y poco práctica para un órgano.",
+          "Correcta: la pluripotente puede dar las tres capas germinales sin formar anexos; es la que cruza capas con precisión.",
+          "Descartada: la unipotente forma un solo linaje; el neumocito II regenera sólo neumocitos tipo I."
+        ],
+        "sec": "Paper 3: células madre (revisión)"
+      },
+      {
+        "id": "P5-20",
+        "topic": "bioingenieria",
+        "ref": "sección 18",
+        "q": "En el estudio de Dias y Ressler, ¿qué hallazgo molecular apoya que la sensibilidad al olor se transmite por vía germinal?",
+        "opts": [
+          "Una mutación puntual en la secuencia del gen Olfr151, detectada en los espermatozoides de los machos condicionados.",
+          "La hipometilación de CpG en Olfr151 en espermatozoides de los machos F0 condicionados y de la F1.",
+          "Una pérdida de neuronas M71 en el epitelio olfatorio de la F1 y la F2, nunca expuestas al olor.",
+          "Una conducta aprendida por la cría durante la convivencia con el padre condicionado, que desaparece con crianza cruzada."
+        ],
+        "ans": 1,
+        "expl": "La vía germinal se apoya en la hipometilación de CpG del gen Olfr151 en espermatozoides y en que el efecto persiste con fecundación in vitro y crianza cruzada. Es una marca epigenética, sin cambio en la secuencia del ADN.",
+        "why": [
+          "Descartada: el efecto es epigenético y no hay cambio en la secuencia del ADN.",
+          "Correcta: la hipometilación de CpG en Olfr151 en espermatozoides es una marca epigenética, sin cambios en la secuencia del ADN.",
+          "Descartada: la F1 presentó más neuronas M71 y glomérulos agrandados, no menos.",
+          "Descartada: el efecto persistió con crianza cruzada, lo que descarta el aprendizaje por convivencia."
+        ],
+        "sec": "Paper 4: experiencia olfatoria parental"
+      }
+    ],
+    "dev": [
+      {
+        "id": "P5-D1",
+        "topic": "respiratorio",
+        "src": "guia",
+        "ref": "sección 12",
+        "q": "Una niña con asma sufre una crisis tras exponerse a un alérgeno: respira con dificultad y se escucha un silbido al espirar. Explique qué ocurre en la vía aérea y por qué se le administra adrenalina.",
+        "checklist": [
+          "La histamina y el parasimpático contraen el músculo liso de los bronquiolos",
+          "El calibre de los bronquiolos baja y la resistencia de la vía aérea sube",
+          "Se dificulta sobre todo la espiración y queda aire atrapado",
+          "Se cierran los bronquiolos y no la tráquea, porque tienen más proporción de músculo liso",
+          "La adrenalina estimula el simpático, que relaja y dilata los bronquiolos"
+        ],
+        "modelo": "En la crisis, la histamina y el parasimpático contraen el músculo liso de los bronquiolos, que son los que más músculo liso tienen. El calibre baja y la resistencia sube, entonces cuesta mover el aire y la espiración queda dificultada, con el silbido típico. La adrenalina activa el simpático, que relaja el músculo liso y dilata los bronquiolos, y baja la resistencia.",
+        "justificacion": "La resistencia de la vía aérea depende del calibre: con broncoconstricción sube. El simpático dilata y el parasimpático constriñe, por eso se usa adrenalina.",
+        "sec": "Mecánica ventilatoria"
+      },
+      {
+        "id": "P5-D2",
+        "topic": "circulatorio",
+        "src": "guia",
+        "ref": "sección 13",
+        "q": "Un hombre de 58 años tiene dolor opresivo en el pecho y se confirma la oclusión de la rama interventricular anterior de la coronaria izquierda. Explique qué territorio queda sin irrigación y qué esperaría a corto y a largo plazo.",
+        "checklist": [
+          "La rama interventricular anterior irriga el ventrículo izquierdo y el tabique interventricular",
+          "Las coronarias se perfunden en diástole y la oclusión deja ese miocardio sin oxígeno",
+          "El tejido isquémico muere (infarto) porque los cardiomiocitos dependen del metabolismo aeróbico",
+          "El miocardio muerto se reemplaza por cicatriz conectiva, porque los cardiomiocitos casi no se dividen",
+          "Menor contractilidad: baja el volumen sistólico y el gasto cardíaco"
+        ],
+        "modelo": "La rama interventricular anterior de la coronaria izquierda irriga el ventrículo izquierdo y el tabique interventricular. Si se ocluye, ese miocardio, que es aeróbico y se perfunde en diástole, queda sin oxígeno y se necrosa. Como los cardiomiocitos casi no se dividen, el tejido muerto se reemplaza por una cicatriz conectiva que no se contrae. A largo plazo cae la contractilidad y con ella el volumen sistólico y el gasto cardíaco.",
+        "justificacion": "Une el territorio coronario con la propiedad del miocardio: tejido aeróbico y no regenerable. De ahí salen la necrosis, la cicatriz y la caída del gasto.",
+        "sec": "Circulación coronaria: el corazón se riega a sí mismo, y en diástole"
+      },
+      {
+        "id": "P5-D3",
+        "topic": "digestivo",
+        "src": "guia",
+        "ref": "sección 14",
+        "q": "A un paciente con cáncer gástrico se le realiza una gastrectomía total. Explique qué funciones del estómago pierde y qué consecuencias esperaría, a corto y a largo plazo.",
+        "checklist": [
+          "Pierde las células parietales: HCl y factor intrínseco",
+          "Sin HCl se desnaturalizan peor las proteínas y no se activa el pepsinógeno",
+          "Pierde las células principales, que secretan el pepsinógeno, precursor de la pepsina",
+          "Sin factor intrínseco no absorbe la vitamina B12 y aparece anemia megaloblástica a largo plazo",
+          "Requiere vitamina B12 por vía parenteral; la digestión sigue en el intestino con enzimas pancreáticas"
+        ],
+        "modelo": "El estómago aporta HCl y factor intrínseco desde las células parietales, y pepsinógeno desde las principales. Sin HCl las proteínas se desnaturalizan peor y se pierde la activación de la pepsina, pero el páncreas y el intestino siguen digiriendo. Lo que no se compensa es el factor intrínseco: sin él no se absorbe la vitamina B12, y años después aparece anemia megaloblástica, por eso se indica B12 parenteral.",
+        "justificacion": "El HCl y el factor intrínseco se secretan por separado. La digestión se compensa en el intestino, pero la absorción de B12 depende del factor intrínseco.",
+        "sec": "Estómago"
+      },
+      {
+        "id": "P5-D4",
+        "topic": "endocrino",
+        "src": "guia",
+        "ref": "sección 16",
+        "q": "Durante una tiroidectomía total se extirpan por error las paratiroides. Dos días después la paciente tiene calambres y hormigueo. Explique qué pasó, qué hormonas intervienen y qué tratamiento tiene sentido.",
+        "checklist": [
+          "Las paratiroides, a los lados de la tiroides, producen PTH (células principales)",
+          "Sin PTH baja el calcio en sangre (hipocalcemia), que causa calambres y tetania",
+          "La PTH normalmente sube el calcio: lo saca del hueso, el reservorio, y favorece su reabsorción renal",
+          "La calcitonina de la tiroides baja el calcio, así que no compensa el déficit",
+          "Se repone calcio y calcitriol (vitamina D), con control de la calcemia"
+        ],
+        "modelo": "Las paratiroides están junto a la tiroides y sus células principales producen PTH, que sube el calcio movilizándolo del hueso y favoreciendo su reabsorción en el riñón. Al faltar la PTH el calcio cae y aparecen calambres y tetania. La calcitonina baja el calcio, así que no compensa el déficit. El tratamiento es reponer calcio y calcitriol, con control periódico de la calcemia.",
+        "justificacion": "La PTH sube el calcio y la calcitonina lo baja; sin PTH queda hipocalcemia. La clínica neuromuscular sale de ahí.",
+        "sec": "Tiroides y paratiroides · el par del calcio"
+      },
+      {
+        "id": "P5-D5",
+        "topic": "nervioso",
+        "src": "guia",
+        "ref": "sección 17",
+        "q": "Dos pacientes llegan tras un ACV del hemisferio izquierdo. A entiende lo que le dicen pero no logra formar las palabras; B habla con fluidez pero no comprende el lenguaje. Localice la lesión de cada uno y explique su razonamiento.",
+        "checklist": [
+          "A tiene una lesión en el área de Broca, del lóbulo frontal",
+          "Broca es la producción del lenguaje (lenguaje expresivo), y por eso A comprende pero no habla",
+          "B tiene una lesión en el área de Wernicke, del lóbulo temporal",
+          "Wernicke es la comprensión del lenguaje, por lo que B habla pero no entiende",
+          "Ambas áreas están en el hemisferio izquierdo en cerca del 95% de las personas"
+        ],
+        "modelo": "A tiene afectada el área de Broca, del lóbulo frontal, que forma las palabras; entiende lo que escucha pero no puede producir el habla. B tiene afectada el área de Wernicke, del lóbulo temporal, que permite comprender el lenguaje; habla pero no entiende. Ambas áreas están en el hemisferio izquierdo en cerca del 95% de las personas, por eso un ACV izquierdo las afecta.",
+        "justificacion": "Broca es producir y Wernicke es comprender. Una lesión frontal da un déficit expresivo y una temporal da un déficit receptivo.",
+        "sec": "Lóbulos corticales · la cátedra lo toma"
       }
     ]
   }

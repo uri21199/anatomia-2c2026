@@ -159,3 +159,17 @@ select { font: inherit; padding: .35rem .5rem; border-radius: 8px; border: 1px s
   .layout { display: block; max-width: none; }
   .cap details { border: 0; }
 }
+
+/* Práctica: marca de respondida y enlace a la teoría */
+.badge-done { display: inline-block; font-size: .78rem; font-weight: 600; padding: .05rem .5rem; border-radius: 999px; vertical-align: middle; margin-right: .2rem; }
+.badge-done.ok { background: var(--ok-bg); color: var(--ok); }
+.badge-done.no { background: var(--bad-bg); color: var(--bad); }
+.ver-teoria { font-size: .85rem; white-space: nowrap; }
+
+/* Desarrollo de aplicación en la práctica por sistema */
+.pd-bloque { margin-top: 1.2rem; }
+.pd { margin: .9rem 0; padding: .8rem 1rem; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }
+.pd-q { margin: 0 0 .5rem; }
+.pd-checks { display: grid; gap: .35rem; margin: .4rem 0 .6rem; }
+.pd-chk { display: flex; gap: .5rem; align-items: flex-start; }
+.pd-model { margin-top: .6rem; padding-top: .5rem; border-top: 1px solid var(--line); }
