@@ -1,7 +1,7 @@
 // Valida los bancos de preguntas: estructura, cantidades, sesgo de longitud y reparto de la correcta.
 // Uso: node tools/validate_quiz.mjs
-// - js/data-quiz.js:     PARCIALES = [{mc: 20 opción múltiple, dev: 5 de desarrollo}, ...]
-// - js/data-practica.js: PRACTICA: entre 20 y 30 opción múltiple por sistema
+// - js/data-quiz.js:     PARCIALES = 5 parciales, cada uno con 20 opción múltiple y 5 de desarrollo
+// - js/data-practica.js: PRACTICA: 47 opción múltiple por sistema y PRACTICA_DEV: 3 de desarrollo por sistema
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -10,6 +10,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const load = (file, expr) => new Function(`${readFileSync(join(root, "js", file), "utf8")}; return ${expr};`)();
 const PARCIALES = load("data-quiz.js", "PARCIALES");
 const PRACTICA = load("data-practica.js", "PRACTICA");
+const PRACTICA_DEV = load("data-practica.js", "PRACTICA_DEV");
 
 const TOPICS = ["respiratorio", "circulatorio", "digestivo", "urinario", "endocrino", "nervioso", "bioingenieria"];
 const errors = [];
@@ -53,7 +54,7 @@ function biasReport(name, mcs) {
 }
 
 // Parciales
-if (!Array.isArray(PARCIALES) || PARCIALES.length < 1) errors.push("No hay parciales definidos");
+if (!Array.isArray(PARCIALES) || PARCIALES.length !== 5) errors.push(`Se esperaban 5 parciales, hay ${PARCIALES.length}`);
 for (const p of PARCIALES) {
   const name = p.nombre;
   if (p.mc.length !== 20) errors.push(`${name}: se esperaban 20 MC, hay ${p.mc.length}`);
@@ -82,7 +83,16 @@ const allPractica = [];
 for (const t of TOPICS) {
   const list = PRACTICA[t];
   if (!list) { errors.push(`Práctica: falta el sistema ${t}`); continue; }
-  if (list.length < 20 || list.length > 30) errors.push(`Práctica ${t}: se esperaban entre 20 y 30 MC, hay ${list.length}`);
+  if (list.length !== 47) errors.push(`Práctica ${t}: se esperaban 47 MC, hay ${list.length}`);
+  const dv = PRACTICA_DEV[t] || [];
+  if (dv.length !== 3) errors.push(`Práctica ${t}: se esperaban 3 de desarrollo, hay ${dv.length}`);
+  dv.forEach((d) => {
+    if (d.topic !== t) errors.push(`${d.id}: topic ${d.topic} dentro de ${t}`);
+    if (!d.checklist || d.checklist.length !== 5) errors.push(`${d.id}: checklist debe tener 5 puntos`);
+    if (!d.modelo || !d.justificacion || !d.sec || !d.ref) errors.push(`${d.id}: falta modelo, justificación, sec o ref`);
+    if (ids.has(d.id)) errors.push(`ID repetido: ${d.id}`);
+    ids.add(d.id);
+  });
   list.forEach((q) => { if (q.topic !== t) errors.push(`${q.id}: topic ${q.topic} dentro de ${t}`); checkMC(q, `Práctica ${t}`); });
   allPractica.push(...list);
 }
